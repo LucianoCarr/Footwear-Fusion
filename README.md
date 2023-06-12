@@ -10,12 +10,12 @@
 
 
 
-### Sitios de Interes
+# Sitios de Interes
 
 [Por los productos o servicios que ofrecen](https://www.cajondelasmuchascosas.com/)
 
-[Por los clientes a los que apuntan](https://www.nike.com.ar/)(https://www.vans.com.ar/)
+[Por los clientes a los que apuntan](https://www.nike.com.ar/)
 
-[Por la estética que presentan](https://www.newbalance.com.ar/)
+[Por la estética que presentan](https://www.newbalance.com.ar/) // [o tambien](https://pimpumpills.com/)
 
 [Por las funcionalidades implementadas](https://www.mercadolibre.com.ar/)
