@@ -14,4 +14,8 @@ app.get('/login', (req,res) => res.sendFile(path.join(__dirname, 'views','login.
 app.get('/registro', (req,res) => res.sendFile(path.join(__dirname, 'views','registro.html')))
 
 
+app.get('/header', (req,res) => res.sendFile(path.join(__dirname, 'views','partials','header.html')))
+app.get('/footer', (req,res) => res.sendFile(path.join(__dirname, 'views','partials','footer.html')))
+
+
 app.listen(PORT, () => console.log(`Servidor: HTTP://localhost:${PORT}`))
