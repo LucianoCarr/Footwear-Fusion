@@ -5,4 +5,7 @@
     font-family: var(--tipografia);
 }
 
-:root {--tipografia : 'Lato', sans-serif;}
+:root {
+    --tipografia : 'Lato', sans-serif;
+    --colorGrisOscuro : #444444;
+}

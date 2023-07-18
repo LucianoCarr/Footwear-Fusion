@@ -5,46 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d7bd81806f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
+
+        <!-- user login link -->
         <div class="header--conteiner-user">
             <button class="header-user">
                 <i class="fa-solid fa-user" style="color: #fafafa;"></i>
             </button>
         </div>
-        <div class="header--conteiner-nav">
-            <nav>
-            <button class="header--button-bars">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <a href="/"><img src="/img/logo-transform(black).png" alt=""></a>
-            <h1>FootwearFusion</h1>
-            <form action="" class="header-form desktop">
-                <input type="text" placeholder="Buscar">
-                <button><i class="fas fa-search"></i></button>
-            </form>
-            <button class="header--button-car">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-            </nav>
-        <form action="" class="header-form mobile">
-            <input type="text" placeholder="Buscar">
-            <button><i class="fas fa-search"></i></button>
-        </form>
-        <nav>
-            <ul class="header--navbar">
-                <li><a href="">HOME</a></li>
-                <li><a href="">PERSONALIZAR</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">OFERTAS</a></li>
-            </ul>
-        </nav>
 
-        </div>
+
+        <nav class="header--conteiner-nav">
+         
+                <!-- burger icon -->
+                <button class="header--button-bars">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- logo -->
+                <a class="header--link-logo" href="/"><img src="/img/logo-transform(black).png" alt=""></a>
+
+                <!-- title -->
+                <h1>FootwearFusion</h1>
+
+                <!-- search bar | DESKTOP -->
+                <form action="" class="header-form">
+                    <input type="text" placeholder="Buscar">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+
+                <!-- shopping cart icon -->
+                <button class="header--button-car">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+
+            <!-- links navigation -->
+            
+                <ul class="header--navbar">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">OFERTAS</a></li>
+                    <li><a href="">ALGO</a></li>
+                </ul>
+          
+
+        </nav>
 
     </header>
 </body>
