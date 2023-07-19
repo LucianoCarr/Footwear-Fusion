@@ -11,56 +11,65 @@
 </head>
 
 <body>
-
     <header>
-        <img src="/img/logo.jpg" class="logo" alt="">
-        <nav>
-            <ul>
-                <li><a href=""></a>Home</li>
-                <li><a href=""></a>Ofertas</li>
-                <li><a href=""></a>About</li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
-                <li><a href=""></a><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li><a href=""></a><i class="fa-solid fa-cart-shopping"></i></li>
-                <li><a href=""></a><i class="fa-solid fa-user"></i></li>
-            </ul>
-        </nav>
     </header>
     <main>
-        <section>
-            <div>
-                <h2>nombre zapatillas</h2>
-                <div>
-                    <img src="/img/logo.jpg" class="img__principal" alt="imagen">
-                </div>
-                <div>
-                    <img src="/img/logo.jpg" class="img__otros" alt="imagen2">
-                    <img src="/img/logo.jpg" class="img__otros" alt="imagen3">
-                    <img src="/img/logo.jpg" class="img__otros" alt="imagen4">
-                </div>
-                <div>
-                    <p>precio</p>
-                    <p>talle</p>
-                    <p>color</p>
-                    <p>cantidad</p>
-                </div>
-                <div>
-                    <button>Comprar</button>
-                    <button>Agregar al carrito</button>
-                </div>
+        <h2>nombre zapatilla</h2>
+            <div class="img-principal">
+                <img src="/img/zapa-1.jpg" class="main-img" alt="imagen">
             </div>
-        </section>
+            <div class="img-otros">
+                <img src="/img/zapa-2.jpg" class="views-img" alt="imagen2">
+                <img src="/img/zapa-3.jpg" class="views-img" alt="imagen3">
+                <img src="/img/zapa-4.jpg" class="views-img" alt="imagen4">
+            </div>
+            <aside>
+                    <p class="precio">Precio: $39.900</p>
+                    <form class="talle" action="">
+                        <p>Talle:</p>
+                        <label for="select"></label>
+                        <select name="talle" id="select">
+                            <option disabled selected>None</option>
+                            <option value="1">36</option>
+                            <option value="2">37</option>
+                            <option value="3">38</option>
+                            <option value="4">39</option>
+                            <option value="4">40</option>
+                            <option value="4">41</option>
+                            <option value="4">42</option>
+                            <option value="4">43</option>
+                            <option value="4">44</option>
+                            <option value="4">45</option>
+                        </select>
+                    </form>
+                    <div class="color">
+                        <p>Color:</p>
+                        <div class="color-1"></div>
+                        <div class="color-2"></div>
+                    </div>
+                    <form class="cantidad" action="">
+                        <p>Cantidad:</p>
+                        <label for="cantidad">
+                            <button type="button">-</button>
+                            <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                            <button type="button">+</button>
+                        </label>
+                    </form>
+                <div class="carrito">
+                    <a href="./carrito.html">Comprar</a>
+                    <a href="">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+        </aside>
         <article>
             <h4>Productos similares</h4>
-            <img src="/img/logo.jpg" class="img__mas" alt="otros productos">
-            <p>detalles</p>
+            <img src="/img/zapa-otro-1.jpg" class="more-img" alt="otros productos">
+            <img src="/img/zapa-otro-2.jpg" class="more-img" alt="otros productos">
+            <img src="/img/zapa-otro-3.jpg" class="more-img" alt="otros productos">
+            <img src="/img/zapa-otro-4.jpg" class="more-img" alt="otros productos">
         </article>
     </main>
     <footer>
-        <div>
+        <!--         <div>
             <h5>contactos</h5>
             <div class="icons">
                 <h3><i class="fa-brands fa-square-whatsapp" style="color: #42d62e;"></i>111-555-555</h3>
@@ -72,7 +81,7 @@
             <h5>acerca de</h5>
             <p>nostros</p>
             <p>otros</p>
-        </div>
+        </div> -->
     </footer>
 </body>
 

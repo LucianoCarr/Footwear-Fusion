@@ -1,21 +1,102 @@
-/* HEADER */
-.logo {
-    width: 50px;
+/* imagenes */
+h2 {
+    text-align: center;
 }
 
-/* MAIN */
-
-
-.img__principal {
-    width: 40px;
+.img-principal {
+    display: flex;
+    justify-content: center;
+    border-top: solid 1px black;
 }
 
-.img__otros {
-    width: 10px;
+.main-img {
+    width: 50%;
 }
 
-.img__mas {
-    width: 20px;
+.img-otros {
+    display: flex;
+    justify-content: space-around;
+    border: solid 1px black;
 }
 
-/* FOOTER */
+.views-img {
+    width: 25%;
+}
+
+/* especificaciones */
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: solid 1px black;
+}
+
+aside p {
+    font-weight: 900;
+}
+
+.precio, .talle, .color, .cantidad, .carrito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.precio {
+    margin: 12px 0;
+}
+
+.talle {
+    gap: 12px;
+}
+
+.color {
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.color-1 {
+    width: 35px;
+    height: 20px;
+    background-color: black;
+    border: solid 1px black;
+}
+
+.color-2 {
+    width: 35px;
+    height: 20px;
+    background-color: burlywood;
+    border: solid 1px black;
+}
+
+.cantidad {
+    gap: 10px;
+}
+
+.carrito {
+    width: 100%;
+    margin: 12px 0;
+    justify-content: space-around;
+}
+
+/* Productos similares */
+article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h4 {
+    width: 100%;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.more-img {
+    width: 20%;
+}
+
+article, aside, div {
+    
+}
+
