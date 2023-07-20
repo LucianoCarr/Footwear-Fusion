@@ -12,53 +12,95 @@
 
 <body>
     <header>
+        <!-- user login link -->
+        <div class="header--conteiner-user">
+            <button class="header-user">
+                <i class="fa-solid fa-user" style="color: #fafafa;"></i>
+            </button>
+        </div>
+        <nav class="header--conteiner-nav">
+                <!-- burger icon -->
+                <button class="header--button-bars">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <!-- logo -->
+                <a class="header--link-logo" href="/"><img src="/img/logo-transform(black).png" alt=""></a>
+                <!-- title -->
+                <h1>FootwearFusion</h1>
+                <!-- search bar | DESKTOP -->
+                <form action="" class="header-form">
+                    <input type="text" placeholder="Buscar">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+                <!-- shopping cart icon -->
+                <button class="header--button-car">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            <!-- links navigation -->
+                <ul class="header--navbar">
+                    <li><a href="">HOME</a></li>                    
+                    <li><a href="">HOMBRE</a></li>
+                    <li><a href="">MUJER</a></li>
+                    <li><a href="">OFERTAS</a></li>
+                    <li><a href="">ABOUT</a></li>
+                </ul>
+        </nav>
     </header>
     <main>
+        <nav>
+            <ul class="lista">
+                <a href="./">Home</a>
+                <p>></p>
+                <p>Detalles</p>
+            </ul>
+        </nav>
         <h2>nombre zapatilla</h2>
-            <div class="img-principal">
-                <img src="/img/zapa-1.jpg" class="main-img" alt="imagen">
+        <div class="img-principal">
+            <img src="/img/zapa-1.jpg" class="main-img" alt="imagen">
+        </div>
+        <div class="img-otros">
+            <img src="/img/zapa-2.jpg" class="views-img" alt="imagen2">
+            <img src="/img/zapa-3.jpg" class="views-img" alt="imagen3">
+            <img src="/img/zapa-4.jpg" class="views-img" alt="imagen4">
+        </div>
+        <aside>
+            <div class="card">
+            <p class="precio">Precio: $39.900</p>
+            <form class="talle" action="">
+                <p>Talle:</p>
+                <label for="select"></label>
+                <select name="talle" id="select">
+                    <option disabled selected>None</option>
+                    <option value="1">36</option>
+                    <option value="2">37</option>
+                    <option value="3">38</option>
+                    <option value="4">39</option>
+                    <option value="4">40</option>
+                    <option value="4">41</option>
+                    <option value="4">42</option>
+                    <option value="4">43</option>
+                    <option value="4">44</option>
+                    <option value="4">45</option>
+                </select>
+            </form>
+            <div class="color">
+                <p>Color:</p>
+                <div class="color-1"></div>
+                <div class="color-2"></div>
             </div>
-            <div class="img-otros">
-                <img src="/img/zapa-2.jpg" class="views-img" alt="imagen2">
-                <img src="/img/zapa-3.jpg" class="views-img" alt="imagen3">
-                <img src="/img/zapa-4.jpg" class="views-img" alt="imagen4">
+            <form class="cantidad" action="">
+                <p>Cantidad:</p>
+                <label for="cantidad">
+                    <button type="button">-</button>
+                    <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                    <button type="button">+</button>
+                </label>
+            </form>
+            <div class="carrito">
+                <a href="./carrito.html">Comprar</a>
+                <a href="">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
             </div>
-            <aside>
-                    <p class="precio">Precio: $39.900</p>
-                    <form class="talle" action="">
-                        <p>Talle:</p>
-                        <label for="select"></label>
-                        <select name="talle" id="select">
-                            <option disabled selected>None</option>
-                            <option value="1">36</option>
-                            <option value="2">37</option>
-                            <option value="3">38</option>
-                            <option value="4">39</option>
-                            <option value="4">40</option>
-                            <option value="4">41</option>
-                            <option value="4">42</option>
-                            <option value="4">43</option>
-                            <option value="4">44</option>
-                            <option value="4">45</option>
-                        </select>
-                    </form>
-                    <div class="color">
-                        <p>Color:</p>
-                        <div class="color-1"></div>
-                        <div class="color-2"></div>
-                    </div>
-                    <form class="cantidad" action="">
-                        <p>Cantidad:</p>
-                        <label for="cantidad">
-                            <button type="button">-</button>
-                            <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
-                            <button type="button">+</button>
-                        </label>
-                    </form>
-                <div class="carrito">
-                    <a href="./carrito.html">Comprar</a>
-                    <a href="">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
+        </div>
         </aside>
         <article>
             <h4>Productos similares</h4>

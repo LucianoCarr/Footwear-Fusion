@@ -1,6 +1,23 @@
+/*Recorrido*/
+.lista {
+    display: flex;
+}
+
+.lista a {
+    list-style: none;
+    padding-right: 5px;
+    margin: 12px 0;
+}
+
+.lista p {
+    padding-right: 5px;
+    margin: 12px 0;
+}
+
 /* imagenes */
 h2 {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .img-principal {
@@ -17,6 +34,7 @@ h2 {
     display: flex;
     justify-content: space-around;
     border: solid 1px black;
+    margin: 12px 0;
 }
 
 .views-img {
@@ -35,6 +53,11 @@ aside p {
     font-weight: 900;
 }
 
+/* .card {
+    border: solid 1px black;
+    width: 90%;
+} */
+
 .precio, .talle, .color, .cantidad, .carrito {
     width: 100%;
     display: flex;
@@ -42,7 +65,7 @@ aside p {
 }
 
 .precio {
-    margin: 12px 0;
+    margin: 22px 0;
 }
 
 .talle {
@@ -51,7 +74,7 @@ aside p {
 
 .color {
     gap: 8px;
-    margin: 12px 0;
+    margin: 22px 0;
 }
 
 .color-1 {
@@ -70,12 +93,25 @@ aside p {
 
 .cantidad {
     gap: 10px;
+    text-align-last: center;
+}
+
+.cantidad button {
+    padding: 0px 3px;
 }
 
 .carrito {
     width: 100%;
-    margin: 12px 0;
+    margin: 22px 0;
     justify-content: space-around;
+}
+
+.carrito a {
+    border: solid 1px white;
+    border-radius: 20px;
+    padding: 11px;
+    background-color: black;
+    color: aliceblue;
 }
 
 /* Productos similares */
@@ -89,14 +125,9 @@ article {
 h4 {
     width: 100%;
     text-align: center;
-    margin: 12px 0;
+    margin: 22px 0;
 }
 
 .more-img {
     width: 20%;
 }
-
-article, aside, div {
-    
-}
-
