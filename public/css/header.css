@@ -3,7 +3,6 @@ body {
 }
 
 .header--conteiner-user {
-    /* background-color: var(--colorGrisOscuro); */
     background-color: var(--colorGrisOscuro);
     display: flex;
     justify-content: flex-end;
@@ -18,7 +17,7 @@ body {
 
 .header--conteiner-nav {
     padding: 15px;
-    background-color: #f2e9e4;
+    background-color: #e9ecef;
     border-bottom: 1px solid var(--colorGrisOscuro);
     display: grid;
     grid-template-areas: "burger logo cart"
@@ -96,7 +95,7 @@ body {
     grid-area: links;
 }
 
-@media (min-width:768px) {
+@media (min-width:520px) {
     .header--conteiner-nav img{
         width: 60px;
     }
