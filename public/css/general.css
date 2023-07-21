@@ -5,6 +5,10 @@
     font-family: var(--tipografia);
 }
 
+.body{
+   background-color: #DCDCDC; 
+}
+
 :root {
     --tipografia : 'Lato', sans-serif;
     --colorGrisOscuro : #444444;
