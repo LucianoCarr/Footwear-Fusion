@@ -4,7 +4,8 @@
   "description": "Somos Footwear-Fusion, un grupo pensado en la comodidad del calzado de nuestros clientes,nos pueden llamar la familia F-F. Nuestro calzado va dirigido a esas personas que no se identifican con las zapatillas del mercado actual,tenemos profesionales pensando en la singularidad que hoy en dia es escasa en el mundo con plena globalizacion,recibimos ideas de nuestros clientes.\r ##       **pensalo && lo diseñamos !.** \r ### ----------------------------------------------------------------------------",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
