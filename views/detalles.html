@@ -28,7 +28,7 @@
             <!-- title -->
             <h1>FootwearFusion</h1>
             <!-- search bar | DESKTOP -->
-            <form action="" class="header-form">
+            <form action="#" class="header-form">
                 <input type="text" placeholder="Buscar">
                 <button><i class="fas fa-search"></i></button>
             </form>
@@ -46,13 +46,13 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-detalles">
         <nav>
-            <ul class="recorrido">
+            <div class="recorrido">
                 <a href="./">Home</a>
                 <p>></p>
                 <p>Detalles</p>
-            </ul>
+            </div>
         </nav>
         <h2 class="nombre-zapatilla">nombre zapatilla</h2>
         <div class="imagenes-detalles">
@@ -68,7 +68,7 @@
         <aside class="especificaciones">
             <div class="card-especificaciones">
                 <p class="precio">Precio: $39.900</p>
-                <form class="talle" action="">
+                <form class="talle" action="#">
                     <p>Talle:</p>
                     <label for="select"></label>
                     <select name="talle" id="select">
@@ -90,13 +90,12 @@
                     <div class="color-1"></div>
                     <div class="color-2"></div>
                 </div>
-                <form class="cantidad" action="">
+                <form class="cantidad" action="#">
                     <p>Cantidad:</p>
-                    <label for="cantidad">
+                    <label for="cantidad"></label>
                         <button type="button">-</button>
                         <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
                         <button type="button">+</button>
-                    </label>
                 </form>
                 <div class="carrito">
                     <a href="./carrito.html">Comprar</a>
@@ -106,7 +105,8 @@
             <div class="descripcion-detalles">
                 <div class="card-descripcion-detalles">
                     <h4>descripcion</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate neque repellat aliquam consequuntur veniam fuga in maxime sequi unde ratione!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate neque repellat aliquam
+                        consequuntur veniam fuga in maxime sequi unde ratione!</p>
                 </div>
             </div>
         </aside>
@@ -118,21 +118,34 @@
             <img src="/img/zapa-otro-4.jpg" class="more-img" alt="otros productos">
         </article>
     </main>
-    <footer>
-        <!--         <div>
-            <h5>contactos</h5>
-            <div class="icons">
-                <h3><i class="fa-brands fa-square-whatsapp" style="color: #42d62e;"></i>111-555-555</h3>
-                <h3><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-square-whatsapp"></i>Facebook</a></h3>
-                <h3><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-square-whatsapp"></i>Instagram</a></h3>
+ <!--    <footer class="home-footer">
+        <section class="home-footer-section">
+            <div class="home-footer-section-div">
+                <h5>CONTACTANOS</h5>
+                <ul>
+                    <li> algo@gmail.com</li>
+                    <li> 152354687</li>
+                    <li> calle falsa 123</li>
+                </ul>
             </div>
-            <h5>horarios</h5>
-            <p>10hs / 18hs</p>
-            <h5>acerca de</h5>
-            <p>nostros</p>
-            <p>otros</p>
-        </div> -->
-    </footer>
+            <div class="home-footer-section-div">
+                <h5>HORARIOS</h5>
+                <p>Lunes a Sabados de 9:30 a 18hs</p>
+            </div>
+            <div class="home-footer-section-div">
+                <h5>REDES</h5>
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+            </div>
+            <div class="home-footer-section-div">
+                <h5>ACERCA DE</h5>
+                <p>VER MAS <i class="fa-solid fa-chevron-down"></i></p>
+            </div>
+        </section>
+    </footer> -->
 </body>
 
 </html>

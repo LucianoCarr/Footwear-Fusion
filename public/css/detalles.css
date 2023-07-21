@@ -43,6 +43,7 @@
 .views-img {
     width: 25%;
     border: solid 1px black;
+    cursor: pointer;
 }
 
 /* especificaciones */
@@ -135,17 +136,20 @@
 .productos-similares h4 {
     width: 100%;
     text-align: center;
-    margin: 40px 0 22px 0;
+    margin: 40px 0 0 0;
     outline: groove;
 }
 
 .more-img {
     width: 20%;
+    margin: 22px 0;
+    border: solid 1px black;
+    cursor: pointer;
 }
 
 /* TABLET */
 @media (min-width:768px) {
-    main {
+    .main-detalles {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
