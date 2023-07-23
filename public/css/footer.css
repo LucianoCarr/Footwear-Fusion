@@ -1,8 +1,11 @@
 .home-footer{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    
     background-color: gray;
+    margin: 0;
+    padding: 0;
+    
 }
 
 .home-footer-section{
@@ -12,10 +15,11 @@
     padding: 5px;
     margin: 5px;
     width: 100%;
+    flex-wrap: wrap;
     
 }
 
-
+ 
 
 .home-footer-section-div h5{
     color: white;
