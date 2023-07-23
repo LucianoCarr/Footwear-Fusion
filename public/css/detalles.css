@@ -1,21 +1,206 @@
-/* HEADER */
-.logo {
-    width: 50px;
+/*Recorrido*/
+.recorrido {
+    display: flex;
 }
 
-/* MAIN */
-
-
-.img__principal {
-    width: 40px;
+.recorrido a {
+    list-style: none;
+    padding-right: 5px;
+    margin: 12px 0;
 }
 
-.img__otros {
-    width: 10px;
+.recorrido p {
+    padding-right: 5px;
+    margin: 12px 0;
 }
 
-.img__mas {
-    width: 20px;
+.nombre-zapatilla {
+    font-style: italic;
 }
 
-/* FOOTER */
+/* imagenes */
+.nombre-zapatilla {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.img-principal {
+    display: flex;
+    justify-content: center;
+}
+
+.main-img {
+    width: 70%;
+    border: 1px solid black;
+}
+
+.img-otros {
+    display: flex;
+    justify-content: space-around;
+    margin: 12px 0;
+}
+
+.views-img {
+    width: 25%;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+/* especificaciones */
+.specificaciones{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.especificaciones p {
+    font-weight: 900;
+}
+
+.card-especificaciones {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.precio, .talle, .color, .cantidad, .carrito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.precio {
+    margin: 22px 0;
+}
+
+.talle {
+    gap: 12px;
+}
+
+.color {
+    gap: 8px;
+    margin: 22px 0;
+}
+
+.color-1 {
+    width: 35px;
+    height: 20px;
+    background-color: black;
+    border: solid 1px black;
+}
+
+.color-2 {
+    width: 35px;
+    height: 20px;
+    background-color: burlywood;
+    border: solid 1px black;
+}
+
+.cantidad {
+    gap: 10px;
+    text-align-last: center;
+}
+
+.cantidad button {
+    padding: 0px 3px;
+}
+
+.carrito {
+    width: 100%;
+    margin: 22px 0;
+    justify-content: space-around;
+}
+
+.carrito a {
+    border: solid 1px white;
+    border-radius: 20px;
+    padding: 11px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.descripcion-detalles {
+    display: none;
+}
+
+/* Productos similares */
+.productos-similares {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productos-similares h4 {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 0 0;
+    outline: groove;
+}
+
+.more-img {
+    width: 20%;
+    margin: 22px 0;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+/* TABLET */
+@media (min-width:768px) {
+    .main-detalles {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .nombre-zapatilla {
+        width: 100%;
+    }
+
+    .imagenes-detalles {
+        width: 50%;
+        margin: auto;
+    }
+
+    .especificaciones {
+        width: 45%;
+        margin: auto;
+    }
+
+    .card-especificaciones {
+        display: flex;
+        align-items: center;
+    }
+
+    .descripcion-detalles {
+        display: contents;
+    }
+
+    .card-descripcion-detalles {
+        margin: 30px 0;
+        border: solid 1px black;
+        text-align: center;
+    }
+
+    .card-descripcion-detalles h4 {
+        border-bottom: 1px solid black;
+        font-size: 20px;
+    }
+}
+
+
+/* DESKTOP */
+@media (min-width:1024px) {
+    .imagenes-detalles {
+        width: 40%;
+    }
+
+    .especificaciones {
+        width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    }
+}

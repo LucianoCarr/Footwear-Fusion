@@ -11,69 +11,141 @@
 </head>
 
 <body>
-
     <header>
-        <img src="/img/logo.jpg" class="logo" alt="">
-        <nav>
-            <ul>
-                <li><a href=""></a>Home</li>
-                <li><a href=""></a>Ofertas</li>
-                <li><a href=""></a>About</li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
-                <li><a href=""></a><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li><a href=""></a><i class="fa-solid fa-cart-shopping"></i></li>
-                <li><a href=""></a><i class="fa-solid fa-user"></i></li>
+        <!-- user login link -->
+        <div class="header--conteiner-user">
+            <button class="header-user">
+                <i class="fa-solid fa-user" style="color: #fafafa;"></i>
+            </button>
+        </div>
+        <nav class="header--conteiner-nav">
+            <!-- burger icon -->
+            <button class="header--button-bars">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- logo -->
+            <a class="header--link-logo" href="/"><img src="/img/logo-transform(black).png" alt=""></a>
+            <!-- title -->
+            <h1>FootwearFusion</h1>
+            <!-- search bar | DESKTOP -->
+            <form action="#" class="header-form">
+                <input type="text" placeholder="Buscar">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+            <!-- shopping cart icon -->
+            <button class="header--button-car">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <!-- links navigation -->
+            <ul class="header--navbar">
+                <li><a href="">HOME</a></li>
+                <li><a href="">HOMBRE</a></li>
+                <li><a href="">MUJER</a></li>
+                <li><a href="">OFERTAS</a></li>
+                <li><a href="">ABOUT</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <div>
-                <h2>nombre zapatillas</h2>
-                <div>
-                    <img src="/img/logo.jpg" class="img__principal" alt="imagen">
+    <main class="main-detalles">
+        <nav>
+            <div class="recorrido">
+                <a href="./">Home</a>
+                <p>></p>
+                <p>Detalles</p>
+            </div>
+        </nav>
+        <h2 class="nombre-zapatilla">nombre zapatilla</h2>
+        <div class="imagenes-detalles">
+            <div class="img-principal">
+                <img src="/img/zapa-1.jpg" class="main-img" alt="imagen">
+            </div>
+            <div class="img-otros">
+                <img src="/img/zapa-2.jpg" class="views-img" alt="imagen2">
+                <img src="/img/zapa-3.jpg" class="views-img" alt="imagen3">
+                <img src="/img/zapa-4.jpg" class="views-img" alt="imagen4">
+            </div>
+        </div>
+        <aside class="especificaciones">
+            <div class="card-especificaciones">
+                <p class="precio">Precio: $39.900</p>
+                <form class="talle" action="#">
+                    <p>Talle:</p>
+                    <label for="select"></label>
+                    <select name="talle" id="select">
+                        <option disabled selected>None</option>
+                        <option value="1">36</option>
+                        <option value="2">37</option>
+                        <option value="3">38</option>
+                        <option value="4">39</option>
+                        <option value="4">40</option>
+                        <option value="4">41</option>
+                        <option value="4">42</option>
+                        <option value="4">43</option>
+                        <option value="4">44</option>
+                        <option value="4">45</option>
+                    </select>
+                </form>
+                <div class="color">
+                    <p>Color:</p>
+                    <div class="color-1"></div>
+                    <div class="color-2"></div>
                 </div>
-                <div>
-                    <img src="/img/logo.jpg" class="img__otros" alt="imagen2">
-                    <img src="/img/logo.jpg" class="img__otros" alt="imagen3">
-                    <img src="/img/logo.jpg" class="img__otros" alt="imagen4">
-                </div>
-                <div>
-                    <p>precio</p>
-                    <p>talle</p>
-                    <p>color</p>
-                    <p>cantidad</p>
-                </div>
-                <div>
-                    <button>Comprar</button>
-                    <button>Agregar al carrito</button>
+                <form class="cantidad" action="#">
+                    <p>Cantidad:</p>
+                    <label for="cantidad"></label>
+                        <button type="button">-</button>
+                        <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                        <button type="button">+</button>
+                </form>
+                <div class="carrito">
+                    <a href="./carrito.html">Comprar</a>
+                    <a href="">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
-        </section>
-        <article>
+            <div class="descripcion-detalles">
+                <div class="card-descripcion-detalles">
+                    <h4>descripcion</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate neque repellat aliquam
+                        consequuntur veniam fuga in maxime sequi unde ratione!</p>
+                </div>
+            </div>
+        </aside>
+        <article class="productos-similares">
             <h4>Productos similares</h4>
-            <img src="/img/logo.jpg" class="img__mas" alt="otros productos">
-            <p>detalles</p>
+            <img src="/img/zapa-otro-1.jpg" class="more-img" alt="otros productos">
+            <img src="/img/zapa-otro-2.jpg" class="more-img" alt="otros productos">
+            <img src="/img/zapa-otro-3.jpg" class="more-img" alt="otros productos">
+            <img src="/img/zapa-otro-4.jpg" class="more-img" alt="otros productos">
         </article>
     </main>
-    <footer>
-        <div>
-            <h5>contactos</h5>
-            <div class="icons">
-                <h3><i class="fa-brands fa-square-whatsapp" style="color: #42d62e;"></i>111-555-555</h3>
-                <h3><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-square-whatsapp"></i>Facebook</a></h3>
-                <h3><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-square-whatsapp"></i>Instagram</a></h3>
+   <!--    <footer class="home-footer">
+        <section class="home-footer-section">
+            <div class="home-footer-section-div">
+                <h5>CONTACTANOS</h5>
+                <ul>
+                    <li> algo@gmail.com</li>
+                    <li> 152354687</li>
+                    <li> calle falsa 123</li>
+                </ul>
             </div>
-            <h5>horarios</h5>
-            <p>10hs / 18hs</p>
-            <h5>acerca de</h5>
-            <p>nostros</p>
-            <p>otros</p>
-        </div>
-    </footer>
+            <div class="home-footer-section-div">
+                <h5>HORARIOS</h5>
+                <p>Lunes a Sabados de 9:30 a 18hs</p>
+            </div>
+            <div class="home-footer-section-div">
+                <h5>REDES</h5>
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+            </div>
+            <div class="home-footer-section-div">
+                <h5>ACERCA DE</h5>
+                <p>VER MAS <i class="fa-solid fa-chevron-down"></i></p>
+            </div>
+        </section>
+    </footer> -->
 </body>
 
 </html>
