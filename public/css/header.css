@@ -89,6 +89,9 @@ body {
     color: white;
     border-left: 1px solid white;
 }
+.header-form button i {
+    padding: 5px;
+}
 
 .header--navbar {
     display: none;
