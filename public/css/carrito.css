@@ -1,0 +1,133 @@
+.carrito_main {
+    padding: 1px 10px 35px 10px;
+    margin: 0 auto;
+}
+/* .carrito__conteiner_rgba{
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 5px;
+} */
+
+.carrito_conteiner h2,.carrito__conteiner_recomended h2 {
+    border-bottom: 1px solid darkgray;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 35px 0 0;
+    padding:10px 1px;
+    font-size: 20px;
+   /*  background-color: rgba(255, 255, 255, 0.8); */
+}
+.carrito__conteiner_recomended h2{
+    margin: 35px 0;
+}
+
+.carrito__conteinerImg {
+    display: flex;
+    width: 100%;
+
+}
+
+.carrito__conteinerImg img {
+    width: 100%;
+
+}
+
+.carrito__conteiner_card {
+    padding: 0 10px;
+    background-color: white;
+}
+
+.carrito__conteiner_card div div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+
+}
+
+.carrito__article {
+    margin: 35px 0;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: black;
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+}
+
+.circle1 {
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+}
+
+.carrito__trash_conteiner {
+    display: flex;
+    justify-content: end;
+}
+
+.carrito_trash {
+    font-size: 25px;
+    margin: 5px;
+    border: none;
+    background: none;
+    padding: 5px;
+}
+
+.carrito__conteiner_resumen{
+    padding: 10px 10px;
+    background-color: white;
+}
+.carrito__conteiner_arti div{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+}
+.carrito__conteiner_arti div:last-child{
+    border-bottom: none
+}
+.carrito_arti h4,.carrito_total h4{
+    color: #cb1b2c;
+    font-weight: 800;
+}
+.carrito__conteiner_finCompr{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.carrito__button_finCompr{
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border: none;
+    background-color: grey;
+    padding: 10px;
+    transition: all 0.5s;
+}
+.carrito__button_finCompr:hover{
+    background-color: #cb1b2c;
+}
+.carrito__conteiner_nextTrash{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrito__conteiner_nextTrash a{
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+}
+.carrito__conteiner_prec-title-carousel{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
 
@@ -60,9 +62,30 @@
         </nav>
     </header>
     <main class="home-main">
-        <article>
-            carrucel
-        </article>
+         <div class="carrusel">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/img/prueba.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/prueba.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/prueba.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+         </div>
 
         <div class="home-main-filtro">
             <button>FILTRO <i class="fa-solid fa-chevron-down"></i></button>
@@ -71,73 +94,90 @@
             <button class="home-main-button-filtro">PRECIO <i class="fa-solid fa-chevron-down"></i></button>
         </div>
 
-        <article class="home-main-contenedor">
-            <div class="home-main-contenedor-card">
-                <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
-                <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
+       <article class="home-main-contenedor">
+        <div class="home-main-contenedor-card">
+            <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
+            <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
+            
+            <img class="home-main-img" src="/img/prueba.jpeg" alt="img">
+            <button class="home-main-button-compra">Comprar</button>
+            <p class="home-main-text">Lorem ipsum dolor sit</p>
+            <h4 class="home-main-precio">$100</h4>
+        </div>
+       
+        <div class="home-main-contenedor-card">
+            <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
+            <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
+            
+            <img class="home-main-img" src="/img/prueba.jpeg" alt="img">
+            <button class="home-main-button-compra">Comprar</button>
+            <p class="home-main-text">Lorem ipsum dolor sit</p>
+            <h4 class="home-main-precio">$100</h4>
+        </div>
+       
 
-                <img class="home-main-img" src="/img/prueba.jpeg" alt="img">
-                <button class="home-main-button-compra">Comprar</button>
-                <p class="home-main-text">Lorem ipsum dolor sit</p>
-                <h4 class="home-main-precio">$100</h4>
-            </div>
-        </article>
+      
+        <div class="home-main-contenedor-card">
+            <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
+            <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
+            
+            <img class="home-main-img" src="/img/prueba.jpeg" alt="img">
+            <button class="home-main-button-compra">Comprar</button>
+            <p class="home-main-text">Lorem ipsum dolor sit</p>
+            <h4 class="home-main-precio">$100</h4>
+        </div>
 
-        <article class="home-main-contenedor">
-            <div class="home-main-contenedor-card">
-                <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
-                <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
 
-                <img class="home-main-img" src="/img/prueba.jpeg" alt="img">
-                <button class="home-main-button-compra">Comprar</button>
-                <p class="home-main-text">Lorem ipsum dolor sit</p>
-                <h4 class="home-main-precio">$100</h4>
-            </div>
-        </article>
-
-        <article class="home-main-contenedor">
-            <div class="home-main-contenedor-card">
-                <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
-                <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
-
-                <img class="home-main-img" src="/img/prueba.jpeg" alt="img">
-                <button class="home-main-button-compra">Comprar</button>
-                <p class="home-main-text">Lorem ipsum dolor sit</p>
-                <h4 class="home-main-precio">$100</h4>
-            </div>
-        </article>
+        <div class="home-main-contenedor-card">
+            <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
+            <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
+            
+            <img class="home-main-img" src="/img/prueba.jpeg" alt="img">
+            <button class="home-main-button-compra">Comprar</button>
+            <p class="home-main-text">Lorem ipsum dolor sit</p>
+            <h4 class="home-main-precio">$100</h4>
+        </div>
+       </article>
 
     </main>
-
     <footer class="home-footer">
         <section class="home-footer-section">
-            <div class="home-footer-section-div">
-                <h5>CONTACTANOS</h5>
-                <ul>
-                    <li> algo@gmail.com</li>
-                    <li> 152354687</li>
-                    <li> calle falsa 123</li>
-                </ul>
-            </div>
+           <div class="home-footer-section-div">
+               <h5>CONTACTANOS</h5>
+               <ul>
+               <li> algo@gmail.com</li>
+               <li>  152354687</li>
+               <li> calle falsa 123</li>
+               </ul>
+           </div>
 
-            <div class="home-footer-section-div">
-                <h5>HORARIOS</h5>
-                <p>Lunes a Sabados de 9:30 a 18hs</p>
-            </div>
+           <div class="home-footer-section-div">
+               <h5>HORARIOS</h5>
+               <p>Lunes a Sabados de 9:30 a 18hs</p>
+           </div>
 
-            <div class="home-footer-section-div">
-                <h5>REDES</h5>
-                <ul>
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-twitter"></i></li>
-                </ul>
-            </div>
+           <div class="home-footer-section-div">
+               <h5>REDES</h5>
+               <ul>
+                   <li><i class="fa-brands fa-facebook"></i></li>
+                   <li><i class="fa-brands fa-instagram"></i></li>
+                   <li><i class="fa-brands fa-twitter"></i></li>
+                   </ul>
+           </div>
 
-            <div class="home-footer-section-div">
-                <h5>ACERCA DE</h5>
-                <p>VER MAS <i class="fa-solid fa-chevron-down"></i></p>
-            </div>
+           <div class="home-footer-section-div">
+               <h5>ACERCA DE</h5>
+               <p>VER MAS <i class="fa-solid fa-chevron-down"></i></p>
+           </div>
+
+          
+
+
+            
+          
+
+        </section>
+   </footer>
 </body>
 
 </html>
