@@ -1,16 +1,30 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: var(--tipografia);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--tipografia);
 }
 
 :root {
-    --tipografia : 'Lato', sans-serif;
-    --colorGrisOscuro : #444444;
-    --colorFondo : #DCDCDC;
+  --tipografia: "Lato", sans-serif;
+  --colorGrisOscuro: #444444;
+  --colorFondo: #dcdcdc;
 }
 
 main {
-    background-color: var(--colorFondo);
+  background-color: var(--colorFondo);
 }
+/* 
+main {
+  background-color: transparent;
+}
+
+body {
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 99%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    url(../img/Colorful-Neon-Splatter-Paint-Designs-On-Black-Background-67848278-1.png);
+}  */

@@ -1,218 +1,259 @@
 /*Recorrido*/
 .recorrido {
-    display: flex;
+  display: flex;
+  color: white;
 }
 
 .recorrido a {
-    list-style: none;
-    padding-right: 5px;
-    margin: 12px 0;
+  list-style: none;
+  padding-right: 5px;
+  margin: 12px 0;
 }
 
 .recorrido p {
-    padding-right: 5px;
-    margin: 12px 0;
+  padding-right: 5px;
+  margin: 12px 0;
 }
 
 .nombre-zapatilla {
-    font-style: italic;
+  font-style: italic;
+  color: white;
 }
 
 /* imagenes */
+
+.main-section-imagenes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
 .nombre-zapatilla {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .img-principal {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .main-img {
-    width: 70%;
-    border: 1px solid silver;
+  height: 310px;
+  border: 1px solid silver;
+  margin: 10px 0;
 }
 
 .img-otros {
-    display: flex;
-    justify-content: space-around;
-    margin: 12px 0;
+  display: flex;
+  justify-content: space-around;
+  margin: auto 0;
 }
 
 .views-img {
-    width: 25%;
-    border: solid 1px silver;
-    cursor: pointer;
+  width: 25%;
+  border: solid 1px silver;
+  cursor: pointer;
 }
 
 /* especificaciones */
-.specificaciones{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+.specificaciones {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .especificaciones p {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 .card-especificaciones {
-    border: 1px solid silver;
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: auto;
-    background-color: white;
+  border: 1px solid silver;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  background-color: #35353596;
+  color: white;
 }
 
-.precio, .talle, .color, .cantidad, .carrito {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.precio,
+.talle,
+.color,
+.cantidad,
+.carrito {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .precio {
-    margin: 22px 0;
-    border-bottom: 1px solid silver;
-    padding: 0 0 10px 0;
+  margin: 22px 0;
+  border-bottom: 1px solid silver;
+  padding: 0 0 10px 0;
 }
 
 .talle {
-    gap: 12px;
-    border-bottom: 1px solid silver;
-    padding: 0 0 10px 0;
+  gap: 12px;
+  border-bottom: 1px solid silver;
+  padding: 0 0 10px 0;
 }
 
 .color {
-    gap: 8px;
-    margin: 22px 0;
-    border-bottom: 1px solid silver;
-    padding: 0 0 10px 0;
+  gap: 8px;
+  margin: 22px 0;
+  border-bottom: 1px solid silver;
+  padding: 0 0 10px 0;
 }
 
 .color-1 {
-    width: 35px;
-    height: 20px;
-    background-color: black;
-    border: solid 1px black;
+  width: 35px;
+  height: 20px;
+  background-color: black;
+  border: solid 1px black;
 }
 
 .color-2 {
-    width: 35px;
-    height: 20px;
-    background-color: burlywood;
-    border: solid 1px silver;
+  width: 35px;
+  height: 20px;
+  background-color: white;
+  border: solid 1px silver;
 }
 
 .cantidad {
-    gap: 10px;
-    text-align-last: center;
-    border-bottom: 1px solid silver;
-    padding: 0 0 10px 0;
+  gap: 10px;
+  text-align-last: center;
+  border-bottom: 1px solid silver;
+  padding: 0 0 10px 0;
 }
 
 .cantidad button {
-    padding: 0px 3px;
+  padding: 0px 3px;
 }
 
 .carrito {
-    width: 100%;
-    margin: 22px 0;
-    justify-content: space-around;
+  width: 100%;
+  margin: 22px 0;
+  justify-content: space-evenly;
 }
 
 .carrito a {
-    border: solid 1px white;
-    border-radius: 20px;
-    padding: 11px;
-    background-color: black;
-    color: aliceblue;
+  border: solid 1px white;
+  border-radius: 20px;
+  padding: 11px;
+  background-color: #00000085;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.carrito a:hover {
+  background-color: #f834f978;
+  color: rgb(255, 255, 255);
+  border-color: #f834f9d6;
+  font-weight: bold;
 }
 
 .descripcion-detalles {
-    display: none;
+  display: none;
 }
 
 /* Productos similares */
 .productos-similares {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #35353596;
 }
 
 .productos-similares h4 {
-    width: 100%;
-    text-align: center;
-    margin: 40px 0 0 0;
-    outline: groove;
-    font-size: 18px;
+  width: 100%;
+  text-align: center;
+  outline: groove;
+  font-size: 18px;
+  color: white;
 }
 
 .more-img {
-    width: 20%;
-    margin: 22px 0;
-    border: solid 1px silver;
-    cursor: pointer;
+  width: 20%;
+  margin: 22px 0;
+  border: solid 1px silver;
+  cursor: pointer;
 }
 
 /* TABLET */
-@media (min-width:768px) {
-    .main-detalles {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
+@media (min-width: 768px) {
+  .main-section {
+    display: flex;
+    flex-direction: row;
+  }
 
-    .nombre-zapatilla {
-        width: 100%;
-    }
+  .main-detalles {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
-    .imagenes-detalles {
-        width: 50%;
-        margin: auto;
-    }
+  .nombre-zapatilla {
+    width: 100%;
+  }
 
-    .especificaciones {
-        width: 45%;
-        margin: auto;
-    }
+  .imagenes-detalles {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .card-especificaciones {
-        display: flex;
-        align-items: center;
-    }
+  .views-img {
+    width: 106px;
+  }
 
-    .descripcion-detalles {
-        display: contents;
-    }
+  .main-img {
+    margin: 0;
+  }
 
-    .card-descripcion-detalles {
-        margin: 30px 0;
-        border: solid 2px silver;
-        text-align: center;
-        background-color: white;
-    }
+  .especificaciones {
+    display: flex;
+    width: 45%;
+    margin: auto;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-    .card-descripcion-detalles h4 {
-        border-bottom: 2px solid silver;
-        font-size: 20px;
-        background-color: white;
-    }
+  .card-especificaciones {
+    display: flex;
+    height: 310px;
+    align-items: center;
+  }
+
+  .descripcion-detalles {
+    display: contents;
+  }
+
+  .card-descripcion-detalles {
+    margin: 30px 0;
+    border: solid 2px silver;
+    text-align: center;
+    background-color: #35353596;
+    color: white;
+  }
+
+  .card-descripcion-detalles h4 {
+    border-bottom: 2px solid silver;
+    font-size: 20px;
+  }
 }
 
-
 /* DESKTOP */
-@media (min-width:1024px) {
-    .imagenes-detalles {
-        width: 40%;
-    }
-
-    .especificaciones {
-        width: 50%;
+@media (min-width: 1024px) {
+  .especificaciones {
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    }
+  }
 }

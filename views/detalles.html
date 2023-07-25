@@ -58,68 +58,70 @@
         <!-- Titulo -->
         <h2 class="nombre-zapatilla">nombre zapatilla</h2>
         <!-- Imagenes -->
-        <div class="imagenes-detalles">
-            <div class="img-principal">
-                <img src="/img/zapa-1.jpg" class="main-img" alt="imagen">
+        <div class="main-section-imagenes">
+            <div class="imagenes-detalles">
+                <div class="img-principal">
+                    <img src="/img/zapa-1.jpg" class="main-img" alt="imagen">
+                </div>
+                <div class="img-otros">
+                    <img src="/img/zapa-2.jpg" class="views-img" alt="imagen2">
+                    <img src="/img/zapa-3.jpg" class="views-img" alt="imagen3">
+                    <img src="/img/zapa-4.jpg" class="views-img" alt="imagen4">
+                </div>
             </div>
-            <div class="img-otros">
-                <img src="/img/zapa-2.jpg" class="views-img" alt="imagen2">
-                <img src="/img/zapa-3.jpg" class="views-img" alt="imagen3">
-                <img src="/img/zapa-4.jpg" class="views-img" alt="imagen4">
-            </div>
+            <!-- Especificaciones -->
+            <aside class="especificaciones">
+                <div class="card-especificaciones">
+                    <!-- precio -->
+                    <p class="precio">Precio: $39.900</p>
+                    <!-- Talle -->
+                    <form class="talle" action="#">
+                        <p>Talle:</p>
+                        <label for="select"></label>
+                        <select name="talle" id="select">
+                            <option disabled selected>None</option>
+                            <option value="1">36</option>
+                            <option value="2">37</option>
+                            <option value="3">38</option>
+                            <option value="4">39</option>
+                            <option value="4">40</option>
+                            <option value="4">41</option>
+                            <option value="4">42</option>
+                            <option value="4">43</option>
+                            <option value="4">44</option>
+                            <option value="4">45</option>
+                        </select>
+                    </form>
+                    <!-- Color -->
+                    <div class="color">
+                        <p>Color:</p>
+                        <div class="color-1"></div>
+                        <div class="color-2"></div>
+                    </div>
+                    <!-- Cantidad -->
+                    <form class="cantidad" action="#">
+                        <p>Cantidad:</p>
+                        <label for="cantidad"></label>
+                        <button type="button">-</button>
+                        <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                        <button type="button">+</button>
+                    </form>
+                    <!-- Botones -->
+                    <div class="carrito">
+                        <a href="/carrito">Comprar</a>
+                        <a href="">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+                <!-- Descripcion -->
+                <div class="descripcion-detalles">
+                    <div class="card-descripcion-detalles">
+                        <h4>descripcion</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate neque repellat aliquam
+                            consequuntur veniam fuga in maxime sequi unde ratione!</p>
+                    </div>
+                </div>
+            </aside>
         </div>
-        <!-- Especificaciones -->
-        <aside class="especificaciones">
-            <div class="card-especificaciones">
-                <!-- precio -->
-                <p class="precio">Precio: $39.900</p>
-                <!-- Talle -->
-                <form class="talle" action="#">
-                    <p>Talle:</p>
-                    <label for="select"></label>
-                    <select name="talle" id="select">
-                        <option disabled selected>None</option>
-                        <option value="1">36</option>
-                        <option value="2">37</option>
-                        <option value="3">38</option>
-                        <option value="4">39</option>
-                        <option value="4">40</option>
-                        <option value="4">41</option>
-                        <option value="4">42</option>
-                        <option value="4">43</option>
-                        <option value="4">44</option>
-                        <option value="4">45</option>
-                    </select>
-                </form>
-                <!-- Color -->
-                <div class="color">
-                    <p>Color:</p>
-                    <div class="color-1"></div>
-                    <div class="color-2"></div>
-                </div>
-                <!-- Cantidad -->
-                <form class="cantidad" action="#">
-                    <p>Cantidad:</p>
-                    <label for="cantidad"></label>
-                    <button type="button">-</button>
-                    <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
-                    <button type="button">+</button>
-                </form>
-                <!-- Botones -->
-                <div class="carrito">
-                    <a href="/carrito">Comprar</a>
-                    <a href="">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </div>
-            <!-- Descripcion -->
-            <div class="descripcion-detalles">
-                <div class="card-descripcion-detalles">
-                    <h4>descripcion</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate neque repellat aliquam
-                        consequuntur veniam fuga in maxime sequi unde ratione!</p>
-                </div>
-            </div>
-        </aside>
         <!-- Prodcutos similares -->
         <article class="productos-similares">
             <h4>Productos similares</h4>
