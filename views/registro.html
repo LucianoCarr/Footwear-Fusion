@@ -8,11 +8,123 @@
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <head>
-    </head>
+    <header>
+
+        <!-- user login link -->
+        <div class="header--conteiner-user">
+            <button class="header-user">
+                <i class="fa-solid fa-user" style="color: #fafafa;"></i>
+            </button>
+        </div>
+
+
+        <nav class="header--conteiner-nav">
+         
+                <!-- burger icon -->
+                <button class="header--button-bars">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- logo -->
+                <a class="header--link-logo" href="/"><img src="/img/logo-transform(black).png" alt=""></a>
+
+                <!-- title -->
+                <h1>FootwearFusion</h1>
+
+                <!-- search bar | DESKTOP -->
+                <form action="" class="header-form">
+                    <input type="text" placeholder="Buscar">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+
+                <!-- shopping cart icon -->
+                <button class="header--button-car">
+                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"style="Color:#444444"></i></a>
+                </button>
+
+            <!-- links navigation -->
+            
+                <ul class="header--navbar">
+                    <li><a href="">HOME</a></li>                    
+                    <li><a href="">HOMBRE</a></li>
+                    <li><a href="">MUJER</a></li>
+                    <li><a href="">OFERTAS</a></li>
+                    <li><a href="">ABOUT</a></li>
+                </ul>
+          
+
+        </nav>
+
+    </header>
     <main>
+        <div class="card-login">
+            <form action="./home.html" class="formulario">
+                <div class="casillas-registro">
+                    <label for="text"></label>
+                    <input class="formulario-casillas id="name" name="name" type="text" placeholder="Nombre">
+                </div>
+                <div class="casillas-registro">
+                    <label for="text2"></label>
+                    <input class="formulario-casillas id="lastname" name="lastname" type="text" placeholder="Apellido">
+                </div>
+                <div class="casillas-registro">
+                    <label for="email"></label>
+                    <input class="formulario-casillas id="email" type="email" name="email" placeholder="Email">
+                </div>
+                    <div class="casillas-registro">
+                        <label for="password"></label>
+                        <input class="formulario-casillas id="password" type="password" name="password" placeholder="Elegi tu Contraseña">
+                    </div>
+                    <div class="casillas-registro">
+                        <label for="password2"></label>
+                        <input class="formulario-casillas id="password2" type="password" name="password2" placeholder="Confirma tu Contraseña">
+                    </div>
+                    <div class="formulario-boton">
+                        <button class="boton" type="submit">Enviar</button>
+                    </div>
+                    <div class="formulario-boton">
+                        <button class="boton-2" type="reset">Borrar</button>
+                    </div>
+            </form>
+        </div>
     </main>
-    <footer>
-    </footer>
+    <footer class="home-footer">
+        <section class="home-footer-section">
+           <div class="home-footer-section-div">
+               <h5>CONTACTANOS</h5>
+               <ul>
+               <li> algo@gmail.com</li>
+               <li>  152354687</li>
+               <li> calle falsa 123</li>
+               </ul>
+           </div>
+
+           <div class="home-footer-section-div">
+               <h5>HORARIOS</h5>
+               <p>Lunes a Sabados de 9:30 a 18hs</p>
+           </div>
+
+           <div class="home-footer-section-div">
+               <h5>REDES</h5>
+               <ul>
+                   <li><i class="fa-brands fa-facebook"></i></li>
+                   <li><i class="fa-brands fa-instagram"></i></li>
+                   <li><i class="fa-brands fa-twitter"></i></li>
+                   </ul>
+           </div>
+
+           <div class="home-footer-section-div">
+               <h5>ACERCA DE</h5>
+               <p>VER MAS <i class="fa-solid fa-chevron-down"></i></p>
+           </div>
+
+          
+
+
+            
+          
+
+        </section>
+   </footer>
 </body>
 </html>

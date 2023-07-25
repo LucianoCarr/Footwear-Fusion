@@ -1,0 +1,8 @@
+/* Botones */
+.boton-2 {
+    width: 95%;
+        background-color: red;
+        color: white;
+        padding: 8px;
+        margin-bottom: 20px;
+}
