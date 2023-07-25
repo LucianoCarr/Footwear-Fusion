@@ -14,7 +14,7 @@
 main {
   background-color: var(--colorFondo);
 }
-/* 
+
 main {
   background-color: transparent;
 }
@@ -27,4 +27,4 @@ body {
       rgba(255, 255, 255, 0.2) 100%
     ),
     url(../img/Colorful-Neon-Splatter-Paint-Designs-On-Black-Background-67848278-1.png);
-}  */
+} 
