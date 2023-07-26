@@ -82,13 +82,14 @@ body {
     flex-grow: 1 ;
     color: white ;
     outline: none ;
+    font-size: .9rem;
 }
 
 .header-form button {
     background: none ;
     border: none ;
     color: white ;
-    font-size: 10px !important;   
+    font-size: .9rem;  
 }
 .header-form button i {
     padding: 5px ;
