@@ -181,19 +181,19 @@
 
 /* TABLET */
 @media (min-width: 768px) {
-  .main-section-imagenes {
-    display: flex;
-    flex-direction: row;
-  }
-
   .main-detalles {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
-
+  
   .nombre-zapatilla {
     width: 100%;
+  }
+
+  .main-section-imagenes {
+    display: flex;
+    flex-direction: row;
   }
 
   .imagenes-detalles {
