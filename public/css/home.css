@@ -124,13 +124,17 @@
     
 }
 
+
+
 .home-main-filtro button{
     display: flex;
     margin: 8px 8px 8px; 
-    
-     
+    background-color: #35353596;
+    border: 1px solid silver;
+    color: white;
     
 }
+
 
 .home-main-button-filtro{
     display: flex; 
