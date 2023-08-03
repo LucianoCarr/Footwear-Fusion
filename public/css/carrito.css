@@ -2,6 +2,9 @@
     padding: 1px 10px 35px 10px;
     margin: 0 auto;
 }
+.carrito_conteiner h4,.carrito_conteiner p{
+    margin: 5px 0 5px 0;
+}
 
 /* .carrito__conteiner_rgba{
     background-color: rgba(255, 255, 255, 0.85);
@@ -46,6 +49,7 @@
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid silver;
+    align-items: center;
 }
 
 .carrito__article {
@@ -66,6 +70,19 @@
     border: 1px solid black;
     width: 15px;
     height: 15px;
+}
+.carrito_addProduc{
+    display: flex;
+    gap: 2px;
+}
+.carrito_sum-rest{
+    display: flex;
+    flex-direction: column;
+}
+.carrito__input_number{
+    border: none;
+    background: none;
+    text-align: center;
 }
 
 .carrito__trash_conteiner {
