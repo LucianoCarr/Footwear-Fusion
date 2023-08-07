@@ -1,18 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/d7bd81806f.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
 </head>
+
 <body>
-    <head>
-    </head>
-    <main>
+    <header>
+
+        <!-- user login link -->
+        <div class="header--conteiner-user">
+            <button class="header-user">
+                <i class="fa-solid fa-user" style="color: #fafafa;"></i>
+            </button>
+        </div>
+
+
+        <nav class="header--conteiner-nav">
+
+            <!-- burger icon -->
+            <button class="header--button-bars">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- logo -->
+            <a class="header--link-logo" href="/"><img src="/img/logo-transform(black).png" alt=""></a>
+
+            <!-- title -->
+            <h1>FootwearFusion</h1>
+
+            <!-- search bar | DESKTOP -->
+            <form action="" class="header-form">
+                <input type="text" placeholder="Buscar">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+
+            <!-- shopping cart icon -->
+            <button class="header--button-car">
+                <a href="/carrito"><i class="fa-solid fa-cart-shopping" style="Color:#444444"></i></a>
+            </button>
+
+            <!-- links navigation -->
+
+            <ul class="header--navbar">
+                <li><a href="">HOME</a></li>
+                <li><a href="">HOMBRE</a></li>
+                <li><a href="">MUJER</a></li>
+                <li><a href="">OFERTAS</a></li>
+                <li><a href="">ABOUT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="carrito_main">
+        <div class="carrito__conteiner_rgba">
+            <section class="carrito_conteiner">
+                <h2>Carrito de compras</h2>
+                <div>
+                    <article class="carrito__article">
+                        <div class="carrito__conteinerImg">
+                            <img src="/img/zapa-1.jpg" alt="">
+                        </div>
+                        <div class="carrito__conteiner_card">
+                            <div>
+                                <div>
+                                    <h4>Detalle</h4>
+                                    <p>Lorem, ipsum.</p>
+                                </div>
+                                <div>
+                                    <h4>Talle</h4>
+                                    <label for="select"></label>
+                                    <select name="talle" id="select">
+                                        <option disabled selected>None</option>
+                                        <option value="1">36</option>
+                                        <option value="2">37</option>
+                                        <option value="3">38</option>
+                                        <option value="4">39</option>
+                                        <option value="4">40</option>
+                                        <option value="4">41</option>
+                                        <option value="4">42</option>
+                                        <option value="4">43</option>
+                                        <option value="4">44</option>
+                                        <option value="4">45</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <h4>Color</h4>
+                                    <div class="circle"></div>
+                                </div>
+                                <div>
+                                    <h4>Precio</h4>
+                                    <p>$1000</p>
+                                </div>
+                                <div>
+                                    <h4>Cantidad</h4>
+                                    <label for="cantidad">
+                                        <button type="button">-</button>
+                                        <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                        <button type="button">+</button>
+                                    </label>
+                                </div>
+                                <div>
+                                    <h4>Distribuidor</h4>
+                                    <p>Lorem, ipsum.</p>
+                                </div>
+                                <div>
+                                    <h4>Precio Subtotal</h4>
+                                    <p>$1000</p>
+                                </div>
+
+                            </div>
+                            <div class="carrito__trash_conteiner">
+                                <button class="carrito_trash"><i class="fa-solid fa-trash"
+                                        style="color: #444444;"></i></button>
+                            </div>
+
+                        </div>
+
+                    </article>
+                    <article class="carrito__article">
+                        <div class="carrito__conteinerImg">
+                            <img src="/img/zapa-otro-3.jpg" alt="">
+                        </div>
+                        <div class="carrito__conteiner_card">
+                            <div>
+                                <div>
+                                    <h4>Detalle</h4>
+                                    <p>Lorem, ipsum.</p>
+                                </div>
+                                <div>
+                                    <h4>Talle</h4>
+                                    <label for="select"></label>
+                                    <select name="talle" id="select">
+                                        <option disabled selected>None</option>
+                                        <option value="1">36</option>
+                                        <option value="2">37</option>
+                                        <option value="3">38</option>
+                                        <option value="4">39</option>
+                                        <option value="4">40</option>
+                                        <option value="4">41</option>
+                                        <option value="4">42</option>
+                                        <option value="4">43</option>
+                                        <option value="4">44</option>
+                                        <option value="4">45</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <h4>Color</h4>
+                                    <div class="circle1"></div>
+                                </div>
+                                <div>
+                                    <h4>Precio</h4>
+                                    <p>$1000</p>
+                                </div>
+                                <div>
+                                    <h4>Cantidad</h4>
+                                    <label for="cantidad">
+                                        <button type="button">-</button>
+                                        <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                        <button type="button">+</button>
+                                    </label>
+                                </div>
+                                <div>
+                                    <h4>Distribuidor</h4>
+                                    <p>Lorem, ipsum.</p>
+                                </div>
+                                <div>
+                                    <h4>Precio Subtotal</h4>
+                                    <p>$1000</p>
+                                </div>
+
+                            </div>
+                            <div class="carrito__trash_conteiner">
+                                <button class="carrito_trash"><i class="fa-solid fa-trash"
+                                        style="color: #444444;"></i></button>
+                            </div>
+
+                        </div>
+                    </article>
+                    <div class="carrito__conteiner_resumen">
+                        <div class="carrito__conteiner_arti">
+                            <div class="carrito_arti">
+                                <p>Total de articulos:</p>
+                                <h4>2</h4>
+                            </div>
+                            <div class="carrito_total">
+                                <p>Total:</p>
+                                <h4>$2000</h4>
+                            </div>
+                        </div>
+                        <div class="carrito__conteiner_finCompr">
+                            <a href=""><button class="carrito__button_finCompr" type="button">Finalizar compra</button></a>
+
+                        </div>
+                        <div class="carrito__conteiner_nextTrash">
+                            <a href="/">Continuar comprando</a>
+                            <a href="">Vaciar carro</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="swiper mySwiper">
+                <div class="carrito__conteiner_recomended">
+                    <h2>Recomendaciones para vos</h2>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/detalles"><img src="/img/zapa-otro-1.jpg" alt="" width="100%"></a>
+                        <div class="carrito__conteiner_prec-title-carousel">
+                            <h4>$1000</h4>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/detalles"><img src="/img/zapa-otro-2.jpg" alt="" width="100%"></a>
+                        <div class="carrito__conteiner_prec-title-carousel">
+                            <h4>$1000</h4>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/detalles"><img src="/img/zapa-otro-3.jpg" alt="" width="100%"></a>
+                        <div class="carrito__conteiner_prec-title-carousel">
+                            <h4>$1000</h4>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/detalles"><img src="/img/zapa-otro-4.jpg" alt="" width="100%"></a>
+                        <div class="carrito__conteiner_prec-title-carousel">
+                            <h4>$1000</h4>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/detalles"><img src="/img/zapa-otro-1.jpg" alt="" width="100%"></a>
+                        <div class="carrito__conteiner_prec-title-carousel">
+                            <h4>$1000</h4>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/detalles"><img src="/img/zapa-otro-2.jpg" alt="" width="100%"></a>
+                        <div class="carrito__conteiner_prec-title-carousel">
+                            <h4>$1000</h4>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/detalles"><img src="/img/zapa-otro-3.jpg" alt="" width="100%"></a>
+                        <div class="carrito__conteiner_prec-title-carousel">
+                            <h4>$1000</h4>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
+    <footer class="home-footer">
+        <section class="home-footer-section">
+            <div class="home-footer-section-div">
+                <h5>CONTACTANOS</h5>
+                <ul>
+                    <li> algo@gmail.com</li>
+                    <li> 152354687</li>
+                    <li> calle falsa 123</li>
+                </ul>
+            </div>
+
+            <div class="home-footer-section-div">
+                <h5>HORARIOS</h5>
+                <p>Lunes a Sabados de 9:30 a 18hs</p>
+            </div>
+
+            <div class="home-footer-section-div">
+                <h5>REDES</h5>
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+            </div>
+
+            <div class="home-footer-section-div">
+                <h5>ACERCA DE</h5>
+                <p>VER MAS <i class="fa-solid fa-chevron-down"></i></p>
+            </div>
+        </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/js/carousel-swiper.js"></script>
 </body>
+
 </html>

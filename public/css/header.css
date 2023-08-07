@@ -3,7 +3,6 @@ body {
 }
 
 .header--conteiner-user {
-    /* background-color: var(--colorGrisOscuro); */
     background-color: var(--colorGrisOscuro);
     display: flex;
     justify-content: flex-end;
@@ -18,7 +17,8 @@ body {
 
 .header--conteiner-nav {
     padding: 15px;
-    background-color: #f2e9e4;
+    background-color: #e9ecef;
+    /* background-color: rgba(233, 236, 239, 0.5); */
     border-bottom: 1px solid var(--colorGrisOscuro);
     display: grid;
     grid-template-areas: "burger logo cart"
@@ -90,13 +90,16 @@ body {
     color: white;
     border-left: 1px solid white;
 }
+.header-form button i {
+    padding: 5px;
+}
 
 .header--navbar {
     display: none;
     grid-area: links;
 }
 
-@media (min-width:768px) {
+@media (min-width:520px) {
     .header--conteiner-nav img{
         width: 60px;
     }

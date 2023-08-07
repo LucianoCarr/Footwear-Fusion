@@ -1,0 +1,168 @@
+/*main*/
+
+.home-main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+.carrusel{
+    display: none;
+}
+
+.home-main-filtro{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    
+}
+
+.home-main-button-filtro{
+    display: none;
+     
+    
+}
+
+.home-main-filtro button{
+    background-color: var(--colorFondo);
+    color: black;
+    width: 100%;
+    border: none; 
+    padding-top: 10px;
+     
+}
+
+.home-main-contenedor{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+       
+}
+
+.home-main-contenedor-card{
+    width:100%;
+    border: solid 1px black;
+    position: relative;
+    background-color: rgba(242, 233, 228, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-main-button-ojo{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    border: none; 
+    background-color: transparent;
+     
+}
+
+.home-main-button-cora{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+
+    border: none; 
+    background-color: transparent;
+     
+}
+
+.home-main-img{
+    width: 100%;
+}
+
+.home-main-button-compra{
+    margin-top: 15px;
+    border-radius: 30%;
+    height: 35px;
+    color: white;
+    background-color: black;
+
+    border: solid 1px gray;
+
+}
+
+.home-main-text{
+    margin-top: 10px ;
+    text-align: center;
+}
+
+.home-main-precio{
+    margin: 15px 0 15px 0;
+}
+
+
+/*tablet*/
+@media (min-width: 361px){
+
+.home-main{
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.carrusel{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+} 
+
+.home-main-filtro{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    
+}
+
+.home-main-filtro button{
+    display: flex;
+    margin: 8px 8px 8px; 
+    
+     
+    
+}
+
+.home-main-button-filtro{
+    display: flex; 
+    margin: 8px 8px 8px;
+     
+}
+
+.home-main-contenedor{
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    
+}
+
+.home-main-contenedor-card{
+    width: 49%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+}
+
+
+/*desktop*/
+@media (min-width: 769px){
+
+.home-main-contenedor-card{
+    width: 28%;
+    }
+
+}
