@@ -20,7 +20,7 @@
         <!-- user login link -->
         <div class="header--conteiner-user">
             <button class="header-user">
-                <i class="fa-solid fa-user" style="color: #fafafa;"></i>
+                <a href="/login"><i class="fa-solid fa-user" style="color: #fafafa;"></i></a>
             </button>
         </div>
 
@@ -46,15 +46,16 @@
 
             <!-- shopping cart icon -->
             <button class="header--button-car">
-                <a href="/carrito"><i class="fa-solid fa-cart-shopping" style="Color:#444444"></i></a>
+                <a href="/cart"><i class="fa-solid fa-cart-shopping" style="Color:#444444"></i></a>
             </button>
 
             <!-- links navigation -->
 
             <ul class="header--navbar">
-                <li><a href="">HOME</a></li>
+                <li><a href="/">HOME</a></li>
                 <li><a href="">HOMBRE</a></li>
                 <li><a href="">MUJER</a></li>
+                <li><a href="">NIÑOS</a></li>
                 <li><a href="">OFERTAS</a></li>
                 <li><a href="">ABOUT</a></li>
             </ul>
@@ -69,8 +70,8 @@
         <div class="carrito__conteiner_rgba">
             <h2>Carrito de compras</h2>
             <section class="carrito_conteiner">
-                
 
+                <!-- VIEW TABLET AND DESKTO -->
                 <table class="table table-secondary carrito__view-tablet-desktop">
                     <thead>
                         <tr>
@@ -86,11 +87,15 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- PRODUCTO 1 -->
                         <tr>
+                            <!-- IMAGE -->
                             <td scope="col"> <img src="/img/zapa-1.jpg" style="width: 100px;" alt=""></td>
+                            <!-- DETAIL -->
                             <td scope="col">
                                 <p>Lorem, ipsum.</p>
                             </td>
+                            <!-- SIZE -->
                             <td scope="col"><select name="talle" id="select">
                                     <option disabled selected>None</option>
                                     <option value="1">36</option>
@@ -104,31 +109,46 @@
                                     <option value="4">44</option>
                                     <option value="4">45</option>
                                 </select></td>
+                            <!-- COLOR -->
                             <td scope="col">
                                 <div class="circle"></div>
                             </td>
+                            <!-- PRICE -->
                             <td scope="col">
                                 <p>$1000</p>
                             </td>
+                            <!-- QUANTITY -->
                             <td scope="col"><label for="cantidad">
-                                    <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                    <div class="carrito_addProduc">
+                                        <div class="carrito_sum-rest">
+                                            <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
+                                            <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
+                                        </div>
+                                        <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                    </div>
                                 </label></td>
+                            <!-- PROVIDER -->
                             <td scope="col">
                                 <p>Lorem, ipsum.</p>
                             </td>
+                            <!-- SUBPRICE -->
                             <td scope="col">
                                 <p>$1000</p>
                             </td>
+                            <!-- TRASH -->
                             <td scope="col"> <button class="carrito_trash"><i class="fa-solid fa-trash"
                                         style="color: #444444;"></i></button></td>
                         </tr>
 
                         <!-- PRODUCTO 2 -->
                         <tr>
+                            <!-- IMAGE -->
                             <td scope="col"> <img src="/img/zapa-otro-3.jpg" style="width: 100px;" alt=""></td>
+                            <!-- DETAIL -->
                             <td scope="col">
                                 <p>Lorem, ipsum.</p>
                             </td>
+                            <!-- SIZE -->
                             <td scope="col"><select name="talle" id="select">
                                     <option disabled selected>None</option>
                                     <option value="1">36</option>
@@ -142,38 +162,54 @@
                                     <option value="4">44</option>
                                     <option value="4">45</option>
                                 </select></td>
+                            <!-- COLOR -->
                             <td scope="col">
                                 <div class="circle1"></div>
                             </td>
+                            <!-- PRICE -->
                             <td scope="col">
                                 <p>$1000</p>
                             </td>
+                            <!-- QUANTITY -->
                             <td scope="col"><label for="cantidad">
-                                    <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                <div class="carrito_addProduc">
+                                    <div class="carrito_sum-rest">
+                                        <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
+                                        <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
+                                    </div>
+                                    <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                </div>
                                 </label></td>
+                            <!-- PROVIDER -->
                             <td scope="col">
                                 <p>Lorem, ipsum.</p>
                             </td>
+                            <!-- SUBPRICE -->
                             <td scope="col">
                                 <p>$1000</p>
                             </td>
+                            <!-- TRASH -->
                             <td scope="col"> <button class="carrito_trash"><i class="fa-solid fa-trash"
                                         style="color: #444444;"></i></button></td>
                         </tr>
                     </tbody>
                 </table>
-
+                <!-- VIEW MOBILE -->
                 <div class="carrito__view-mobile">
+                    <!-- PRODUCTO 1 -->
                     <article class="carrito__article">
                         <div class="carrito__conteiner_card">
                             <div class="carrito__card_container-items">
+                                <!-- IMAGE -->
                                 <div class="carrito__conteinerImg carrito__card_info carrito__card_info-img">
                                     <img src="/img/zapa-1.jpg" alt="">
                                 </div>
+                                <!-- DETAIL -->
                                 <div class="carrito__card_info carrito__card_info-detail">
                                     <h4>Detalle</h4>
                                     <p>Lorem, ipsum.</p>
                                 </div>
+                                <!-- SIZE -->
                                 <div class="carrito__card_info carrito__card_info-size">
                                     <h4>Talle</h4>
                                     <label for="select"></label>
@@ -191,24 +227,35 @@
                                         <option value="4">45</option>
                                     </select>
                                 </div>
+                                <!-- COLOR -->
                                 <div class="carrito__card_info carrito__card_info-color">
                                     <h4>Color</h4>
                                     <div class="circle"></div>
                                 </div>
+                                <!-- PRICE -->
                                 <div class="carrito__card_info carrito__card_info-price">
                                     <h4>Precio</h4>
                                     <p>$1000</p>
                                 </div>
+                                <!-- QUANTITY -->
                                 <div class="carrito__card_info carrito__card_info-quantity">
                                     <h4>Cantidad</h4>
                                     <label for="cantidad">
-                                        <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                        <div class="carrito_addProduc">
+                                            <div class="carrito_sum-rest">
+                                                <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
+                                                <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
+                                            </div>
+                                            <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                        </div>
                                     </label>
                                 </div>
+                                <!-- PROVIDER -->
                                 <div class="carrito__card_info carrito__card_info-provider">
                                     <h4>Distribuidor</h4>
                                     <p>Lorem, ipsum.</p>
                                 </div>
+                                <!-- SUBPRICE -->
                                 <div class="carrito__card_info carrito__card_info-subprice">
                                     <h4>Precio Subtotal</h4>
                                     <p>$1000</p>
@@ -222,17 +269,20 @@
                             </div>
                         </div>
                     </article>
-
+                    <!-- PRODUCTO 2 -->
                     <article class="carrito__article">
                         <div class="carrito__conteiner_card">
                             <div class="carrito__card_container-items">
+                                <!-- IMAGE -->
                                 <div class="carrito__conteinerImg carrito__card_info carrito__card_info-img">
                                     <img src="/img/zapa-otro-3.jpg" alt="">
                                 </div>
+                                <!-- DETAIL -->
                                 <div class="carrito__card_info carrito__card_info-detail">
                                     <h4>Detalle</h4>
                                     <p>Lorem, ipsum.</p>
                                 </div>
+                                <!-- SIZE -->
                                 <div class="carrito__card_info carrito__card_info-size">
                                     <h4>Talle</h4>
                                     <label for="select"></label>
@@ -250,29 +300,39 @@
                                         <option value="4">45</option>
                                     </select>
                                 </div>
+                                <!-- COLOR -->
                                 <div class="carrito__card_info carrito__card_info-color">
                                     <h4>Color</h4>
                                     <div class="circle1"></div>
                                 </div>
+                                <!-- PRICE -->
                                 <div class="carrito__card_info carrito__card_info-price">
                                     <h4>Precio</h4>
                                     <p>$1000</p>
                                 </div>
+                                <!-- QUANTITY -->
                                 <div class="carrito__card_info carrito__card_info-quantity">
                                     <h4>Cantidad</h4>
                                     <label for="cantidad">
-                                        <input id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
-                                    </label>
+                                        <div class="carrito_addProduc">
+                                            <div class="carrito_sum-rest">
+                                                <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
+                                                <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
+                                            </div>
+                                            <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
+                                        </div>                                    </label>
                                 </div>
+                                <!-- PROVIDER -->
                                 <div class="carrito__card_info carrito__card_info-provider">
                                     <h4>Distribuidor</h4>
                                     <p>Lorem, ipsum.</p>
                                 </div>
+                                <!-- SUBPRICE -->
                                 <div class="carrito__card_info carrito__card_info-subprice">
                                     <h4>Precio Subtotal</h4>
                                     <p>$1000</p>
                                 </div>
-
+                                <!-- TRASH -->
                                 <div class="carrito__trash_conteiner">
                                     <h4></h4>
                                     <button class="carrito_trash"><i class="fa-solid fa-trash"
@@ -282,6 +342,7 @@
                         </div>
                     </article>
                 </div>
+                <!-- RESUMEN -->
                 <div class="carrito__box_resumen">
                     <div class="carrito__conteiner_resumen">
                         <div class="carrito__conteiner_arti">
@@ -307,12 +368,13 @@
                 </div>
 
             </section>
-
+            <!-- CARROUSEL -->
             <div class="swiper mySwiper">
                 <div class="carrito__conteiner_recomended">
                     <h2>Recomendaciones para vos</h2>
                 </div>
                 <div class="swiper-wrapper">
+                    <!-- ARTICLE 1 -->
                     <div class="swiper-slide">
                         <a href="/detalles"><img src="/img/zapa-otro-1.jpg" alt="" width="100%"></a>
                         <div class="carrito__conteiner_prec-title-carousel">
@@ -320,6 +382,7 @@
                             <p>Lorem, ipsum dolor.</p>
                         </div>
                     </div>
+                    <!-- ARTICLE 2 -->
                     <div class="swiper-slide">
                         <a href="/detalles"><img src="/img/zapa-otro-2.jpg" alt="" width="100%"></a>
                         <div class="carrito__conteiner_prec-title-carousel">
@@ -327,6 +390,7 @@
                             <p>Lorem, ipsum dolor.</p>
                         </div>
                     </div>
+                    <!-- ARTICLE 3 -->
                     <div class="swiper-slide">
                         <a href="/detalles"><img src="/img/zapa-otro-3.jpg" alt="" width="100%"></a>
                         <div class="carrito__conteiner_prec-title-carousel">
@@ -334,6 +398,7 @@
                             <p>Lorem, ipsum dolor.</p>
                         </div>
                     </div>
+                    <!-- ARTICLE 4 -->
                     <div class="swiper-slide">
                         <a href="/detalles"><img src="/img/zapa-otro-4.jpg" alt="" width="100%"></a>
                         <div class="carrito__conteiner_prec-title-carousel">
@@ -341,6 +406,7 @@
                             <p>Lorem, ipsum dolor.</p>
                         </div>
                     </div>
+                    <!-- ARTICLE 5 -->
                     <div class="swiper-slide">
                         <a href="/detalles"><img src="/img/zapa-otro-1.jpg" alt="" width="100%"></a>
                         <div class="carrito__conteiner_prec-title-carousel">
@@ -348,6 +414,7 @@
                             <p>Lorem, ipsum dolor.</p>
                         </div>
                     </div>
+                    <!-- ARTICLE 6 -->
                     <div class="swiper-slide">
                         <a href="/detalles"><img src="/img/zapa-otro-2.jpg" alt="" width="100%"></a>
                         <div class="carrito__conteiner_prec-title-carousel">
@@ -355,6 +422,7 @@
                             <p>Lorem, ipsum dolor.</p>
                         </div>
                     </div>
+                    <!-- ARTICLE 7 -->
                     <div class="swiper-slide">
                         <a href="/detalles"><img src="/img/zapa-otro-3.jpg" alt="" width="100%"></a>
                         <div class="carrito__conteiner_prec-title-carousel">

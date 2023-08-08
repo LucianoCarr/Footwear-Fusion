@@ -16,8 +16,11 @@
     flex-direction: column;
     align-items: center;
     display: flex;
+    background-color: #35353596;
     
 }
+
+ 
 
 .home-main-button-filtro{
     display: none;
@@ -26,11 +29,12 @@
 }
 
 .home-main-filtro button{
-    background-color: var(--colorFondo);
-    color: black;
     width: 100%;
-    border: none; 
     padding-top: 10px;
+    background-color: #35353596;
+    border: 1px solid silver;
+    color: white; 
+     
      
 }
 
@@ -52,6 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .home-main-button-ojo{
@@ -80,12 +85,15 @@
 
 .home-main-button-compra{
     margin-top: 15px;
-    border-radius: 30%;
+    border-radius: 35%;
     height: 35px;
     color: white;
     background-color: black;
 
     border: solid 1px gray;
+    display: flex;
+    align-items: center;
+    padding: 15px; 
 
 }
 
@@ -121,6 +129,7 @@
     flex-direction: row;
     align-items: center;
     display: flex;
+   
     
 }
 
@@ -132,6 +141,8 @@
     background-color: #35353596;
     border: 1px solid silver;
     color: white;
+    height: 60px;
+    font-size: 12px;
     
 }
 
@@ -168,5 +179,11 @@
 .home-main-contenedor-card{
     width: 28%;
     }
+
+.home-main-filtro button{
+        justify-content: center;
+        font-size: 15px;
+        
+    }    
 
 }

@@ -1,4 +1,14 @@
+.card-login{
+    background: transparent;
+}
 /* Botones */
+.casillas-registro{
+    border-radius: 30%;
+}
+.formulario-casillas{
+    background-color: gainsboro;
+    padding: 5px;
+}
 .boton-2 {
     width: 95%;
         background-color: red;
