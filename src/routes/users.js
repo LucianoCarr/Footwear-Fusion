@@ -1,10 +1,8 @@
-var express = require('express');
+const express = require('express');
 const usersControllers = require('../controller/usersControllers');
-var router = express.Router();
+const router = express.Router();
 
-/* GET users listing. */
-router.get('/cart', usersControllers.cart);
-router.get('/details', usersControllers.details);
+/* /users */
 router.get('/login', usersControllers.login);
 router.get('/register', usersControllers.register);
 
