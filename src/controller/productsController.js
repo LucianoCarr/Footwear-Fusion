@@ -9,6 +9,6 @@ module.exports = {
         return res.render('add');
        },
        edit : (req, res) => {
-        return res.render('edit');
+        return res.render('productEdit');
        },
 }

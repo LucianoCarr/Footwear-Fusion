@@ -1,7 +1,7 @@
 .main-login,.main-register{
   padding: 10px;
   display: flex;
-  margin: 40px 0;
+  margin: 100px 0;
 }
 .main-login h3,.main-register h3{
   padding: 10px;
