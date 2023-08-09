@@ -6,7 +6,7 @@ module.exports = {
         return res.render('details');
        },
        add : (req, res) => {
-        return res.render('add');
+        return res.render('producAdd');
        },
        edit : (req, res) => {
         return res.render('productEdit');

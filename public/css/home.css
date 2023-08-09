@@ -87,14 +87,17 @@
     margin-top: 15px;
     border-radius: 35%;
     height: 35px;
-    color: white;
     background-color: black;
-
     border: solid 1px gray;
     display: flex;
     align-items: center;
     padding: 15px; 
 
+}
+
+.home-main-button-compra a{
+    color: white;
+    text-decoration: none;
 }
 
 .home-main-text{
