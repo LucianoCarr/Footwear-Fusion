@@ -5,7 +5,7 @@ const router = express.Router();
 /* /produtcs */
 router.get('/cart', productsController.cart)
 router.get('/details', productsController.details)
-router.get('/productadd', productsController.add)
-router.get('/productedit', productsController.edit)
+router.get('/add', productsController.add)
+router.get('/edit', productsController.edit)
 
 module.exports = router;
