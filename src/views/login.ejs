@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head',{
-        title : 'Footwear-Fusion | Login',
-        
-      }) %>
-<body>
-    <%- include('partials/header') %>
-    <main class="main-login">
-        <div class="card-login">
-            <h3>LOGIN</h3>
-            <form action="" class="formulario">
-                <div class="casillas-registro">
-                    <label for="email"></label>
-                    <input class="formulario-casillas" id="email" type="email" name="email" placeholder="Email">
-                </div>
-                <div class="casillas-registro">
-                    <label for="password"></label>
-                    <input class="formulario-casillas" id="password" type="password" name="password" placeholder="Contraseña">
-                </div>
-                <div class="formulario-boton">
-                    <button class="boton" type="submit">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </main>
-    <%- include('partials/footer') %>
-</body>
+<%- include('partials/head',{ title : 'Footwear-Fusion | Login' , }) %>
+    <%- include('partials/bootstrap') %>
+
+        <body>
+            <%- include('partials/header') %>
+                <main class="main-login">
+                    <div class="card-login">
+                        <div class="login_conteiner-img">
+                            <img src="/img/logo-transform(whrite).png" alt="">
+                        </div>
+                        <h3>LOGIN</h3>
+                        <form action="" class="formulario">
+                            <div class="casillas-registro">
+                                <label for="email">Email</label>
+                                <input class="formulario-casillas" id="email" type="email" name="email">
+                            </div>
+                            <div class="casillas-registro1">
+                                <label for="password">Contraseña</label>
+                                <input class="formulario-casillas" id="password" type="password" name="password">
+                                <i class="fa-solid fa-eye"></i>
+                                <div>
+                                    <a href="">Has olvidado tu contraseña?</a>
+                                </div>
+                            </div>
+                            <div class="formulario-boton">
+                                <button class="boton" type="submit">iniciar sesion</button>
+                            </div>
+                            <a href="">Terminos & Condiciones</a>
+
+                        </form>
+                    </div>
+                </main>
+                <%- include('partials/footer') %>
+        </body>
+
 </html>
