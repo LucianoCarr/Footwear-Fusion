@@ -39,7 +39,7 @@
 }
 
 .main-img {
-  height: 310px;
+  height: 355px;
   border: 1px solid silver;
   margin: 10px 0;
 }
@@ -218,7 +218,7 @@
 
   .card-especificaciones {
     display: flex;
-    height: 310px;
+    height: 355px;
     align-items: center;
   }
 
