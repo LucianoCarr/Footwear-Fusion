@@ -1,87 +1,143 @@
-.main-login,.main-register{
-  padding: 10px;
-  display: flex;
-  margin: 100px 0;
+.main-login,
+.main-register {
+  padding: 60px 20px;
 }
-.main-login h3,.main-register h3{
+
+/* .main-login{
+  background-color:rgba(94, 84, 142, 1) ;
+} */
+.main-login h3,
+.main-register h3 {
   padding: 10px;
-  border-bottom: 1px solid silver;
+  color: #e5e5e5;
   width: 100%;
   font-size: 23px;
 }
-.card-login,.card-register {
-  background-color: #ebebeb;
+
+.card-login,
+.card-register {
   width: 100%;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
   margin: auto;
   padding: 5px;
+  border: 1px solid #e5e5e5;
+}
+
+.card-login {
+  background-color: rgba(94, 84, 142, 1);
+  box-shadow: 0px 0px 25px 0px rgba(94, 84, 142, 1);
+}
+
+
+.login_conteiner-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.login_conteiner-img img {
+  width: 40px;
 }
 
 
 
 /* casillas */
-.casillas-registro {
+.casillas-registro,.casillas-registro1 {
   padding: 5px 20px;
   margin: 10px;
+  color: #e5e5e5;
+  font-size: 14px;
 }
 
-.formulario-casillas {
+.casillas-registro1 {
+  position: relative;
+}
+
+.casillas-registro1 i {
+  position: absolute;
+  top: 35px;
+  right: 25px;
+  font-size: 17px;
+  background-color: transparent;
+}
+
+.casillas-registro1 div {
+  display: flex;
+  justify-content: end;
+  padding: 2px 5px 0 0;
+}
+
+
+.formulario a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.formulario-casillas{
   border: none;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 4px 10px;
   width: 100%;
-  padding: 10px;
   font-size: 17px;
+  color: #e5e5e5;
+  transition: all 0.7s;
+  border-bottom: 1px solid azure;
 }
 
-.formulario-casillas:focus {
+.formulario-casillas:focus{
   outline: none;
-  border: 1px solid blue;
-  box-shadow: 0 0 10px cornflowerblue;
+  border-bottom: 1px solid #e27396;
 }
-
+.formulario-casillas{
+  background-color: rgba(94, 84, 142, 1);
+}
 /* BOTON */
 .formulario-boton {
   text-align: center;
 }
 
 .boton {
-  background-color: rgb(27, 27, 234);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  margin: 15px 0;
+  background-color: transparent;
+  color: #e5e5e5;
+  padding: 5px 20px;
+  border: 1px solid #e5e5e5;
+  margin: 30px 0;
   border-radius: 5px;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
+  transition: all 0.5s;
 }
+
+.boton:hover {
+  color: #e27396;
+  border: 1px solid #e27396;
+}
+
 @media (min-width: 520px) {
-  .card-login,.card-register {
-    width: 60%;
-  }
-  .register-nameAndLastname{
-    display: flex;
-    margin-top: 15px;
-  }
-  .name,.lastname{
+
+  .card-login,
+  .card-register {
     width: 50%;
   }
-  .conteiner-passwords{
-    display: flex;
-  }
-  .register-password,.register-password1{
-    width: 50%;
-  }
-  .casillas-registro {
-    padding: 5px;
-    margin: 5px 0;
-  }
+
 }
+
 @media (min-width: 1024px) {
-  .card-login,.card-register {
+
+  .card-login,
+  .card-register {
     width: 40%;
-  }
+}
+}
+@media (min-width: 1440px) {
+
+  .card-login,
+  .card-register {
+    width: 25%;
+}
 }

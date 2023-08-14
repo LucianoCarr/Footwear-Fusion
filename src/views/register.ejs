@@ -5,47 +5,50 @@
     title : 'Footwear-Fusion | Register',
     
   }) %>
+  <%- include('partials/bootstrap') %>
 
 <body>
     <%- include('partials/header') %>
     <main class="main-register">
 
         <div class="card-register">
+            <div class="login_conteiner-img">
+                <img src="/img/logo-transform(whrite).png" alt="">
+            </div>
             <h3>REGISTRO</h3>
             <form action="./home.html" class="formulario">
                 <div class="register-nameAndLastname">
                     <div class="casillas-registro name">
-                        <label for="text"></label>
-                        <input class="formulario-casillas" id="name" name="name" type="text" placeholder="Nombre">
+                        <label for="text">Nombre</label>
+                        <input class="formulario-casillas-register" id="name" name="name" type="text">
                     </div>
                     <div class="casillas-registro lastname">
-                        <label for="text2"></label>
-                        <input class="formulario-casillas" id="lastname" name="lastname" type="text"
-                            placeholder="Apellido">
+                        <label for="text2">Apellido</label>
+                        <input class="formulario-casillas-register" id="lastname" name="lastname" type="text">
                     </div>
                 </div>
                 <div class="casillas-registro">
-                    <label for="email"></label>
-                    <input class="formulario-casillas" id="email" type="email" name="email" placeholder="Email">
+                    <label for="email">Email</label>
+                    <input class="formulario-casillas-register" id="email" type="email" name="email">
                 </div>
                 <div class="conteiner-passwords">
-                    <div class="casillas-registro register-password">
-                        <label for="password"></label>
-                        <input class="formulario-casillas" id="password" type="password" name="password"
-                            placeholder="Contraseña">
+                    <div class="casillas-registro1 register-password">
+                        <label for="password">Contraseña</label>
+                        <input class="formulario-casillas-register" id="password" type="password" name="password">
+                        <i class="fa-solid fa-eye"></i>
                     </div>
-                    <div class="casillas-registro register-password1">
-                        <label for="password2"></label>
-                        <input class="formulario-casillas" id="password2" type="password" name="password2"
-                            placeholder="Confirmar Contraseña">
+                    <div class="casillas-registro1 register-password1">
+                        <label for="password2">Confirmar Contraseña</label>
+                        <input class="formulario-casillas-register" id="password2" type="password" name="password2">
+                        <i class="fa-solid fa-eye"></i>
                     </div>
                 </div>
                 <div class="conteiner-buttons">
                     <div class="formulario-boton">
-                        <button class="boton" type="submit">Enviar</button>
+                        <button class="boton1" type="submit">Crear Cuenta</button>
                     </div>
                     <div class="formulario-boton">
-                        <button class="boton-2" type="reset">Borrar</button>
+                        <button class="boton-2" type="reset">Cancelar</button>
                     </div>
                 </div>
             </form>
