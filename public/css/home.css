@@ -122,9 +122,8 @@
 
 .home-main-carrusel{
     display: block;
-    width: 100%;
-    height: auto;
-    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
 } 
 
 
