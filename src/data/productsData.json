@@ -1,0 +1,101 @@
+[{
+    "id" :1,
+    "name" : "Zapatillas Dc Blancas",
+    "price" : 50000,
+    "discount": 15,
+    "category": "women",
+    "description": "lorem",
+    "image" : "dc-blanca01.webp",
+    "color" : "blanco"
+    
+
+},
+{
+    "id" :2,
+    "name" : "Zapatillas Dc negras",
+    "price" : 30000,
+    "discount": 0,
+    "category": "man",
+    "description": "lorem",
+    "image" : "dc-negra01.webp",
+    "color" : "negro"
+    
+
+},
+
+{
+    "id" :3,
+    "name" : "Zapatillas de mujer blancas",
+    "price" : 53000,
+    "discount": 0,
+    "category": "women",
+    "description": "lorem",
+    "image" : "mujer01_blanca-01.webp",
+    "color" : "blanco"
+    
+
+},
+
+{
+    "id" :4,
+    "name" : "Zapatillas de mujer",
+    "price" : 70000,
+    "category": "women",
+    "description": "lorem",
+    "image" : "mujer01.webp",
+    "color" : "blanco"
+    
+
+},
+
+{
+    "id" :5,
+    "name" : "Zapatillas Nike",
+    "price" : 20000,
+    "discount": 10,
+    "category": "women",
+    "description": "lorem",
+    "image" : "nike-blanca01.webp",
+    "color" : "blanco"
+    
+
+},
+{
+    "id" :6,
+    "name" : "Nike",
+    "price" : 80000,
+    "discount": 25,
+    "category": "man",
+    "description": "lorem",
+    "image" : "nike-negra01.webp",
+    "color" : "negro"
+    
+
+},
+{
+    "id" :7,
+    "name" : "Zapatillas vans",
+    "price" : 66000,
+    "discount": 30,
+    "category": "man",
+    "description": "lorem",
+    "image" : "vans-01.webp",
+    "color" : "negro"
+    
+
+},
+
+{
+    "id" :8,
+    "name" : "Vans",
+    "price" : 88000,
+    "discount": 3,
+    "category": "women",
+    "description": "lorem",
+    "image" : "vans01.webp",
+    "color" : "negro"
+    
+
+}
+
+]
