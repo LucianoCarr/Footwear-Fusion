@@ -11,6 +11,10 @@
     display: none;
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon  {
+    background-color: rgb(216, 29, 216);
+}
+
 .home-main-filtro{
     width: 100%;
     flex-direction: column;
