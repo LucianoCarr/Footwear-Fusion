@@ -20,10 +20,29 @@ const controller = {
     add : (req, res) => {
      return res.render('productAdd');
     },
-    edit : (req, res) => {
-     return res.render('productEdit');
-    }
+    edit: (req, res) => {
+      const product = products.find(product => product.id === +req.params.id)
+      return res.render('productEdit',{
+        ...product,
+      })
+    },
+    modify: (req,res) => {
+    const {name,price,discount,category,description} = req.body
 
-};
+    const productsUpdated = products.map(product => {
+      if (product.id == +req.params.id){
+        product.name = name.trim();
+        product.price = +price;
+        product.discount = +discount;
+        product.category = category;
+        product.description = description.trim()
+      }
+      return product
+    })
+    fs.writeFileSync(productsFilePath,JSON.stringify(products,null,3),'utf-8');
+    
+    return res.redirect('/products')
+    }
+}
 
 module.exports = controller;
