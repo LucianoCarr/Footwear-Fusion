@@ -1,81 +1,90 @@
 [
    {
       "id": 1,
-      "name": "Zapatillas Dc Blancas",
-      "price": 50000,
+      "name": "Zapatillas Dc Shoes Pure White",
+      "price": 57.999,
       "discount": 15,
       "category": "women",
-      "description": "lorem",
+      "description": "Parte superior en cuero, nobuk y/o ante \n Forro de malla \n Lengüeta y cuello acolchados con espuma, para mayor confort y sujeción \n Suela fabricada con tira lateral envolvente \n Suela media de goma resistente a la abrasión \n  Dibujo Pill Pattern de marca registrada por DC",
       "image": "dc-blanca01.webp",
-      "color": "blanco"
+      "color": "blanco",
+      "stock" : true
    },
    {
       "id": 2,
-      "name": "Zapatillas Dc negras",
-      "price": 30000,
+      "name": "Zapatillas Dc Shoes Tonik Tx ( Blo)",
+      "price": 38.999,
       "discount": 0,
       "category": "man",
-      "description": "lorem",
+      "description": "Calzado skate icónico de la marca + Suela vulcanizada +\nCapellada de textil de algodón + Plantilla desmontable de EVA + Suela de caucho\nvulcanizada para un mejor agarre y menor desgaste + Excelente calce y confort.",
       "image": "dc-negra01.webp",
-      "color": "negro"
+      "color": "negro",
+      "stock" : true
    },
    {
       "id": 3,
-      "name": "Zapatillas de mujer blancas",
-      "price": 53000,
+      "name": "Zapatillas Moda Mujer Urbana Plataforma",
+      "price": 30000,
       "discount": 0,
       "category": "women",
-      "description": "lorem",
+      "description": "Zapatillas de Moda Urbanas de Mujer \n Material: Eco cuero \nAltura de la plataforma: 3 cm adelante / 4 cm atrás",
       "image": "mujer01_blanca-01.webp",
-      "color": "blanco"
+      "color": "blanco",
+      "stock" : true
    },
    {
       "id": 4,
-      "name": "Zapatillas de mujer",
-      "price": 70000,
+      "name": "Zapatilla Urbana Mujer Moda Multicolor Liviana Air 1851",
+      "price": 17.999,
       "category": "women",
-      "description": "lorem",
+      "description": "Ideales para todo tipo de rutinas y actividades. Su diseño y confort las convierten en el calzado perfecto.",
       "image": "mujer01.webp",
-      "color": "blanco"
+      "color": "blanco",
+      "stock" : true
    },
    {
       "id": 5,
-      "name": "Zapatillas Nike",
-      "price": 20000,
+      "name": "Nike Air Force 1 '07 Mid",
+      "price": 89.999,
       "discount": 10,
       "category": "women",
-      "description": "lorem",
+      "description": "El Air Force 1 '07 tiene todo lo que amas: revestimientos nítidos, detalles audaces\n y la cantidad perfecta de destellos para que brille tu calzado. El cuello acolchado de corte medio con\n un cierre por contacto clásico combina versatilidad de estilo con la comodidad del básquetbol",
       "image": "nike-blanca01.webp",
-      "color": "blanco"
+      "color": "blanco",
+      "stock" : true
    },
    {
       "id": 6,
-      "name": "Nike",
-      "price": 80000,
+      "name": "Nike Air Force 1 LE",
+      "price": 65.999,
       "discount": 25,
       "category": "man",
-      "description": "lorem",
+      "description": "El Nike Air Force 1 LE trae de vuelta al ícono de la cancha del año 82 en un estilo \ncompletamente blanco o negro de uso diario. La durabilidad, la sensación y el Air siguen ahí para \naquellos que aman un clásico.",
       "image": "nike-negra01.webp",
-      "color": "negro"
+      "color": "negro",
+      "stock" : true
    },
    {
       "id": 7,
-      "name": "Zapatillas vans",
-      "price": 66000,
+      "name": "Zapatillas Vans Sk8-hi Black/white Unisex - Big Buey",
+      "price": 56.990,
       "discount": 30,
       "category": "man",
-      "description": "lorem",
+      "description": "Las Sk8-Hi de Vans son unas zapatillas ligeras, de caña alta y con cordones, con \n amortiguación en el talón para más confort, una puntera reforzada que garantiza la durabilidad y cuello \n acolchado para mayor sujeción y flexibilidad. La distintiva suela waffle de caucho proporciona un \n agarre más firme",
       "image": "vans-botitas01.webp",
-      "color": "negro"
+      "color": "negro",
+      "stock" : false
    },
    {
       "id": 8,
-      "name": "Vans",
-      "price": 88000,
+      "name": "Zapatillas Vans Old Skool - Wetting Day",
+      "price": 48.999,
       "discount": 3,
       "category": "women",
-      "description": "lorem",
+      "description": "confort, agarre y ajuste que necesitas para llevar tus limites al máximo\n una nueva suela UltraCush , suela waffle invertida para control máximo",
       "image": "vans01.webp",
-      "color": "negro"
+      "color": "negro",
+      "stock" : false
+
    }
 ]
