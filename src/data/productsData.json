@@ -1,128 +1,128 @@
 [
    {
       "id": 1,
-      "name": "Zapatillas Dc Shoes Pure White",
-      "price": 57.999,
+      "name": "Fresh Foam X 1080v12 Wide",
+      "price": 89.099,
       "discount": 15,
-      "category": "women",
-      "description": "Parte superior en cuero, nobuk y/o ante \n Forro de malla \n Lengüeta y cuello acolchados con espuma, para mayor confort y sujeción \n Suela fabricada con tira lateral envolvente \n Suela media de goma resistente a la abrasión \n  Dibujo Pill Pattern de marca registrada por DC",
-      "image": "dc-blanca01.webp",
+      "category": "hombre",
+      "description": "mpeine Hypoknit diseñado para proporcionar áreas estratégicas de sujeción y elasticidad La construcción tipo bootie envuelve el pie para brindar un ajuste ceñido y firme La suela exterior de goma soplada en la parte delantera del pie brinda un rebote superior",
+      "image": "naranja-01.jpg",
       "images": [
-         "dc-blanca02.webp",
-         "dc-blanca03.webp",
-         "dc-blanca04.webp"
+         "naranja-02.jpg",
+         "naranja-03.jpg",
+         "naranja-04.jpg"
       ],
-      "color": "blanco",
+      "color": "naranja",
       "stock" : true
    },
    {
       "id": 2,
-      "name": "Zapatillas Dc Shoes Tonik Tx ( Blo)",
-      "price": 38.999,
+      "name": "Vans Zapatillas U AUTHENTIC",
+      "price":  28.909,
       "discount": 0,
-      "category": "man",
+      "category": "mujer",
       "description": "Calzado skate icónico de la marca + Suela vulcanizada +\nCapellada de textil de algodón + Plantilla desmontable de EVA + Suela de caucho\nvulcanizada para un mejor agarre y menor desgaste + Excelente calce y confort.",
-      "image": "dc-negra01.webp",
+      "image": "azul-01.jpg",
       "images": [
-         "dc-negra02.webp",
-         "dc-negra03.webp",
-         "dc-negra04.webp"
+         "azul-02.jpg",
+         "azul-03.jpg",
+         "azul-04.jpg"
       ],
-      "color": "negro",
+      "color": "azul",
       "stock" : true
    },
    {
       "id": 3,
-      "name": "Zapatillas Moda Mujer Urbana Plataforma",
-      "price": 30000,
+      "name": "BOTITAS JORDAN AIR 7 RETRO CARDINAL",
+      "price": 136.999,
       "discount": 0,
-      "category": "women",
-      "description": "Zapatillas de Moda Urbanas de Mujer \n Material: Eco cuero \nAltura de la plataforma: 3 cm adelante / 4 cm atrás",
-      "image": "mujer01_blanca-01.webp",
+      "category": "hombre",
+      "description": "Botitas Jordan Air 7 Retro Cardinal De Moda Para Hombre Código: Cu9307-106",
+      "image": "blanca-01.webp",
       "images": [
-         "mujer01_blanca-02.webp",
-         "mujer01_blanca-03.webp",
-         "mujer01_blanca-04.webp"
+         "blanca-02.webp",
+         "blanca-03.webp",
+         "blanca-04.webp"
       ],
       "color": "blanco",
       "stock" : true
    },
    {
       "id": 4,
-      "name": "Zapatilla Urbana Mujer Moda Multicolor Liviana Air 1851",
-      "price": 17.999,
+      "name": "Vans Zapatillas K SK8-MID REISSUE V",
+      "price": 29.899,
       "discount": 10,
-      "category": "women",
+      "category": "nene",
       "description": "Ideales para todo tipo de rutinas y actividades. Su diseño y confort las convierten en el calzado perfecto.",
-      "image": "mujer01.webp",
+      "image": "rojo-01.jpg",
       "images": [
-         "mujer02.webp",
-         "mujer03.webp",
-         "mujer04.webp"
+         "rojo-02.jpg",
+         "rojo-03.jpg",
+         "rojo-04.jpg"
       ],
-      "color": "blanco",
+      "color": "rojo",
       "stock" : true
    },
    {
       "id": 5,
-      "name": "Nike Air Force 1 '07 Mid",
-      "price": 89.999,
+      "name": "FuelCell Rebel v3",
+      "price": 81.399,
       "discount": 10,
-      "category": "women",
-      "description": "El Air Force 1 '07 tiene todo lo que amas: revestimientos nítidos, detalles audaces\n y la cantidad perfecta de destellos para que brille tu calzado. El cuello acolchado de corte medio con\n un cierre por contacto clásico combina versatilidad de estilo con la comodidad del básquetbol",
-      "image": "nike-blanca01.webp",
+      "category": "mujer",
+      "description": "Fusionando velocidad y amortiguación, la FuelCell Rebel v3 te aporta la energía que necesitas en tus quehaceres diarios, sesiones de entrenamiento o largas competiciones. Esta zapatilla de running para mujer incorpora la espuma FuelCell de alto rebote que te propulsa a cada zancada y está confeccionada en un empeine de punto técnico muy ligero, con la cantidad justa de estructura para que te desplaces a ritmos muy altos.",
+      "image": "violeta-01.jpg",
       "images": [
-         "nike-blanca02.webp",
-         "nike-blanca03.webp",
-         "nike-blanca04.webp"
+         "violeta-02.jpg",
+         "violeta-03.jpg",
+         "violeta-04.jpg"
       ],
-      "color": "blanco",
+      "color": "violeta",
       "stock" : true
    },
    {
       "id": 6,
-      "name": "Nike Air Force 1 LE",
-      "price": 65.999,
+      "name": "ZAPATILLAS LITE RACER REBOLD",
+      "price": 41.999,
       "discount": 25,
-      "category": "man",
-      "description": "El Nike Air Force 1 LE trae de vuelta al ícono de la cancha del año 82 en un estilo \ncompletamente blanco o negro de uso diario. La durabilidad, la sensación y el Air siguen ahí para \naquellos que aman un clásico.",
-      "image": "nike-negra01.webp",
+      "category": "nene",
+      "description": "Inspiradas en el estilo running, estas zapatillas adidas le imprimen energía deportiva a tu look diario. La amortiguación liviana mantiene tus pies cómodos y preparados para todo lo que te depare el día.",
+      "image": "negra-01.webp",
       "images": [
-         "nike-negra02.webp",
-         "nike-negra03.webp",
-         "nike-negra04.webp"
+         "negra-02.avif",
+         "negra-03.avif",
+         "negra-04.avif"
       ],
       "color": "negro",
       "stock" : true
    },
    {
       "id": 7,
-      "name": "Zapatillas Vans Sk8-hi Black/white Unisex - Big Buey",
-      "price": 56.990,
+      "name": "Nike Air Max SC",
+      "price": 54.999,
       "discount": 30,
-      "category": "man",
-      "description": "Las Sk8-Hi de Vans son unas zapatillas ligeras, de caña alta y con cordones, con \n amortiguación en el talón para más confort, una puntera reforzada que garantiza la durabilidad y cuello \n acolchado para mayor sujeción y flexibilidad. La distintiva suela waffle de caucho proporciona un \n agarre más firme",
-      "image": "vans-botitas01.webp",
+      "category": "hombre",
+      "description": "Con sus líneas simples, el look de atletismo tradicional y, por supuesto, la amortiguación Air visible, el Nike Air Max SC es el toque final perfecto para cualquier atuendo.",
+      "image": "blanco-01.webp",
       "images": [
-         "vans-botitas02.webp",
-         "vans-botitas03.webp",
-         "vans-botitas04.webp"
+         "blanco-02.webp",
+         "blanco-03.webp",
+         "blanco-04.webp"
       ],
-      "color": "negro",
+      "color": "blanco",
       "stock" : false
    },
    {
       "id": 8,
-      "name": "Zapatillas Vans Old Skool - Wetting Day",
-      "price": 48.999,
+      "name": "Nike Free Metcon 5",
+      "price": 82.999,
       "discount": 3,
-      "category": "women",
-      "description": "confort, agarre y ajuste que necesitas para llevar tus limites al máximo\n una nueva suela UltraCush , suela waffle invertida para control máximo",
-      "image": "vans01.webp",
+      "category": "hombre",
+      "description": "Cuando tus entrenamientos se ponen superespecíficos, el Nike Free Metcon 5 te ayuda a llegar a esos lugares profundos para encontrar ese último gramo de fuerza y salir del otro lado en un grito de victoria. Combina estilo con sustancia y flexibilidad en el antepié con estabilidad en la parte superior, perfecto para volar durante un día de cardio o mejorar tu agilidad.",
+      "image": "negro-01.webp",
       "images": [
-         "vans02.webp",
-         "vans03.webp",
-         "vans04.webp"
+         "negro-02.webp",
+         "negro-03.webp",
+         "negro-04.webp"
       ],
       "color": "negro",
       "stock" : false
