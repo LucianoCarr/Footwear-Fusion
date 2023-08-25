@@ -1,93 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head',{
-    title : 'Footwear-Fusion | Editar producto'
-   }) %>
-   <%- include('partials/bootstrap') %>
+<%- include('partials/head',{ title : 'Footwear-Fusion | Editar producto' }) %>
+    <%- include('partials/bootstrap') %>
 
-<body class="productEdit">
-    <%- include('partials/header')  %>
-    <main>
-        <div class="row mx-0">
-            <div class="col-12 col-md-8 mx-auto mt-5 mb-5">
-                <div class="card shadow">
-                    <div class="card-header">
-                        <h4 class="card-title">EDITAR PRODUCTO: <i><%= name %></i></h4>
+        <body class="productEdit">
+            <%- include('partials/header') %>
+                <main>
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-8 mx-auto mt-5 mb-5">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h4 class="card-title">Estas editando: <i>
+                                            <%= name %>
+                                        </i></h4>
+                                </div>
+                                <div class="card-body">
+                                    <form action="/products/edit/<%= id %>?_method=PUT" method="POST" class="row">
+
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label for="name" class="form-label">Título:</label>
+                                            <input type="text" class="form-control" id="title" name="title"
+                                                value="<%= name %>">
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label for="color" class="form-label">Color</label>
+                                            <select class="form-select" aria-label="Default select example" name="color"
+                                                id="color">
+                                                <option value="blanco" <%=color==="blanco" && 'selected' %>>Blanco</option>
+                                                <option value="negro" <%=color==="negro" && 'selected' %>>Negro</option>
+                                                <option value="otros" <%=color==="otros" && 'selected' %>>Otros</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label for="price" class="form-label">Precio</label>
+                                            <input type="number" class="form-control" id="price" name="price"
+                                                value="<%= price %>">
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label for="discount" class="form-label">Descuento</label>
+                                            <input type="number" class="form-control" id="discount" name="discount"
+                                                value="<%= discount %>">
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label for="category" class="form-label">Categoría</label>
+                                            <select class="form-select" aria-label="Default select example"
+                                                name="category" id="category">
+                                                <option value="men" <%= category ==="men" && 'selected' %>>Hombre</option>
+                                                <option value="women" <%= category ==="women" && 'selected' %>>Mujer</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label for="stock" class="form-label">Stock</label>
+                                            <select class="form-select" name="stock" id="stock">
+                                                <option value="true" <%= color ==="true" && 'selected' %>>TRUE</option>
+                                                <option value="false" <%= color ==="false" && 'selected' %>>FALSE</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-center col-md-12 mb-3">
+                                            <img class="img-fluid" src="/img/<%= image %>" alt="">
+                                        </div>
+                                        <label for="image" class="btn btn-success mb-3">Editar imagen</label>
+
+                                        <div class="col-12 mb-3">
+                                            <label for="description" class="form-label">Descripción</label>
+                                            <textarea name="description" id="description" class="form-control"
+                                                style="resize: none;"><%= description %></textarea>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-between gap-2 mb-3">
+                                            <label for="image" class="btn btn-primary">Guardar cambios</label>
+                                            <input type="file" name="image" id="image" hidden>
+                                            <label for="delete-image" class="btn btn-danger">Eliminar</label>
+                                            <input type="file" name="delete-image" id="delete-image" hidden>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <form  action="/products/edit/<%= id %>?_method=PUT" method="POST" class="row">
-                            
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="name" class="form-label">Título:</label>
-                                <input type="text" class="form-control" id="title" name="title" value="<%= name %>">
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="size" class="form-label">Talle</label>
-                                <select class="form-select" aria-label="Default select example" name="size" id="size">
-                                    <option selected hidden>Seleccione...</option>
-                                    <option value="1">35</option>
-                                    <option value="2">36</option>
-                                    <option value="3">37</option>
-                                    <option value="4">38</option>
-                                    <option value="5">39</option>
-                                    <option value="6">40</option>
-                                    <option value="7">41</option>
-                                    <option value="8">42</option>
-                                    <option value="9">43</option>
-                                    <option value="10">44</option>
-                                  </select>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="color" class="form-label">Color</label>
-                                <select class="form-select" aria-label="Default select example" name="color" id="color">
-                                    <option selected hidden>Seleccione...</option>
-                                    <option value="1">Blanco</option>
-                                    <option value="2">Negro</option>
-                                    <option value="3">Otros</option>
-                                  </select>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="category" class="form-label">Categoría</label>
-                                <select class="form-select" aria-label="Default select example" name="category" id="category">
-                                    <option selected hidden>Seleccione...</option>
-                                    <option value="1">Niño</option>
-                                    <option value="2">Hombre</option>
-                                    <option value="3">Mujer</option>
-                                  </select>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="price" class="form-label">Precio</label>
-                                <input type="number" class="form-control" id="price" name="price">
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="stock" class="form-label">Stock</label>
-                                <input type="number" class="form-control" id="stock" name="stock">
-                            </div>
-                            <div class="col-12 d-flex justify-content-center col-md-12 mb-3">
-                                <label for="image" class="btn btn-success">Editar imagen</label>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <label for="description" class="form-label">Descripción</label>
-                               <textarea name="description" id="description" class="form-control" style="resize: none;"></textarea>
-                            </div>
-                            <div class="col-12 d-flex justify-content-between gap-2 mb-3">
-                                <label for="image" class="btn btn-primary">Guardar cambios</label>
-                                <input type="file" name="image" id="image" hidden>
-                                <label for="delete-image" class="btn btn-danger">Eliminar</label>
-                                <input type="file" name="delete-image" id="delete-image" hidden>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </main>
+                </main>
 
 
 
-    <%- include('partials/footer')  %>
+                <%- include('partials/footer') %>
 
-</body>
+        </body>
+
 </html>

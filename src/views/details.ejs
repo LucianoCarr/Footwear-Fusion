@@ -80,6 +80,10 @@
                             <div class="carrito">
                                 <a href="">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
                                 <a href="/products/cart">Comprar</a>
+                                <form action="/products/edit/<%= product.id %>">
+                                    <button class="carrito_trash"><i class="fa-solid fa-pen"
+                                        style="color: #e27396;"></i></button>
+                                </form>
                             </div>
                         </div>
                         <!-- Descripcion -->

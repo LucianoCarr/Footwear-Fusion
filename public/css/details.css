@@ -168,6 +168,8 @@
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.5s;
+  display: flex;
+  align-items: center;
 }
 
 .carrito a:hover {

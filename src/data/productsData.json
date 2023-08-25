@@ -36,10 +36,11 @@
       "id": 4,
       "name": "Zapatilla Urbana Mujer Moda Multicolor Liviana Air 1851",
       "price": 17.999,
+      "discount": 10,
       "category": "women",
       "description": "Ideales para todo tipo de rutinas y actividades. Su diseño y confort las convierten en el calzado perfecto.",
       "image": "mujer01.webp",
-      "color": "blanco",
+      "color": "otros",
       "stock" : true
    },
    {
