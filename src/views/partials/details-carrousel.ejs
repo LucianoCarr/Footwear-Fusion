@@ -1,8 +1,21 @@
-<div class="swiper-slide">
-    <a class="image_swi" href="/products/details/<%= product.id %>"><img src="/img/<%= product.image || 'default-image.png' %>" alt=""
-            width="100%"></a>
-    <div class="carrito__conteiner_prec-title-carousel">
-        <h4>$<%= product.price %></h4>
-        <p><%= product.description %></p>
+<div class="swiper mySwiper">
+    <div class="carrito__conteiner_recomended">
+        <h2>Productos similares</h2>
+    </div>
+    <div class="swiper-wrapper">
+        <% for(let product of products) { %>
+            <div class="swiper-slide">
+                <a class="image_swi" href="/products/details/<%= product.id %>">
+                    <img src="/img/<%= product.image || 'default-image.png' %>" alt=""
+                        width="100%"></a>
+                        <div class="carrito__conteiner_prec-title-carousel">
+                            <h4>$<%= product.price %></h4>
+                            <p><%= product.description %></p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <% } %>
+        
     </div>
 </div>
+

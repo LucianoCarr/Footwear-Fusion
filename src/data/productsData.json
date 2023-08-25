@@ -7,6 +7,11 @@
       "category": "women",
       "description": "Parte superior en cuero, nobuk y/o ante \n Forro de malla \n Lengüeta y cuello acolchados con espuma, para mayor confort y sujeción \n Suela fabricada con tira lateral envolvente \n Suela media de goma resistente a la abrasión \n  Dibujo Pill Pattern de marca registrada por DC",
       "image": "dc-blanca01.webp",
+      "images": [
+         "dc-blanca02.webp",
+         "dc-blanca03.webp",
+         "dc-blanca04.webp"
+      ],
       "color": "blanco",
       "stock" : true
    },
@@ -18,6 +23,11 @@
       "category": "man",
       "description": "Calzado skate icónico de la marca + Suela vulcanizada +\nCapellada de textil de algodón + Plantilla desmontable de EVA + Suela de caucho\nvulcanizada para un mejor agarre y menor desgaste + Excelente calce y confort.",
       "image": "dc-negra01.webp",
+      "images": [
+         "dc-negra02.webp",
+         "dc-negra03.webp",
+         "dc-negra04.webp"
+      ],
       "color": "negro",
       "stock" : true
    },
@@ -29,6 +39,11 @@
       "category": "women",
       "description": "Zapatillas de Moda Urbanas de Mujer \n Material: Eco cuero \nAltura de la plataforma: 3 cm adelante / 4 cm atrás",
       "image": "mujer01_blanca-01.webp",
+      "images": [
+         "mujer01_blanca-02.webp",
+         "mujer01_blanca-03.webp",
+         "mujer01_blanca-04.webp"
+      ],
       "color": "blanco",
       "stock" : true
    },
@@ -39,6 +54,11 @@
       "category": "women",
       "description": "Ideales para todo tipo de rutinas y actividades. Su diseño y confort las convierten en el calzado perfecto.",
       "image": "mujer01.webp",
+      "images": [
+         "mujer02.webp",
+         "mujer03.webp",
+         "mujer04.webp"
+      ],
       "color": "blanco",
       "stock" : true
    },
@@ -50,6 +70,11 @@
       "category": "women",
       "description": "El Air Force 1 '07 tiene todo lo que amas: revestimientos nítidos, detalles audaces\n y la cantidad perfecta de destellos para que brille tu calzado. El cuello acolchado de corte medio con\n un cierre por contacto clásico combina versatilidad de estilo con la comodidad del básquetbol",
       "image": "nike-blanca01.webp",
+      "images": [
+         "nike-blanca02.webp",
+         "nike-blanca03.webp",
+         "nike-blanca04.webp"
+      ],
       "color": "blanco",
       "stock" : true
    },
@@ -61,6 +86,11 @@
       "category": "man",
       "description": "El Nike Air Force 1 LE trae de vuelta al ícono de la cancha del año 82 en un estilo \ncompletamente blanco o negro de uso diario. La durabilidad, la sensación y el Air siguen ahí para \naquellos que aman un clásico.",
       "image": "nike-negra01.webp",
+      "images": [
+         "nike-negra02.webp",
+         "nike-negra03.webp",
+         "nike-negra04.webp"
+      ],
       "color": "negro",
       "stock" : true
    },
@@ -72,6 +102,11 @@
       "category": "man",
       "description": "Las Sk8-Hi de Vans son unas zapatillas ligeras, de caña alta y con cordones, con \n amortiguación en el talón para más confort, una puntera reforzada que garantiza la durabilidad y cuello \n acolchado para mayor sujeción y flexibilidad. La distintiva suela waffle de caucho proporciona un \n agarre más firme",
       "image": "vans-botitas01.webp",
+      "images": [
+         "vans-botitas02.webp",
+         "vans-botitas03.webp",
+         "vans-botitas04.webp"
+      ],
       "color": "negro",
       "stock" : false
    },
@@ -83,6 +118,11 @@
       "category": "women",
       "description": "confort, agarre y ajuste que necesitas para llevar tus limites al máximo\n una nueva suela UltraCush , suela waffle invertida para control máximo",
       "image": "vans01.webp",
+      "images": [
+         "vans02.webp",
+         "vans03.webp",
+         "vans04.webp"
+      ],
       "color": "negro",
       "stock" : false
 
