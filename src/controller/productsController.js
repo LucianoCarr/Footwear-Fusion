@@ -8,18 +8,23 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
   
   cart : (req, res) => {
-    return res.render('cart');
+    return res.render('cart',{
+      products
+    });
   },
   
    details : (req, res) => {
     const product = products.find(product => product.id === +req.params.id)
      return res.render('details', {
-      product
+      product,
+      products
      });
     },
+
     add : (req, res) => {
      return res.render('productAdd');
     },
+    
     edit: (req, res) => {
       const product = products.find(product => product.id === +req.params.id)
       return res.render('productEdit',{
@@ -46,20 +51,3 @@ const controller = {
 }
 
 module.exports = controller;
-
-
-
-/* module.exports = {
-    cart : (req, res) => {
-       return res.render('cart');
-      },
-      details : (req, res) => {
-        return res.render('details');
-       },
-       add : (req, res) => {
-        return res.render('productAdd');
-       },
-       edit : (req, res) => {
-        return res.render('productEdit');
-       },
-} */

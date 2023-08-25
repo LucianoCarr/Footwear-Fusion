@@ -85,58 +85,6 @@
                                         style="color: #e27396;"></i></button></td>
                         </tr>
 
-                        <!-- PRODUCTO 2 -->
-                        <tr>
-                            <!-- IMAGE -->
-                            <td scope="col"> <img src="/img/zapa-otro-3.jpg" style="width: 100px;" alt=""></td>
-                            <!-- DETAIL -->
-                            <td scope="col">
-                                <p>Lorem, ipsum.</p>
-                            </td>
-                            <!-- SIZE -->
-                            <td scope="col"><select name="talle" id="select">
-                                    <option disabled selected>None</option>
-                                    <option value="1">36</option>
-                                    <option value="2">37</option>
-                                    <option value="3">38</option>
-                                    <option value="4">39</option>
-                                    <option value="4">40</option>
-                                    <option value="4">41</option>
-                                    <option value="4">42</option>
-                                    <option value="4">43</option>
-                                    <option value="4">44</option>
-                                    <option value="4">45</option>
-                                </select></td>
-                            <!-- COLOR -->
-                            <td scope="col">
-                                <div class="circle1"></div>
-                            </td>
-                            <!-- PRICE -->
-                            <td scope="col">
-                                <p>$1000</p>
-                            </td>
-                            <!-- QUANTITY -->
-                            <td scope="col"><label for="cantidad">
-                                <div class="carrito_addProduc">
-                                    <div class="carrito_sum-rest">
-                                        <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
-                                        <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
-                                    </div>
-                                    <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
-                                </div>
-                                </label></td>
-                            <!-- PROVIDER -->
-                            <td scope="col">
-                                <p>Lorem, ipsum.</p>
-                            </td>
-                            <!-- SUBPRICE -->
-                            <td scope="col">
-                                <p>$1000</p>
-                            </td>
-                            <!-- TRASH -->
-                            <td scope="col"> <button class="carrito_trash"><i class="fa-solid fa-trash"
-                                        style="color: #e27396;"></i></button></td>
-                        </tr>
                     </tbody>
                 </table>
                 <!-- VIEW MOBILE -->
@@ -314,70 +262,9 @@
 
             </section>
             <!-- CARROUSEL -->
-            <div class="swiper mySwiper">
-                <div class="carrito__conteiner_recomended">
-                    <h2>Recomendaciones para vos</h2>
-                </div>
-                <div class="swiper-wrapper">
-                    <!-- ARTICLE 1 -->
-                    <div class="swiper-slide">
-                        <a class="image_swi" href="/products/details"><img  src="/img/zapa-otro-1.jpg" alt="" width="100%"></a>
-                        <div class="carrito__conteiner_prec-title-carousel">
-                            <h4>$1000</h4>
-                            <p>Lorem, ipsum dolor.</p>
-                        </div>
-                    </div>
-                    <!-- ARTICLE 2 -->
-                    <div class="swiper-slide">
-                        <a href="/products/details"><img src="/img/zapa-otro-3.jpg" alt="" width="100%"></a>
-                        <div class="carrito__conteiner_prec-title-carousel">
-                            <h4>$1000</h4>
-                            <p>Lorem, ipsum dolor.</p>
-                        </div>
-                    </div>
-                    <!-- ARTICLE 3 -->
-                    <div class="swiper-slide">
-                        <a href="/products/details"><img src="/img/zapa-otro-1.jpg" alt="" width="100%"></a>
-                        <div class="carrito__conteiner_prec-title-carousel">
-                            <h4>$1000</h4>
-                            <p>Lorem, ipsum dolor.</p>
-                        </div>
-                    </div>
-                    <!-- ARTICLE 4 -->
-                    <div class="swiper-slide">
-                        <a href="/products/details"><img src="/img/zapa-otro-3.jpg" alt="" width="100%"></a>
-                        <div class="carrito__conteiner_prec-title-carousel">
-                            <h4>$1000</h4>
-                            <p>Lorem, ipsum dolor.</p>
-                        </div>
-                    </div>
-                    <!-- ARTICLE 5 -->
-                    <div class="swiper-slide">
-                        <a href="/products/details"><img src="/img/zapa-otro-1.jpg" alt="" width="100%"></a>
-                        <div class="carrito__conteiner_prec-title-carousel">
-                            <h4>$1000</h4>
-                            <p>Lorem, ipsum dolor.</p>
-                        </div>
-                    </div>
-                    <!-- ARTICLE 6 -->
-                    <div class="swiper-slide">
-                        <a href="/products/details"><img src="/img/zapa-otro-3.jpg" alt="" width="100%"></a>
-                        <div class="carrito__conteiner_prec-title-carousel">
-                            <h4>$1000</h4>
-                            <p>Lorem, ipsum dolor.</p>
-                        </div>
-                    </div>
-                    <!-- ARTICLE 7 -->
-                    <div class="swiper-slide">
-                        <a href="/products/details"><img src="/img/zapa-otro-1.jpg" alt="" width="100%"></a>
-                        <div class="carrito__conteiner_prec-title-carousel">
-                            <h4>$1000</h4>
-                            <p>Lorem, ipsum dolor.</p>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
+         
+                    <%- include('partials/details-carrousel') %>
+       
         </div>
     </main>
     <%- include('partials/footer') %>

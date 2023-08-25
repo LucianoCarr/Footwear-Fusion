@@ -25,9 +25,9 @@
                             <img src="/img/<%= product.image || 'default-image.png' %>" class="main-img" alt="imagen">
                         </div>
                         <div class="img-otros">
-                            <img src="/img/<%= product.image || 'default-image.png' %>" class="views-img" alt="imagen2">
-                            <img src="/img/<%= product.image || 'default-image.png' %>" class="views-img" alt="imagen3">
-                            <img src="/img/<%= product.image || 'default-image.png' %>" class="views-img" alt="imagen4">
+                            <% for(let image of product.images) { %>
+                            <img src="/img/<%= image || 'default-image.png' %>" class="views-img" alt="imagen2">
+                            <% } %>
                         </div>
                     </div>
                     <!-- Especificaciones -->
@@ -95,28 +95,10 @@
                         </div>
                     </aside>
                 </div>
-                <div class="swiper mySwiper">
-                    <div class="carrito__conteiner_recomended">
-                        <h2>Productos similares</h2>
-                    </div>
-                    <div class="swiper-wrapper">
-                        <!-- ARTICLE 1 -->
-                        <%- include('partials/details-carrousel') %>
-                        <!-- ARTICLE 2 -->
-                        <%- include('partials/details-carrousel') %>
-                        <!-- ARTICLE 3 -->
-                        <%- include('partials/details-carrousel') %>
-                        <!-- ARTICLE 4 -->
-                        <%- include('partials/details-carrousel') %>
-                        <!-- ARTICLE 5 -->
-                        <%- include('partials/details-carrousel') %>
-                        <!-- ARTICLE 6 -->
-                        <%- include('partials/details-carrousel') %>
-                        <!-- ARTICLE 7 -->
-                        <%- include('partials/details-carrousel') %>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
+
+                 <!-- CARROUSEL -->
+                <%- include('partials/details-carrousel') %>
+                
             </main>
             <%- include('partials/footer') %>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
