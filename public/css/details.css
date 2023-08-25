@@ -131,17 +131,8 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: black;
-  border: solid 1px black;
 }
 
-.color-2 {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: white;
-  border: solid 1px silver;
-}
 
 .cantidad {
   display: flex;

@@ -12,7 +12,7 @@
          "naranja-03.jpg",
          "naranja-04.jpg"
       ],
-      "color": "naranja",
+      "color": "orange.png",
       "stock" : true
    },
    {
@@ -28,7 +28,7 @@
          "azul-03.jpg",
          "azul-04.jpg"
       ],
-      "color": "azul",
+      "color": "blue.png",
       "stock" : true
    },
    {
@@ -44,7 +44,7 @@
          "blanca-03.webp",
          "blanca-04.webp"
       ],
-      "color": "blanco",
+      "color": "white.avif",
       "stock" : true
    },
    {
@@ -60,7 +60,7 @@
          "rojo-03.jpg",
          "rojo-04.jpg"
       ],
-      "color": "rojo",
+      "color": "red.webp",
       "stock" : true
    },
    {
@@ -76,7 +76,7 @@
          "violeta-03.jpg",
          "violeta-04.jpg"
       ],
-      "color": "violeta",
+      "color": "purpple.avif",
       "stock" : true
    },
    {
@@ -92,7 +92,7 @@
          "negra-03.avif",
          "negra-04.avif"
       ],
-      "color": "negro",
+      "color": "black.jpg",
       "stock" : true
    },
    {
@@ -108,7 +108,7 @@
          "blanco-03.webp",
          "blanco-04.webp"
       ],
-      "color": "blanco",
+      "color": "white.avif",
       "stock" : false
    },
    {
@@ -124,7 +124,7 @@
          "negro-03.webp",
          "negro-04.webp"
       ],
-      "color": "negro",
+      "color": "black.jpg",
       "stock" : false
 
    }
