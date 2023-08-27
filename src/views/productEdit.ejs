@@ -112,11 +112,18 @@
                                         </div>
                                         <div class="col-12 d-flex justify-content-between gap-2 mb-3">
                                             <button type="submit" class="btn btn-primary">Guardar cambios</label>
-                                            <input type="file" name="image" id="image" hidden>
-                                            <button type="reset" class="btn btn-danger">Eliminar</label>
-                                            <input type="file" name="delete-image" id="delete-image" hidden>
+                                        
                                         </div>
                                     </form>
+                                   
+                                        <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete" <%= id %>>
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                    <%- include('partials/modalDelete',{
+                                        id,
+                                        name
+                                    }) %>
                                 </div>
 
                             </div>
