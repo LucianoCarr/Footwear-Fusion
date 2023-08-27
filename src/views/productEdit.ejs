@@ -16,21 +16,42 @@
                                         </i></h4>
                                 </div>
                                 <div class="card-body">
-                                    <form action="/products/edit/<%= id %>?_method=PUT" method="POST" class="row">
+                                    <form action="/products/edit/<%= id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
+
+                                        <div class="col-12 col-md-4 mb-3">
+                                            <img class="img-fluid border border-danger-subtle img-product-edit" src="/img/<%= image %>" alt="">
+                                        </div>
+
+                                        
+                                        
+                                        <div class="col-12 col-md-8 mb-3 d-inline-flex align-items-center align-content-start gap-2 justify-content-between justify-content-md-start flex-wrap">
+                                            <div class="col-12 mb-3">
+                                                <input type="checkbox" checked value="true" class="form-check-input me-2" name="rememberImg" id="rememberImg">
+                                                <label for="rememberImg" class="form-label">Conservar imagenes secundarias</label>
+                                            </div>   
+                                            <%if(images.length){%>
+                                                <% images.forEach((img) => { %>
+                                                    <img class="img-fluid border border-primary-subtle img-secondary-product-edit" src="/img/<%= img %>" alt="">
+                                                <%})%>
+                                                <%}else{%>
+                                                    <h4>No hay imagenes secundarias</h4>
+                                                <%}%>
+                                            </div>
 
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="name" class="form-label">Título:</label>
-                                            <input type="text" class="form-control" id="title" name="title"
+                                            <label for="name" class="form-label">Título</label>
+                                            <input type="text" class="form-control" id="title" name="name"
                                                 value="<%= name %>">
                                         </div>
+                                        
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="color" class="form-label">Color</label>
-                                            <select class="form-select" aria-label="Default select example" name="color"
-                                                id="color">
-                                                <option value="blanco" <%=color==="blanco" && 'selected' %>>Blanco</option>
-                                                <option value="negro" <%=color==="negro" && 'selected' %>>Negro</option>
-                                                <option value="otros" <%=color==="otros" && 'selected' %>>Otros</option>
-                                            </select>
+                                            <div class="col-12 col-md-6 input-group">
+                                                <span class="input-group-text p-0" id="basic-addon1">
+                                                    <input class="form-control-sm form-control-color border-0 bg-transparent" type="color" name="hexColor" value="<%= color.hex %>">
+                                                </span>
+                                                <input class="form-control" type="text" name="textColor" id="color" value="<%= color.text %>">    
+                                            </div>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="price" class="form-label">Precio</label>
@@ -53,24 +74,46 @@
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="stock" class="form-label">Stock</label>
                                             <select class="form-select" name="stock" id="stock">
-                                                <option value="true" <%= color ==="true" && 'selected' %>>TRUE</option>
-                                                <option value="false" <%= color ==="false" && 'selected' %>>FALSE</option>
+                                                <option value="true" <%= color ==="true" && 'selected' %>>Si</option>
+                                                <option value="false" <%= color ==="false" && 'selected' %>>No</option>
                                             </select>
                                         </div>
-                                        <div class="col-12 d-flex justify-content-center col-md-12 mb-3">
-                                            <img class="img-fluid" src="/img/<%= image %>" alt="">
+                          
+                                        <div class="col-12 row">
+                                            <div class="col-4">
+                                                <div class="container-preview-img"><img src="https://cdn.avalos.sv/wp-content/uploads/default-featured-image.png" alt=""></div>
+                                                <label for="image" class="btn btn-danger w-100 mb-3">
+                                                    <span><i class="fa-solid fa-file-arrow-up fs-4 me-1"></i></span>
+                                                    Imagen Principal</label>
+                                                <input type="file" name="image" id="image" class="d-none">
+                                            </div>
+         
+                                            <div class="col-8">
+                                                <div class="d-flex justify-content-between gap-2">
+                                                    <div class="container-preview-img"><img src="https://cdn.avalos.sv/wp-content/uploads/default-featured-image.png" alt=""></div>
+                                                    <div class="container-preview-img"><img src="https://cdn.avalos.sv/wp-content/uploads/default-featured-image.png" alt=""></div>
+                                                    <div class="container-preview-img"><img src="https://cdn.avalos.sv/wp-content/uploads/default-featured-image.png" alt=""></div>
+                                                    <div class="container-preview-img"><img src="https://cdn.avalos.sv/wp-content/uploads/default-featured-image.png" alt=""></div>
+                                                    <div class="container-preview-img"><img src="https://cdn.avalos.sv/wp-content/uploads/default-featured-image.png" alt=""></div>
+                                                    <div class="container-preview-img"><img src="https://cdn.avalos.sv/wp-content/uploads/default-featured-image.png" alt=""></div>
+                                                </div>
+                                                <label for="images" class="btn btn-primary mb-3 w-100">
+                                                    <span><i class="fa-solid fa-file-arrow-up fs-4 me-1"></i></span>
+                                                    Imagenes Secundarias</label>
+                                                <input type="file" name="images" id="images" class="d-none" multiple>
+                                            </div>
                                         </div>
-                                        <label for="image" class="btn btn-success mb-3">Editar imagen</label>
+
 
                                         <div class="col-12 mb-3">
                                             <label for="description" class="form-label">Descripción</label>
-                                            <textarea name="description" id="description" class="form-control"
+                                            <textarea name="description" id="description" rows="5" class="form-control"
                                                 style="resize: none;"><%= description %></textarea>
                                         </div>
                                         <div class="col-12 d-flex justify-content-between gap-2 mb-3">
-                                            <label for="image" class="btn btn-primary">Guardar cambios</label>
+                                            <button type="submit" class="btn btn-primary">Guardar cambios</label>
                                             <input type="file" name="image" id="image" hidden>
-                                            <label for="delete-image" class="btn btn-danger">Eliminar</label>
+                                            <button type="reset" class="btn btn-danger">Eliminar</label>
                                             <input type="file" name="delete-image" id="delete-image" hidden>
                                         </div>
                                     </form>

@@ -2,7 +2,7 @@
   padding: 1px 15px 35px 15px;
   margin: 0 auto;
 }
-/*Recorrido*/
+
 .recorrido {
   display: flex;
   color: grey;
@@ -127,12 +127,16 @@
   align-items: center;
 }
 
-.color-1 {
+.details_conteiner_colors .color {
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
 
+.details_conteiner_colors .text-color {
+  display: inline-block;
+  text-transform: capitalize;
+}
 
 .cantidad {
   display: flex;
@@ -206,6 +210,10 @@
   }
   .img-otros{
     border-top: none;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
   }
   .nombre-zapatilla {
     width: 100%;
@@ -225,6 +233,9 @@
 
   .views-img {
     width: 106px;
+    height: 106px;
+    object-fit: contain;
+    margin-bottom: 5px;
   }
 
   .main-img {

@@ -228,8 +228,8 @@
         grid-area: quantity
     }
 
-    .carrito__card_info-provider {
-        grid-area: provider
+    .carrito__card_info-discount {
+        grid-area: discount
     }
 
     .carrito__card_info-subprice {

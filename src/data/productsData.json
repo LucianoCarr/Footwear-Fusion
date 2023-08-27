@@ -12,24 +12,30 @@
          "naranja-03.jpg",
          "naranja-04.jpg"
       ],
-      "color": "orange.png",
-      "stock" : true
+      "color": {
+         "text": "naranja",
+         "hex": "#e36b45"
+      },
+      "stock": true
    },
    {
       "id": 2,
-      "name": "Vans Zapatillas U AUTHENTIC",
-      "price":  28.909,
+      "name": "Vans Zapatillas U AUTHENTIC 2",
+      "price": 28.909,
       "discount": 0,
-      "category": "mujer",
-      "description": "Calzado skate icónico de la marca + Suela vulcanizada +\nCapellada de textil de algodón + Plantilla desmontable de EVA + Suela de caucho\nvulcanizada para un mejor agarre y menor desgaste + Excelente calce y confort.",
-      "image": "azul-01.jpg",
+      "category": "men",
+      "description": "Calzado skate icónico de la marca + Suela vulcanizada +\r\nCapellada de textil de algodón + Plantilla desmontable de EVA + Suela de caucho\r\nvulcanizada para un mejor agarre y menor desgaste + Excelente calce y confort.",
       "images": [
-         "azul-02.jpg",
-         "azul-03.jpg",
-         "azul-04.jpg"
+         "images-1693099691933-405306049.jpg",
+         "images-1693099691934-920829332.jpg",
+         "images-1693099691935-66680982.jpg"
       ],
-      "color": "blue.png",
-      "stock" : true
+      "image": "image-1693099671858-3856300.jpg",
+      "color": {
+         "text": "azul",
+         "hex": "#007ab3"
+      },
+      "stock": true
    },
    {
       "id": 3,
@@ -44,8 +50,11 @@
          "blanca-03.webp",
          "blanca-04.webp"
       ],
-      "color": "white.avif",
-      "stock" : true
+      "color": {
+         "text": "blanco",
+         "hex": "#ecebf0"
+      },
+      "stock": true
    },
    {
       "id": 4,
@@ -60,8 +69,11 @@
          "rojo-03.jpg",
          "rojo-04.jpg"
       ],
-      "color": "red.webp",
-      "stock" : true
+      "color": {
+         "text": "rojo",
+         "hex": "#d61c2d"
+      },
+      "stock": true
    },
    {
       "id": 5,
@@ -76,8 +88,11 @@
          "violeta-03.jpg",
          "violeta-04.jpg"
       ],
-      "color": "purpple.avif",
-      "stock" : true
+      "color": {
+         "text": "violeta",
+         "hex": "#908cc7"
+      },
+      "stock": true
    },
    {
       "id": 6,
@@ -92,8 +107,11 @@
          "negra-03.avif",
          "negra-04.avif"
       ],
-      "color": "black.jpg",
-      "stock" : true
+      "color": {
+         "text": "negro",
+         "hex": "#1a1a1a"
+      },
+      "stock": true
    },
    {
       "id": 7,
@@ -108,8 +126,11 @@
          "blanco-03.webp",
          "blanco-04.webp"
       ],
-      "color": "white.avif",
-      "stock" : false
+      "color": {
+         "text": "blanco",
+         "hex": "#e1e3e7"
+      },
+      "stock": false
    },
    {
       "id": 8,
@@ -124,8 +145,10 @@
          "negro-03.webp",
          "negro-04.webp"
       ],
-      "color": "black.jpg",
-      "stock" : false
-
+      "color": {
+         "text": "negro",
+         "hex": "#1a1a1a"
+      },
+      "stock": false
    }
 ]

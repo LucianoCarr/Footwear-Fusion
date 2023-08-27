@@ -58,9 +58,9 @@
                             </form>
                             <!-- Color -->
                             <div class="color">
-                                <p>Color:</p>
+                                <p>Color: <span class="text-color"><%= product.color.text %></span></p>
                                 <div class="details_conteiner_colors">
-                                    <img src="/img/<%= product.color  %>" class="color-1" alt="black">
+                                    <div class="color" style="background-color:<%= product.color.hex %>"></div>
                                 </div>
                             </div>
                             <!-- Cantidad -->
