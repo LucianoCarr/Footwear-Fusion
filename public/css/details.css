@@ -127,20 +127,17 @@
   align-items: center;
 }
 
-.color-1 {
+.details_conteiner_colors .color {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: black;
-  border: solid 1px black;
+  /* background-color: black;
+  border: solid 1px black; */
 }
 
-.color-2 {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: white;
-  border: solid 1px silver;
+.details_conteiner_colors .text-color {
+  display: inline-block;
+  text-transform: capitalize;
 }
 
 .cantidad {
@@ -215,6 +212,10 @@
   }
   .img-otros{
     border-top: none;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
   }
   .nombre-zapatilla {
     width: 100%;
@@ -234,6 +235,9 @@
 
   .views-img {
     width: 106px;
+    height: 106px;
+    object-fit: contain;
+    margin-bottom: 5px;
   }
 
   .main-img {
