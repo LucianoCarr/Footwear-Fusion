@@ -20,4 +20,9 @@ router.put(
 ); 
 
 
+/* DELETE */
+
+router.delete('/delete/:id',productsController.destroy)
+
+
 module.exports = router;

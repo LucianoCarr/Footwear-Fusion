@@ -7,6 +7,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 	index: (req, res) => {
+		const productsFilePath = path.join(__dirname, '../data/productsData.json');
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 		const product = products.find(product => product.id === +req.params.id)
 		const productHombre = products.filter(product => product.category == "hombre")
 		const productMujer = products.filter(product => product.category == "mujer")
