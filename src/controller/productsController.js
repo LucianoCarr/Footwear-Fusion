@@ -24,27 +24,31 @@ const controller = {
     add : (req, res) => {
      return res.render('productAdd');
     },
+    create : (req,res) => {
+      const {name, price, discount, category, description, textColor, hexColor} = req.body;
 
-    create: (req, res) => {
-      const {name, price, description} = req.body;
-      let newProduct = {
-        id : products[products.length - 1].id + 1,
-        name : name.trim(),
-        price : +price,
-        description : description.trim(),
+      const newProduct = {
+        id: products[products.length - 1].id + 1,
+        name: name?.trim(),
+        price: +price,
+        discount: +discount,
+        category,
+        description:description?.trim(),
+        color:{text:textColor,color:hexColor},
+        image: req.files?.image?.length ? req.files.image[0].filename : 'default-image.png',
+        images: req.files?.images?.length ? req.files.images.map(image => image.filename) : []
       }
 
-      console.log(newProduct);
+      console.log(req.files?.images?.map(image => image.filename))
+      products.push(newProduct)
+      fs.writeFileSync(
+        productsFilePath,
+        JSON.stringify(products, null, 3),
+        "utf-8"
+      );
+  
+      return res.redirect(`/products/details/${newProduct.id}`);
 
-      if (req.file) {
-        newProduct.image = req.file.filename;
-      }
-      
-      products.push(newProduct);
-  
-  fs.writeFileSync(productsFilePath,  JSON.stringify(products, null, 3), 'utf8')
-  
-      return res.redirect('/')
     },
     
     edit: (req, res) => {

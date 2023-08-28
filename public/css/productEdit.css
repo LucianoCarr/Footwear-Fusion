@@ -1,30 +1,30 @@
-.productEdit .img-product-edit {
+.productAddAndEdit .img-product-edit {
    width: 100%;
    object-fit: contain;
    height: 150px;
 }
 
 @media (min-width:768px) {
-    .productEdit .img-product-edit {
+    .productAddAndEdit .img-product-edit {
         width: 170px;
         object-fit: contain;
         height: 170px;
      }
 }
-.productEdit .img-secondary-product-edit {
+.productAddAndEdit .img-secondary-product-edit {
    width: 70px;
    object-fit: contain;
    height: 70px;
 }
 
-.productEdit .container-preview-img {
+.productAddAndEdit .container-preview-img {
     width: 80px;
     height: 80px;
     border:1px solid rgb(198, 197, 197);
     margin: 5px auto;
 }
 
-.productEdit .container-preview-img img {
+.productAddAndEdit .container-preview-img img {
     width: 100%;
     height: 100%;
     object-fit: contain;
