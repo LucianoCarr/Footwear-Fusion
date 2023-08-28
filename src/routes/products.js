@@ -6,7 +6,13 @@ const router = express.Router();
 /* /produtcs */
 router.get('/cart', productsController.cart)
 router.get('/details/:id', productsController.details)
+
+/* CREATE PRODUCT */
 router.get('/add', productsController.add)
+router.post('/add', upload.fields([
+  { name: "image", maxCount: 1 }, // image primary
+  { name: "images"}, // images secondary
+]), productsController.create)
 
 /* EDIT PRODUCT */ 
 router.get('/edit/:id', productsController.edit); 
