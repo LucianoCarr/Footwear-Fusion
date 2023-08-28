@@ -17,7 +17,7 @@
                         <h4 class="card-title">AGREGAR PRODUCTO</h4>
                     </div>
                     <div class="card-body">
-                        <form action="" class="row">
+                        <form action="/products/add" method="POST" class="row" enctype="multipart/form-data">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="name" class="form-label">Nombre del producto</label>
                                 <input type="text" class="form-control" id="name"  name="title">
@@ -31,7 +31,7 @@
                                     <option selected hidden>Seleccione...</option>
                                     <option value="1">Niño</option>
                                     <option value="2">Hombre</option>
-                                    <option value="3">Mujere</option>
+                                    <option value="3">Mujer</option>
                                 </select>
                             </div>
     
@@ -44,6 +44,7 @@
                                     <option value="3" class="btn btn-warning">Amarrillo</option>
                                 </select>
                             </div>
+
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="price" class="form-label">Precio</label>
                                 <input type="number" class="form-control" id="price" name="price">
@@ -76,8 +77,10 @@
                             <div class="col-12 d-flex justify-content-between gap-2 mb-3">
                                 <label for="image" class="btn btn-success">Agregar imagen</label>
                                 <input type="file" name="image" id="image" hidden>
-                                <label for="delete-image" class="btn btn-danger">Eliminar</label>
-                                <input type="file" name="delete-image" id="delete-image" hidden>
+
+                                <div class="col-12 d-flex justify-content-between gap-2 mb-3">
+                                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                                </div>
                             </div>
                         </form>
                     </div>

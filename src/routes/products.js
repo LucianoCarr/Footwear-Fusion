@@ -6,7 +6,10 @@ const router = express.Router();
 /* /produtcs */
 router.get('/cart', productsController.cart)
 router.get('/details/:id', productsController.details)
+
+/* ADD PRODUCT */ 
 router.get('/add', productsController.add)
+router.post('/add', upload.single('image'), productsController.create)
 
 /* EDIT PRODUCT */ 
 router.get('/edit/:id', productsController.edit); 

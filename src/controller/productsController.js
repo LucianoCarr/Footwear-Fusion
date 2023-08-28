@@ -24,6 +24,28 @@ const controller = {
     add : (req, res) => {
      return res.render('productAdd');
     },
+
+    create: (req, res) => {
+      const {name, price, description} = req.body;
+      let newProduct = {
+        id : products[products.length - 1].id + 1,
+        name : name.trim(),
+        price : +price,
+        description : description.trim(),
+      }
+
+      console.log(newProduct);
+
+      if (req.file) {
+        newProduct.image = req.file.filename;
+      }
+      
+      products.push(newProduct);
+  
+  fs.writeFileSync(productsFilePath,  JSON.stringify(products, null, 3), 'utf8')
+  
+      return res.redirect('/')
+    },
     
     edit: (req, res) => {
       const product = products.find(product => product.id === +req.params.id)
