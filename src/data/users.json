@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "username": "Ariel",
+        "lastname": "Boxler",
+        "email": "arieldepibeschorros@gmail.com",
+        "password": "batman123"
+    },
+    {
+        "id": 2,
+        "username": "Luciano",
+        "lastname": "Carrizo",
+        "email": "luchok-po@gmail.com",
+        "password": "enlodella420"
+    },
+    {
+        "id": 3,
+        "username": "Luciano",
+        "lastname": "Cabral",
+        "email": "lucianocafecito@gmail.com",
+        "password": "cafecito1034"
+    },
+    {
+        "id": 4,
+        "username": "Lucas",
+        "lastname": "Arroyo",
+        "email": "luquitaschaja@gmail.com",
+        "password": "boca213"
+    }
+]
