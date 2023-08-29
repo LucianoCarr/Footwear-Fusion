@@ -26,5 +26,19 @@
         "lastname": "Arroyo",
         "email": "luquitaschaja@gmail.com",
         "password": "boca213"
+    },
+    {
+        "id" : 5,
+        "username" : "Ismael",
+        "lastname" : "Callamullo",
+        "email" : "ismaelC@gmail.com",
+        "password" : "tremendo"
+    },
+    {
+        "id" : 6,
+        "username" : "Inigo",
+        "lastname" : "Montoya",
+        "email" : "inimontoya@gmail.com",
+        "password" : "hello666"
     }
 ]
