@@ -3,9 +3,6 @@
   padding: 60px 20px;
 }
 
-/* .main-login{
-  background-color:rgba(94, 84, 142, 1) ;
-} */
 .main-login h3,
 .main-register h3 {
   padding: 10px;
@@ -41,8 +38,6 @@
 .login_conteiner-img img {
   width: 40px;
 }
-
-
 
 /* casillas */
 .casillas-registro,.casillas-registro1 {
