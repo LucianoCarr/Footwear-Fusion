@@ -15,15 +15,13 @@
                                             <%= name %>
                                         </i></h4>
                                 </div>
+                                <!-- id -->
                                 <div class="card-body">
                                     <form action="/products/edit/<%= id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
-
+                                        <!-- conservar imagenes -->
                                         <div class="col-12 col-md-4 mb-3">
                                             <img class="img-fluid border border-danger-subtle img-product-edit" src="/img/<%= image %>" alt="">
                                         </div>
-
-                                        
-                                        
                                         <div class="col-12 col-md-8 mb-3 d-inline-flex align-items-center align-content-start gap-2 justify-content-between justify-content-md-start flex-wrap">
                                             <div class="col-12 mb-3">
                                                 <input type="checkbox" checked value="true" class="form-check-input me-2" name="rememberImg" id="rememberImg">
@@ -37,13 +35,13 @@
                                                     <h4>No hay imagenes secundarias</h4>
                                                 <%}%>
                                             </div>
-
+                                            <!-- nombre zapatilla -->
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="name" class="form-label">Título</label>
+                                            <label for="name" class="form-label">Nombre zapatilla</label>
                                             <input type="text" class="form-control" id="title" name="name"
                                                 value="<%= name %>">
                                         </div>
-                                        
+                                        <!-- color -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="color" class="form-label">Color</label>
                                             <div class="col-12 col-md-6 input-group">
@@ -53,16 +51,19 @@
                                                 <input class="form-control" type="text" name="textColor" id="color" value="<%= color.text %>">    
                                             </div>
                                         </div>
+                                        <!-- precio -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="price" class="form-label">Precio</label>
                                             <input type="number" class="form-control" id="price" name="price"
                                                 value="<%= price %>">
                                         </div>
+                                        <!-- descuento -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="discount" class="form-label">Descuento</label>
                                             <input type="number" class="form-control" id="discount" name="discount"
                                                 value="<%= discount %>">
                                         </div>
+                                        <!-- categoria -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="category" class="form-label">Categoría</label>
                                             <select class="form-select" aria-label="Default select example"
@@ -71,7 +72,7 @@
                                                 <option value="women" <%= category ==="women" && 'selected' %>>Mujer</option>
                                             </select>
                                         </div>
-                                        
+                                        <!-- stock -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="stock" class="form-label">Stock</label>
                                             <select class="form-select" name="stock" id="stock">
@@ -79,7 +80,7 @@
                                                 <option value="false" <%= color ==="false" && 'selected' %>>No</option>
                                             </select>
                                         </div>
-                          
+                                        <!-- imagen principal -->
                                         <div class="col-12 row">
                                             <div class="col-4">
                                                 <div class="container-preview-img"><img src="/img/default-image.png" alt=""></div>
@@ -88,7 +89,7 @@
                                                     Imagen Principal</label>
                                                 <input type="file" name="image" id="image" class="d-none">
                                             </div>
-         
+                                            <!-- imagenes secundarias -->
                                             <div class="col-8">
                                                 <div class="d-flex justify-content-between gap-2">
                                                     <div class="container-preview-img"><img src="/img/default-image.png" alt=""></div>
@@ -104,8 +105,7 @@
                                                 <input type="file" name="images" id="images" class="d-none" multiple>
                                             </div>
                                         </div>
-
-
+                                        <!-- descripcion -->
                                         <div class="col-12 mb-3">
                                             <label for="description" class="form-label">Descripción</label>
                                             <textarea name="description" id="description" rows="5" class="form-control"
@@ -116,8 +116,7 @@
                                         
                                         </div>
                                     </form>
-                                   
-                                        <!-- Button trigger modal -->
+                                        <!-- Boton modal -->
                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete" <%= id %>>
                                         <i class="fa-regular fa-trash-can"></i>
                                     </button>
