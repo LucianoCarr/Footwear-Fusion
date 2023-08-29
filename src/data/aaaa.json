@@ -1,0 +1,44 @@
+[
+    {
+        "id" : 1,
+        "username" : "Luciano",
+        "lastname" : "Cabral",
+        "email" : "luciano@gmail.com",
+        "password" : "123455"
+    },
+    {
+        "id" : 2,
+        "username" : "Lucas",
+        "lastname" : "Arroyo",
+        "email" : "lucas@gmail.com",
+        "password" : "151452"
+    },
+    {
+        "id" : 3,
+        "username" : "Ariel",
+        "lastname" : "Boxler",
+        "email" : "ariel@gmail.com",
+        "password" : "765432"
+    },
+    {
+        "id" : 4,
+        "username" : "Luciano",
+        "lastname" : "Carrizo",
+        "email" : "luciano.carrizo@gmail.com",
+        "password" : "665622"
+    },
+    {
+        "id" : 5,
+        "username" : "Ismael",
+        "lastname" : "Callamullo",
+        "email" : "ismaelC@gmail.com",
+        "password" : "222444"
+    },
+    {
+        "id" : 6,
+        "username" : "Inigo",
+        "lastname" : "Montoya",
+        "email" : "inimontoya@gmail.com",
+        "password" : "181223"
+    }
+]

@@ -24,6 +24,7 @@ const controller = {
     add : (req, res) => {
      return res.render('productAdd');
     },
+    
     create : (req,res) => {
       const {name, price, discount, category, description, textColor, hexColor} = req.body;
 
@@ -34,18 +35,14 @@ const controller = {
         discount: +discount,
         category,
         description:description?.trim(),
-        color:{text:textColor,color:hexColor},
+        color:{text:textColor, hex:hexColor},
         image: req.files?.image?.length ? req.files.image[0].filename : 'default-image.png',
         images: req.files?.images?.length ? req.files.images.map(image => image.filename) : []
       }
 
-      console.log(req.files?.images?.map(image => image.filename))
-      products.push(newProduct)
-      fs.writeFileSync(
-        productsFilePath,
-        JSON.stringify(products, null, 3),
-        "utf-8"
-      );
+      products.push(newProduct) 
+
+      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3), "utf-8");
   
       return res.redirect(`/products/details/${newProduct.id}`);
 
@@ -57,17 +54,9 @@ const controller = {
         ...product,
       })
     },
+
     modify: (req, res) => {
-      const {
-        name,
-        price,
-        discount,
-        category,
-        description,
-        textColor,
-        hexColor,
-        rememberImg,
-      } = req.body;
+      const {name, price, discount, category, description, textColor, hexColor, rememberImg} = req.body;
   
       const productsUpdated = products.map((product) => {
         if (product.id == +req.params.id) {
@@ -129,11 +118,7 @@ const controller = {
         }
         return product;
       });
-      fs.writeFileSync(
-        productsFilePath,
-        JSON.stringify(productsUpdated, null, 3),
-        "utf-8"
-      );
+      fs.writeFileSync(productsFilePath, JSON.stringify(productsUpdated, null, 3), "utf-8");
   
       return res.redirect(`/products/details/${req.params.id}`);
     },

@@ -25,12 +25,12 @@
       "discount": 0,
       "category": "men",
       "description": "Calzado skate icónico de la marca + Suela vulcanizada +\r\nCapellada de textil de algodón + Plantilla desmontable de EVA + Suela de caucho\r\nvulcanizada para un mejor agarre y menor desgaste + Excelente calce y confort.",
+      "image": "azul-01.jpg",
       "images": [
-         "images-1693099691933-405306049.jpg",
-         "images-1693099691934-920829332.jpg",
-         "images-1693099691935-66680982.jpg"
+         "azul-02.jpg",
+         "azul-03.jpg",
+         "azul-04.jpg"
       ],
-      "image": "image-1693099671858-3856300.jpg",
       "color": {
          "text": "azul",
          "hex": "#007ab3"
