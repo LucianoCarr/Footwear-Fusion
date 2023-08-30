@@ -121,6 +121,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #e27396;
 }
+
 .details_conteiner_colors{
   display: flex;
   gap: 5px;
@@ -151,6 +152,10 @@
   justify-content: end;
   gap: 5px;
 }
+
+/* .carrito_addProduc {
+  border: solid 1px black;
+} */
 
 .carrito a {
   border: solid 2px #e27396;
@@ -208,6 +213,7 @@
     flex-wrap: wrap;
     width: 100%;
   }
+
   .img-otros{
     border-top: none;
     margin: 0 auto;
@@ -215,6 +221,7 @@
     justify-content: start;
     gap: 10px;
   }
+
   .nombre-zapatilla {
     width: 100%;
     margin: 0 0 25px 0;

@@ -111,9 +111,7 @@ const controller = {
           product.category = category;
           product.description = description?.trim();
           product.color = { text: textColor, hex: hexColor };
-          product.image = req.files?.image?.length
-            ? req.files.image[0].filename
-            : product.image;
+          product.image = req.files?.image?.length? req.files.image[0].filename : product.image;
           product.images = imagesRemember.length ? imagesRemember : newImages;
         }
         return product;
@@ -124,7 +122,6 @@ const controller = {
     },
 
     destroy: (req,res)=>{
-
       const productsModify = products.filter((product) => {
         if (product.id === +req.params.id) {
           
@@ -132,7 +129,6 @@ const controller = {
             fs.unlinkSync(`./public/img/${product.image}`);
           }
     
-        
           product.images.forEach(image => {
             if (fs.existsSync(`./public/img/${image}`)) {
               fs.unlinkSync(`./public/img/${image}`);
