@@ -106,6 +106,14 @@
   border-bottom: 1px solid #e27396;
 }
 
+.sub-price {
+  text-decoration: line-through 2px;
+}
+
+.discount {
+  color: rgb(155, 223, 53);
+}
+
 .talle {
   display: flex;
   justify-content: space-between;

@@ -34,10 +34,21 @@
                     <aside class="especificaciones">
                         <div class="card-especificaciones">
                             <!-- precio -->
+                            <% if (product.discount) { %>
+                            <div class="precio">
+                                <p>Precio:</p>
+                                <p class="sub-price"> $<%= product.price %></p>
+                                /
+								<b class="discount"><%= product.discount %>% OFF</b>
+                                =
+                                <b>$<%= product.price - ((product.price * product.discount / 100).toFixed(0)) %></b>
+                            </div>
+                            <% } else { %>
                             <div class="precio">
                                 <p>Precio:</p>
                                 <p> $<%= product.price %></p>
                             </div>
+                           <% } %>
                             <!-- Talle -->
                             <form class="talle" action="#">
                                 <p>Talle:</p>

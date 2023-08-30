@@ -9,7 +9,12 @@
         <button class="home-main-button-compra"><a href="/products/details/<%= product.id %>">Comprar</a></button>
         <!-- <p>NOMBRE ZAPATILLA</p> -->
         <p class="home-main-text"><%= product.name %></p>
-        <h4 class="home-main-precio">$<%= product.price %></h4>
+        <div class="home-main-box">
+            <h4 class="home-main-precio">$<%= product.price %></h4>
+            <% if (product.discount) { %>
+                <span class="home-main-discount"><%= product.discount %> % OFF</span>
+                <% } %>
+        </div>
     </div>
 
     <% } %>

@@ -64,6 +64,14 @@
     margin-bottom: 10px;
 }
 
+.home-main-box {
+    display: flex;
+  }
+
+  .home-main-discount {
+    color: rgb(155, 223, 53);
+  }
+
 .home-main-button-ojo{
     position: absolute;
     top: 10px;
