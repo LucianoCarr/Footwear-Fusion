@@ -94,8 +94,20 @@
                                     <button class="carrito_trash"><i class="fa-solid fa-pen"
                                         style="color: #e27396;"></i></button>
                                 </form>
+                                <div class="btn-group ml-2" role="group">
+                                    <button type="button" class="btn btn-danger  " data-bs-toggle="modal" data-bs-target="#modalDelete" <%= product.id %>>
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                </div>
                             </div>
+                            
                         </div>
+                        
+                            <%- include('partials/modalDelete', {
+                                id: product.id,
+                                name: product.name
+                            }) %>
+
                         <!-- Descripcion -->
                         <div class="descripcion-detalles">
                             <div class="card-descripcion-detalles">
@@ -113,6 +125,7 @@
             <%- include('partials/footer') %>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
                 <script src="/js/carousel-swiper.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 
 </html>
