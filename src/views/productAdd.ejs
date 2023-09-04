@@ -7,109 +7,107 @@
         <body class="productAddAndEdit">
             <%- include('partials/header') %>
 
-                <main>
-                    <div class="row mx-0">
-                        <div class="col-12 col-md-8 mx-auto mt-5 mb-5">
-                            <div class="card shadow ">
-                                <div class="card-header bg-transparent">
-                                    <h4 class="card-title">AGREGAR PRODUCTO</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form action="/products/add" method="POST" class="row"
-                                        enctype="multipart/form-data">
-                                        <!-- Nombre zapatilla -->
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="name" class="form-label">nombre zapatilla</label>
-                                            <input type="text" class="form-control" id="title" name="name">
-                                        </div>
-                                        <!-- color -->
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="color" class="form-label">Color</label>
-                                            <div class="col-12 col-md-6 input-group">
-                                                <span class="input-group-text p-0" id="basic-addon1">
-                                                    <input
-                                                        class="form-control-sm form-control-color border-0 bg-transparent"
-                                                        type="color" name="hexColor">
-                                                </span>
-                                                <input class="form-control" type="text" name="textColor" id="color">
-                                            </div>
-                                        </div>
-                                        <!-- precio -->
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="price" class="form-label">Precio</label>
-                                            <input type="number" class="form-control" id="price" name="price">
-                                        </div>
-                                        <!-- descuento -->
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="discount" class="form-label">Descuento</label>
-                                            <input type="number" class="form-control" id="discount" name="discount">
-                                        </div>
-                                        <!-- categoria -->
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="category" class="form-label">Categoría</label>
-                                            <select class="form-select" aria-label="Default select example"
-                                                name="category" id="category">
-                                                <option value="men">Hombre</option>
-                                                <option value="women">Mujer</option>
-                                                <option value="child">Niño</option>
-                                            </select>
-                                        </div>
-                                        <!-- stock -->
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="stock" class="form-label">Stock</label>
-                                            <select class="form-select" name="stock" id="stock">
-                                                <option value="true">Si</option>
-                                                <option value="false">No</option>
-                                            </select>
-                                        </div>
-                                        <!-- imagen principal -->
-                                        <div class="col-12 row">
-                                            <div class="col-4">
-                                                <div class="container-preview-img"><img src="/img/default-image.png"
-                                                        alt=""></div>
-                                                <label for="image" class="btn btn-danger w-100 mb-3">
-                                                    <span><i class="fa-solid fa-file-arrow-up fs-4 me-1"></i></span>
-                                                    Imagen Principal</label>
-                                                <input type="file" name="image" id="image" class="d-none">
-                                            </div>
-                                            <!-- imagenes secundarias -->
-                                            <div class="col-8">
-                                                <div class="d-flex justify-content-between gap-2">
-                                                    <div class="container-preview-img"><img src="/img/default-image.png"
-                                                            alt=""></div>
-                                                    <div class="container-preview-img"><img src="/img/default-image.png"
-                                                            alt=""></div>
-                                                    <div class="container-preview-img"><img src="/img/default-image.png"
-                                                            alt=""></div>
-                                                    <div class="container-preview-img"><img src="/img/default-image.png"
-                                                            alt=""></div>
-                                                    <div class="container-preview-img"><img src="/img/default-image.png"
-                                                            alt=""></div>
-                                                    <div class="container-preview-img"><img src="/img/default-image.png"
-                                                            alt=""></div>
-                                                </div>
-                                                <label for="images" class="btn btn-primary mb-3 w-100">
-                                                    <span><i class="fa-solid fa-file-arrow-up fs-4 me-1"></i></span>
-                                                    Imagenes Secundarias</label>
-                                                <input type="file" name="images" id="images" class="d-none" multiple>
-                                            </div>
-                                        </div>
-                                        <!-- descripcion -->
-                                        <div class="col-12 mb-3">
-                                            <label for="description" class="form-label">Descripción</label>
-                                            <textarea name="description" id="description" rows="5" class="form-control"
-                                                style="resize: none;"></textarea>
-                                        </div>
-                                        <!-- boton guardar cambios -->
-                                        <div class="col-12 d-flex justify-content-between gap-2 mb-3">
-                                            <button type="submit" class="btn btn-primary">Guardar cambios</label>
-                                        </div>
-                                    </form>
-                                </div>
+<main>
+    <div class="row mx-0">
+        <div class="col-12 col-md-8 mx-auto mt-5 mb-5">
+            <div class="card shadow ">
+                <div class="card-header bg-transparent">
+                    <h4 class="card-title">AGREGAR PRODUCTO</h4>
+                </div>
+                <div class="card-body">
+                    <form action="/products/add" method="POST" class="row"
+                        enctype="multipart/form-data">
+                        <!-- Nombre zapatilla -->
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="name" class="form-label">nombre zapatilla</label>
+                            <input type="text" class="form-control" id="title" name="name">
+                        </div>
+                        <!-- color -->
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="color" class="form-label">Color</label>
+                            <div class="col-12 col-md-6 input-group">
+                                <span class="input-group-text p-0" id="basic-addon1">
+        <input class="form-control-sm form-control-color border-0 bg-transparent" type="color" name="hexColor">
+                                </span>
+                                <input class="form-control" type="text" name="textColor" id="color">
                             </div>
                         </div>
-                    </div>
-                </main>
+                        <!-- precio -->
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="price" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="price" name="price">
+                        </div>
+                        <!-- descuento -->
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="discount" class="form-label">Descuento</label>
+                            <input type="number" class="form-control" id="discount" name="discount">
+                        </div>
+                        <!-- categoria -->
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="category" class="form-label">Categoría</label>
+                            <select class="form-select" aria-label="Default select example"
+                                name="category" id="category">
+                                <option value="men">Hombre</option>
+                                <option value="women">Mujer</option>
+                                <option value="child">Niño</option>
+                            </select>
+                        </div>
+                        <!-- stock -->
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="stock" class="form-label">Stock</label>
+                            <select class="form-select" name="stock" id="stock">
+                                <option value="true">Si</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        <!-- imagen principal -->
+                        <div class="col-12 row">
+                            <div class="col-4">
+                                <div class="container-preview-img"><img src="/img/default-image.png"
+                                        alt=""></div>
+                                <label for="image" class="btn btn-danger w-100 mb-3">
+                                    <span><i class="fa-solid fa-file-arrow-up fs-4 me-1"></i></span>
+                                    Imagen Principal</label>
+                                <input type="file" name="image" id="image" class="d-none">
+                            </div>
+                            <!-- imagenes secundarias -->
+                            <div class="col-8">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <div class="container-preview-img"><img src="/img/default-image.png"
+                                            alt=""></div>
+                                    <div class="container-preview-img"><img src="/img/default-image.png"
+                                            alt=""></div>
+                                    <div class="container-preview-img"><img src="/img/default-image.png"
+                                            alt=""></div>
+                                    <div class="container-preview-img"><img src="/img/default-image.png"
+                                            alt=""></div>
+                                    <div class="container-preview-img"><img src="/img/default-image.png"
+                                            alt=""></div>
+                                    <div class="container-preview-img"><img src="/img/default-image.png"
+                                            alt=""></div>
+                                </div>
+                                <label for="images" class="btn btn-primary mb-3 w-100">
+                                    <span><i class="fa-solid fa-file-arrow-up fs-4 me-1"></i></span>
+                                    Imagenes Secundarias</label>
+                                <input type="file" name="images" id="images" class="d-none" multiple>
+                            </div>
+                        </div>
+                        <!-- descripcion -->
+                        <div class="col-12 mb-3">
+                            <label for="description" class="form-label">Descripción</label>
+                            <textarea name="description" id="description" rows="5" class="form-control"
+                                style="resize: none;"></textarea>
+                        </div>
+                        <!-- boton guardar cambios -->
+                        <div class="col-12 d-flex justify-content-between gap-2 mb-3">
+                            <button type="submit" class="btn btn-primary">Guardar cambios</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 
                 <%- include('partials/footer') %>
