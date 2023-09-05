@@ -20,18 +20,18 @@
                 <div class="register-nameAndLastname">
                     <div class="casillas-registro name">
                         <label for="name">Nombre</label>
-                        <input class="formulario-casillas-register <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" type="text">
+                        <input class="formulario-casillas-register <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" type="text" value="<%= locals.old && (old.name && old.name) %>">
                         <small class="text-danger ms-2"><%= locals.errors && (errors.name && errors.name.msg) %></small>
                     </div>
                     <div class="casillas-registro lastname">
                         <label for="lastname">Apellido</label>
-                        <input class="formulario-casillas-register <%= locals.errors && (errors.lastname && 'is-invalid') %>" id="lastname" name="lastname" type="text">
+                        <input class="formulario-casillas-register <%= locals.errors && (errors.lastname && 'is-invalid') %>" id="lastname" name="lastname" type="text" value="<%= locals.old && (old.lastname && old.lastname) %>">
                         <small class="text-danger ms-2"><%= locals.errors && (errors.lastname && errors.lastname.msg) %></small>
                     </div>
                 </div>
                 <div class="casillas-registro">
                     <label for="email">Email</label>
-                    <input class="formulario-casillas-register <%= locals.errors && (errors.email && 'is-invalid') %>" id="email" type="email" name="email">
+                    <input class="formulario-casillas-register <%= locals.errors && (errors.email && 'is-invalid') %>" id="email" type="email" name="email" value="<%= locals.old && (old.email && old.email) %>">
                     <small class="text-danger ms-2"><%= locals.errors && (errors.email && errors.email.msg) %></small>
                 </div>
                 <div class="conteiner-passwords">

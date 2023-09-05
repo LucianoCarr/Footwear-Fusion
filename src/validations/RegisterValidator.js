@@ -39,7 +39,7 @@ module.exports = [
     min: 6,
     max: 12,
   })
-  .withMessage('La contraseña tiene que requerir al menos 6 caracteres'),
+  .withMessage('La contraseña debe requerir al menos 6 caracteres'),
   body('password2')
     .custom((value,{req}) => {
         if(value !== req.body.password){

@@ -28,8 +28,9 @@ const controller = {
                      password : hashSync(password,10)
               }
 
+              
               users.push(newUser) 
-				
+              
               fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 3), "utf-8");
               
               return res.redirect('login');
@@ -39,12 +40,12 @@ const controller = {
                      old : req.body
               })
        } 
-       },
+},
 
-       /* login */
-       login : (req, res) => {
-        return res.render('login');
-       },
-       
+/* login */
+login : (req, res) => {
+       return res.render('login');
+},
+
 }
 module.exports = controller
