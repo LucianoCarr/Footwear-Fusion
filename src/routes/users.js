@@ -1,7 +1,7 @@
 const express = require('express');
 const {register,registerPage,login} = require('../controller/usersControllers');
 const registerValidator = require('../validations/RegisterValidator');
-const notUserCheck = require('../controller/notUserCheck');
+const notUserCheck = require('../middlewares/notUserCheck');
 const router = express.Router();
 
 /* /users */

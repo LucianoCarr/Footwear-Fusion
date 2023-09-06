@@ -48,7 +48,7 @@ const controller = {
 },
 
 }
-module.exports = controller*/
+module.exports = controllern*/
 
 module.exports = {
        login : require('./users/login'),
