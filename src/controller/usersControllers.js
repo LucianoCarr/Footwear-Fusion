@@ -1,4 +1,4 @@
-const fs = require('fs');
+/*const fs = require('fs');
 const path = require('path');
 
 const usersFilePath = path.join(__dirname, '../data/usersData.json');
@@ -13,7 +13,7 @@ const controller = {
        },
 
        /* registro */
-       register : (req, res) => {
+/*       register : (req, res) => {
               const errors = validationResult(req)
 
               if (errors.isEmpty()) {
@@ -43,9 +43,15 @@ const controller = {
 },
 
 /* login */
-login : (req, res) => {
+/*login : (req, res) => {
        return res.render('login');
 },
 
 }
-module.exports = controller
+module.exports = controller*/
+
+module.exports = {
+       login : require('./users/login'),
+       registerPage : require('./users/registerPage'),
+       register : require('./users/register')
+}
