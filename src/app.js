@@ -9,7 +9,7 @@ const session = require('express-session');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
-const userSession = require('./middlewares/userSession')
+const userSession = require('./middlewares/userSession');
 
 const app = express();
 
@@ -31,6 +31,7 @@ app.use(session({
 }));
 
 app.use(userSession)
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
