@@ -53,5 +53,6 @@ module.exports = controller*/
 module.exports = {
        login : require('./users/login'),
        registerPage : require('./users/registerPage'),
-       register : require('./users/register')
+       register : require('./users/register'),
+       profile : require('./users/profile')
 }
