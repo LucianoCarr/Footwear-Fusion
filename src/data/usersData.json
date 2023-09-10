@@ -12,8 +12,8 @@
       "username": "Luciano",
       "lastname": "Carrizo",
       "email": "luciano@gmail.com",
-      "password": "123123",
-      "role": "admin"
+      "password": "$2a$10$nNUW3n09CSRi1qzUydlQluAIRXZmkXWGoZpNk5OMt2/8NMc/45Z1y",
+      "role": "user"
    },
    {
       "id": 3,

@@ -51,6 +51,7 @@ const controller = {
 module.exports = controller*/
 
 module.exports = {
+       loginPage : require ('./users/loginPage'),
        login : require('./users/login'),
        registerPage : require('./users/registerPage'),
        register : require('./users/register'),
