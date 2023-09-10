@@ -8,12 +8,12 @@
       "role": "admin"
    },
    {
-      "id": 2,
-      "username": "Luciano",
+      "id": 6,
+      "name": "Luciano",
       "lastname": "Carrizo",
       "email": "luciano@gmail.com",
-      "password": "$2a$10$nNUW3n09CSRi1qzUydlQluAIRXZmkXWGoZpNk5OMt2/8NMc/45Z1y",
-      "role": "user"
+      "role": "admin",
+      "password": "$2a$10$If/hkoZ27kwMA5WqXK0wfuON2rAsynUFPEgIqpIJTItkiOFvme6xC"
    },
    {
       "id": 3,
