@@ -3,5 +3,5 @@ module.exports = (req,res,next) => {
        return next() //podría acceder al perfil de usuario
     }
 
-        return res.redirect('/')
+        return res.redirect('/users/profile')
 }

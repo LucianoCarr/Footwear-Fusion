@@ -12,11 +12,11 @@ const {hashSync} = require('bcryptjs');
         const errors = validationResult(req)
 
         if (errors.isEmpty()) {
-        const {name, lastname, email, password}  = req.body
+        const {username, lastname, email, password}  = req.body
 
         const newUser = {
                id: users[users.length - 1].id + 1,
-               name : name.trim(),
+               username : username.trim(),
                lastname : lastname.trim(),
                email : email.trim(),
                role : 'user',

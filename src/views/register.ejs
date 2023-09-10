@@ -19,9 +19,9 @@
             <form action="" method="POST" class="formulario">
                 <div class="register-nameAndLastname">
                     <div class="casillas-registro name">
-                        <label for="name">Nombre</label>
-                        <input class="formulario-casillas-register <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" type="text" value="<%= locals.old && (old.name && old.name) %>">
-                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
+                        <label for="username">Nombre</label>
+                        <input class="formulario-casillas-register <%= locals.errors && (errors.username && 'is-invalid') %>" id="username" name="username" type="text" value="<%= locals.old && (old.username && old.username) %>">
+                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.username && errors.username.msg) %></spam>
                     </div>
                     <div class="casillas-registro lastname">
                         <label for="lastname">Apellido</label>
