@@ -1,5 +1,5 @@
 const express = require('express');
-const {register,registerPage,loginPage,login,profile} = require('../controller/usersControllers');
+const {register,registerPage,login,profile,processLogin} = require('../controller/usersControllers');
 const registerValidator = require('../validations/RegisterValidator');
 const loginValidator = require('../validations/loginValidator');
 const sessionCheckLogin = require('../middlewares/sessionCheckLogin');
@@ -13,8 +13,8 @@ router.get('/register', sessionCheckLogin, registerPage);
 router.post('/register', registerValidator, register);
 
 /* login */
-router.get('/login', sessionCheckLogin, loginPage);
-router.post('/login',loginValidator, login)
+router.get('/login', sessionCheckLogin, login)
+router.post('/login', loginValidator, processLogin)
 
 /* profile */
 router.get('/profile',sessionCheckNotLogin, profile);
