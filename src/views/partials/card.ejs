@@ -4,7 +4,7 @@
         <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
         <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
         
-        <img class="home-main-img" src="/img/<%= product.image || 'default-image.png' %>" alt="img">
+        <a href="/products/details/<%= product.id %>"><img class="home-main-img" src="/img/<%= product.image || 'default-image.png' %>" alt="img"></a>
         <!-- <span>DESCUENTO (en forma de etiqueta) % OFF</span> -->
         <button class="home-main-button-compra"><a href="/products/details/<%= product.id %>">Comprar</a></button>
         <!-- <p>NOMBRE ZAPATILLA</p> -->
