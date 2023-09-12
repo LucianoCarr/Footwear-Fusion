@@ -1,10 +1,9 @@
 const express = require('express');
-const {register,registerPage,loginPage,login,profile,processLogin} = require('../controller/usersControllers');
+const {register,registerPage,login,profile,processLogin} = require('../controller/usersControllers');
 const registerValidator = require('../validations/RegisterValidator');
 const loginValidator = require('../validations/loginValidator');
 const sessionCheckLogin = require('../middlewares/sessionCheckLogin');
 const sessionCheckNotLogin = require('../middlewares/sessionCheckNotLogin');
-const notUsercheck = require('../middlewares/notUsercheck');
 const router = express.Router();
 
 /* /users */
@@ -15,7 +14,7 @@ router.post('/register', registerValidator, register);
 
 /* login */
 router.get('/login', sessionCheckLogin, login)
-router.post('/login',loginValidator,processLogin)
+router.post('/login', loginValidator, processLogin)
 
 /* profile */
 router.get('/profile',sessionCheckNotLogin, profile);
