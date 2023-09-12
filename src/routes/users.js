@@ -14,7 +14,7 @@ router.get('/register', sessionCheckLogin, registerPage);
 router.post('/register', registerValidator, register);
 
 /* login */
-router.get('/login',notUsercheck, login)
+router.get('/login', sessionCheckLogin, login)
 router.post('/login',loginValidator,processLogin)
 
 /* profile */
