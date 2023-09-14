@@ -20,7 +20,12 @@ const {hashSync} = require('bcryptjs');
                lastname : lastname.trim(),
                email : email.trim(),
                role : 'user',
-               password : hashSync(password,10)
+               password : hashSync(password,10),
+               birthday : null,
+               address : null,
+               province : null,
+               city : null
+
         }
 
         

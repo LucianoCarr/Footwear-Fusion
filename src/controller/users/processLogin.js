@@ -6,12 +6,16 @@ module.exports = (req,res) =>{
 
     if(errors.isEmpty()){
         const users= readJSON('usersData.json');
-        const {id,username,role,lastname} = users.find(user => user.email === req.body.email)
+        const {id,username,role,lastname,birthday,address,province,city} = users.find(user => user.email === req.body.email)
 
         req.session.userLogin = {
             id,
             username,
             lastname,
+            birthday ,
+            address ,
+            province ,
+            city ,
             role
         }
 
