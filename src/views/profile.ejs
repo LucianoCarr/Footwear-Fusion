@@ -14,25 +14,26 @@
                                         <h4>PERFIL DE USUARIO</h4>
                                     </div>
                                     <div class="card-body">
-                                        <form action="/users/update?_method=PUT" method="POST" class="row">
+                                        <form action="/users/profile?_method=PUT" method="POST" class="row">
                                             <div class="col-12 col-md-6 mb-3">
-                                                <label for="name" class="form-label">Nombre</label>
-                                                <input type="text" class="form-control" id="name" placeholder="ej: Juan"
-                                                    name="name">
+                                                <label for="username" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="username" placeholder="ej: Juan"
+                                                    name="username" value="<%= username %>">
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
-                                                <label for="surname" class="form-label">Apellido</label>
-                                                <input type="text" class="form-control" id="surname"
-                                                    placeholder="ej: Rodriguez" name="surname">
+                                                <label for="lastname" class="form-label">Apellido</label>
+                                                <input type="text" class="form-control" id="lastname"
+                                                    placeholder="ej: Rodriguez" name="lastname" value="<%= lastname %>">
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="birthday" class="form-label">Fecha de nacimiento</label>
-                                                <input type="date" class="form-control" id="birthday" name="birthday">
+                                                <input type="date" class="form-control" id="birthday" name="birthday" 
+                                                value="<%= birthday %>">
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="address" class="form-label">Dirección</label>
                                                 <input type="text" class="form-control" id="address"
-                                                    placeholder="Domicilio" name="address">
+                                                    placeholder="Domicilio" name="address" value="<%= address %>">
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="province" class="form-label">Provincia</label>
@@ -67,7 +68,7 @@
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="city" class="form-label">Ciudad</label>
                                                 <select type="text" class="form-select" id="city" name="city">
-                                                    <option hidden>Seleccione...</option>
+                                                    <option hidden >Seleccione...</option>
                                                     <option>CABA</option>
                                                     <option>San miguel</option>
                                                     <option>Muñiz</option>

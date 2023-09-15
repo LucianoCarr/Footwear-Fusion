@@ -6,11 +6,18 @@
             <% if(locals.userLogin?.role === 'admin'){ %>
             <a href="/products/add"><i class="fa-solid fa-file-circle-plus" style="color: #fafafa;"></i></a>
             <% } %>
+            
             <a class="text-decoration-none text-white" href="<%= locals.userLogin ? '/users/profile' : '/users/login' %>">
                 <i class="fa-solid <%= locals.userLogin ? 'fa-id-card' : 'fa-user' %>" style="color: #fafafa;"></i>
                 <%= locals.userLogin && `Hola ${locals.userLogin.username}` %>
             </a>
-            
+        </button>
+        <button class="header-user">
+            <% if (locals.userLogin) { %>
+                <div class="header-user">
+                    <a href="/users/exit"><i class="fa-solid fa-right-from-bracket" style="color: #fafafa;"></i></a>
+                </div>
+            <% } %>
         </button>
     </div>
 
@@ -38,7 +45,8 @@
         <div class="header--button-car">
             <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-
+        
+        
         <!-- links navigation -->
 
         <ul class="header--navbar">

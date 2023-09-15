@@ -25,11 +25,14 @@
    },
    {
       "id": 4,
-      "username": "Ismael",
-      "lastname": "Callamullo",
+      "username": "ISMAEL",
+      "lastname": "cachamucho",
       "email": "ismael@gmail.com",
       "role": "user",
-      "password": "$2a$10$PsQEMpLUIlcKgUBr1NL2/OxPioUG8l7U/Is1NWoo.PUazIZ/Fabp2"
+      "password": "$2a$10$PsQEMpLUIlcKgUBr1NL2/OxPioUG8l7U/Is1NWoo.PUazIZ/Fabp2",
+      "birthday": "2023-09-28",
+      "address": "lanus 1111",
+      "province": "NQN",
+      "city": "Seleccione..."
    }
-
 ]
