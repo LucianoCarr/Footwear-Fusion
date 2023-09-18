@@ -19,12 +19,14 @@ module.exports = (req,res) =>{
             role
         }
 
-        req.body.remember !== undefined && res.cookie('footwear',req.session.userLogin,{
-            maxAge : 1000 * 60
+        req.body.remember !== undefined && res.cookie('footwear', req.session.userLogin,{
+            maxAge : 1000 * 60 * 10
         })
 
         return res.redirect('/')
     }else{
-        return res.send(errors.mapped())
+        return res.render('login',{
+            errors : errors.mapped()
+     })
     }
 }

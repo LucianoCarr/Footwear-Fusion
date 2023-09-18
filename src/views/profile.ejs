@@ -19,11 +19,13 @@
                                                 <label for="username" class="form-label">Nombre</label>
                                                 <input type="text" class="form-control" id="username" placeholder="ej: Juan"
                                                     name="username" value="<%= username %>">
+                                                    <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.username?.msg %></span>
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="lastname" class="form-label">Apellido</label>
                                                 <input type="text" class="form-control" id="lastname"
                                                     placeholder="ej: Rodriguez" name="lastname" value="<%= lastname %>">
+                                                    <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.lastname?.msg %></span>
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="birthday" class="form-label">Fecha de nacimiento</label>
@@ -38,42 +40,19 @@
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="province" class="form-label">Provincia</label>
                                                 <select type="text" class="form-select" id="province" name="province">
-                                                    <option hidden>Seleccione...</option>
-                                                    <option>Buenos Aires</option>
-                                                    <option value="">Catamarca</option>
-                                                    <option value="">Chaco</option>
-                                                    <option value="">Chubut</option>
-                                                    <option value="">Cordoba</option>
-                                                    <option value="">Corrientes</option>
-                                                    <option value="">Entre rios</option>
-                                                    <option value="">Formosa</option>
-                                                    <option value="">Jujuy</option>
-                                                    <option value="">La pampa</option>
-                                                    <option value="">La rioja</option>
-                                                    <option value="">Mendoza</option>
-                                                    <option value="">Misiones</option>
-                                                    <option value="">Neuquen</option>
-                                                    <option value="">Rio negro</option>
-                                                    <option value="">Salta</option>
-                                                    <option value="">San juan</option>
-                                                    <option value="">San luis</option>
-                                                    <option value="">Santa cruz</option>
-                                                    <option value="">Santa fe</option>
-                                                    <option value="">Santiago del estero</option>
-                                                    <option value="">Tierra del fuego</option>
-                                                    <option value="">Tucuman</option>
-
+                                                    <option hidden value="">Seleccione...</option>
+                                                    <% provinces.forEach( prov => { %>
+                                                        <option <%= province === prov.name ? 'selected' : '' %> value="<%= prov.name %>"><%= prov.name %></option>
+                                                    <% }) %>
                                                 </select>
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="city" class="form-label">Ciudad</label>
                                                 <select type="text" class="form-select" id="city" name="city">
-                                                    <option hidden >Seleccione...</option>
-                                                    <option>CABA</option>
-                                                    <option>San miguel</option>
-                                                    <option>Muñiz</option>
-                                                    <option>Wilde</option>
-                                                    <option>Bella Vista</option>
+                                                    <option hidden value="">Seleccione...</option>
+                                                    <% cities.forEach( cit => { %>
+                                                        <option <%= city === cit.name ? 'selected' : '' %> value="<%= cit.name %>"><%= cit.name %></option>
+                                                    <% }) %>
                                                 </select>
                                             </div>
 
