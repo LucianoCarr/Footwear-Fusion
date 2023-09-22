@@ -4,6 +4,7 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const { validationResult } = require('express-validator')
 
 const controller = {
   
@@ -27,6 +28,9 @@ const controller = {
     },
     
     create : (req,res) => {
+      const errors = validationResult(req)
+
+      if (errors.isEmpty()) { 
       const {name, price, discount, category, description, textColor, hexColor} = req.body;
 
       const newProduct = {
@@ -46,7 +50,13 @@ const controller = {
       fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3), "utf-8");
   
       return res.redirect(`/products/details/${newProduct.id}`);
+    }else {
+      return res.render('productAdd',{
+            errors : errors.mapped(),
+            old : req.body
+      })
 
+} 
     },
     
     edit: (req, res) => {
@@ -120,7 +130,8 @@ const controller = {
       fs.writeFileSync(productsFilePath, JSON.stringify(productsUpdated, null, 3), "utf-8");
   
       return res.redirect(`/products/details/${req.params.id}`);
-    },
+  
+},
 
     destroy: (req,res)=>{
       const productsModify = products.filter((product) => {

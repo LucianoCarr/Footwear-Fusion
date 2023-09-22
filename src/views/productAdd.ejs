@@ -16,11 +16,12 @@
                 </div>
                 <div class="card-body">
                     <form action="/products/add" method="POST" class="row"
-                        enctype="multipart/form-data">
+                    enctype="multipart/form-data">
                         <!-- Nombre zapatilla -->
                         <div class="col-12 col-md-6 mb-3">
                             <label for="name" class="form-label">nombre zapatilla</label>
-                            <input type="text" class="form-control" id="title" name="name">
+                            <input type="text" class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" value="<%= locals.old && (old.name && old.name) %>">
+                            <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                         </div>
                         <!-- color -->
                         <div class="col-12 col-md-6 mb-3">
@@ -29,28 +30,31 @@
                                 <span class="input-group-text p-0" id="basic-addon1">
         <input class="form-control-sm form-control-color border-0 bg-transparent" type="color" name="hexColor">
                                 </span>
-                                <input class="form-control" type="text" name="textColor" id="color">
+                                <input class="form-control <%= locals.errors && (errors.textColor && 'is-invalid') %>" type="text" name="textColor" id="color" value="<%= locals.old && (old.textColor && old.textColor) %>">
                             </div>
+                            <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.textColor && errors.textColor.msg) %></spam>
                         </div>
                         <!-- precio -->
                         <div class="col-12 col-md-6 mb-3">
                             <label for="price" class="form-label">Precio</label>
-                            <input type="number" class="form-control" id="price" name="price">
+                            <input type="text" class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>" id="price" name="price" value="<%= locals.old && (old.price && old.price) %>">
+                            <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.price && errors.price.msg) %></spam>
                         </div>
                         <!-- descuento -->
                         <div class="col-12 col-md-6 mb-3">
                             <label for="discount" class="form-label">Descuento</label>
-                            <input type="number" class="form-control" id="discount" name="discount">
+                            <input type="text" class="form-control" id="discount" name="discount">
                         </div>
                         <!-- categoria -->
                         <div class="col-12 col-md-6 mb-3">
                             <label for="category" class="form-label">Categoría</label>
-                            <select class="form-select" aria-label="Default select example"
-                                name="category" id="category">
+                            <select class="form-select <%= locals.errors && (errors.category && 'is-invalid') %>" aria-label="Default select example" name="category" id="category" value="<%= locals.old && (old.category && old.category) %>">
+                                <option disabled selected>None</option>
                                 <option value="men">Hombre</option>
                                 <option value="women">Mujer</option>
-                                <option value="child">Niño</option>
+                                <option value="child">Niños</option>
                             </select>
+                            <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.category && errors.category.msg) %></spam>
                         </div>
                         <!-- stock -->
                         <div class="col-12 col-md-6 mb-3">

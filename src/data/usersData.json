@@ -37,8 +37,20 @@
    },
    {
       "id": 4,
+      "username": "luciano",
+      "lastname": "Cabral",
+      "email": "luciano1@gmail.com",
+      "role": "admin",
+      "password": "$2a$10$y.C4VV73Rp9nq/yLwy7vC.YVxHeNZj4megQfucUibjy65lbxoHeyC",
+      "birthday": null,
+      "address": null,
+      "province": null,
+      "city": null
+   },
+   {
+      "id": 5,
       "username": "ISMAEL",
-      "lastname": "cachamucho",
+      "lastname": "callamullo",
       "email": "ismael@gmail.com",
       "role": "user",
       "password": "$2a$10$PsQEMpLUIlcKgUBr1NL2/OxPioUG8l7U/Is1NWoo.PUazIZ/Fabp2",

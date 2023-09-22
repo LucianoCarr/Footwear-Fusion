@@ -3,6 +3,8 @@ const productsController = require('../controller/productsController');
 const { upload } = require('../middlewares/upload');
 const adminCheck = require('../middlewares/adminCheck');
 const router = express.Router();
+const productAddValidator = require('../validations/productAddValidator')
+const productEditValidator = require('../validations/productEditValidator')
 
 /* /produtcs */
 router.get('/cart', productsController.cart)
@@ -13,18 +15,14 @@ router.get('/add', adminCheck, productsController.add)
 router.post('/add', upload.fields([
   { name: "image", maxCount: 1 }, // image primary
   { name: "images"}, // images secondary
-]), productsController.create)
+]), productAddValidator, productsController.create)
 
 /* EDIT PRODUCT */ 
 router.get('/edit/:id', adminCheck, productsController.edit); 
-router.put(
-  "/edit/:id",
-  upload.fields([
+router.put("/edit/:id", upload.fields([
     { name: "image", maxCount: 1 }, // image primary
     { name: "images"}, // images secondary
-  ]),
-  productsController.modify
-); 
+  ]), productEditValidator, productsController.modify); 
 
 
 /* DELETE */

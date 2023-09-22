@@ -33,14 +33,14 @@
                                                     <img class="img-fluid border border-primary-subtle img-secondary-product-edit" src="/img/<%= img %>" alt="">
                                                 <%})%>
                                                 <%}else{%>
-                                                    <h4>No hay imagenes secundarias</h4>
+                                                    <h4>No hay imagenes secundarias</h4>        <!-- Fresh Foam X 1080v12 Wide -->
                                                 <%}%>
                                             </div>
                                             <!-- nombre zapatilla -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="name" class="form-label">Nombre zapatilla</label>
-                                            <input type="text" class="form-control" id="title" name="name"
-                                                value="<%= name %>">
+                                            <input type="text" class="form-control" id="name" name="name" value="<%= name %>">
+                                          
                                         </div>
                                         <!-- color -->
                                         <div class="col-12 col-md-6 mb-3">
@@ -49,29 +49,31 @@
                                                 <span class="input-group-text p-0" id="basic-addon1">
                                                     <input class="form-control-sm form-control-color border-0 bg-transparent" type="color" name="hexColor" value="<%= color.hex %>">
                                                 </span>
-                                                <input class="form-control" type="text" name="textColor" id="color" value="<%= color.text %>">    
+                                                <input class="form-control" type="text" name="textColor" id="color" value="<%= color.text %>"> 
+                                               
                                             </div>
                                         </div>
                                         <!-- precio -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="price" class="form-label">Precio</label>
-                                            <input type="number" class="form-control" id="price" name="price"
-                                                value="<%= price %>">
+                                            <input type="text" class="form-control" id="price" name="price" value="<%= price %>">
+
                                         </div>
                                         <!-- descuento -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="discount" class="form-label">Descuento</label>
-                                            <input type="number" class="form-control" id="discount" name="discount"
-                                                value="<%= discount %>">
+                                            <input type="text" class="form-control" id="discount" name="discount" value="<%= discount %>">
+                                           
                                         </div>
                                         <!-- categoria -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="category" class="form-label">Categoría</label>
-                                            <select class="form-select" aria-label="Default select example"
-                                                name="category" id="category">
+                                            <select class="form-select" aria-label="Default select example" name="category" id="category">
                                                 <option value="men" <%= category ==="men" && 'selected' %>>Hombre</option>
                                                 <option value="women" <%= category ==="women" && 'selected' %>>Mujer</option>
+                                                <option value="child" <%= category ==="child" && 'selected' %>>Niños</option>
                                             </select>
+                                         
                                         </div>
                                         <!-- stock -->
                                         <div class="col-12 col-md-6 mb-3">
