@@ -19,6 +19,7 @@
                                 <!-- id -->
                                 <div class="card-body">
                                     <form action="/products/edit/<%= id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
+                                          
                                         <!-- conservar imagenes -->
                                         <div class="col-12 col-md-4 mb-3">
                                             <img class="img-fluid border border-danger-subtle img-product-edit" src="/img/<%= image %>" alt="">
@@ -39,8 +40,8 @@
                                             <!-- nombre zapatilla -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="name" class="form-label">Nombre zapatilla</label>
-                                            <input type="text" class="form-control" id="name" name="name" value="<%= name %>">
-                                          
+                                            <input type="text" class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" value="<%= name %>">
+                                            <spam class="ms-2 fw-bold"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                                         </div>
                                         <!-- color -->
                                         <div class="col-12 col-md-6 mb-3">
@@ -49,21 +50,20 @@
                                                 <span class="input-group-text p-0" id="basic-addon1">
                                                     <input class="form-control-sm form-control-color border-0 bg-transparent" type="color" name="hexColor" value="<%= color.hex %>">
                                                 </span>
-                                                <input class="form-control" type="text" name="textColor" id="color" value="<%= color.text %>"> 
-                                               
+                                                <input class="form-control <%= locals.errors && (errors.textColor&& 'is-invalid') %>" type="text" name="textColor" id="color" value="<%= color.text %>"> 
                                             </div>
+                                            <spam class="ms-2 fw-bold"><%= locals.errors && (errors.textColor && errors.textColor.msg) %></spam>
                                         </div>
                                         <!-- precio -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="price" class="form-label">Precio</label>
-                                            <input type="text" class="form-control" id="price" name="price" value="<%= price %>">
-
+                                            <input type="text" class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>" id="price" name="price" value="<%= price %>">
+                                            <spam class="ms-2 fw-bold"><%= locals.errors && (errors.price && errors.price.msg) %></spam>
                                         </div>
                                         <!-- descuento -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="discount" class="form-label">Descuento</label>
                                             <input type="text" class="form-control" id="discount" name="discount" value="<%= discount %>">
-                                           
                                         </div>
                                         <!-- categoria -->
                                         <div class="col-12 col-md-6 mb-3">
@@ -73,7 +73,6 @@
                                                 <option value="women" <%= category ==="women" && 'selected' %>>Mujer</option>
                                                 <option value="child" <%= category ==="child" && 'selected' %>>Niños</option>
                                             </select>
-                                         
                                         </div>
                                         <!-- stock -->
                                         <div class="col-12 col-md-6 mb-3">

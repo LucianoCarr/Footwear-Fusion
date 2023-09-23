@@ -67,6 +67,10 @@ const controller = {
     },
 
     modify: (req, res) => {
+      const errors = validationResult(req)
+      const product = products.find(product => product.id === +req.params.id)
+
+      if (errors.isEmpty()) { 
       const {name, price, discount, category, description, textColor, hexColor, rememberImg} = req.body;
   
       const productsUpdated = products.map((product) => {
@@ -130,8 +134,13 @@ const controller = {
       fs.writeFileSync(productsFilePath, JSON.stringify(productsUpdated, null, 3), "utf-8");
   
       return res.redirect(`/products/details/${req.params.id}`);
-  
-},
+     } else {
+       return res.render('productEdit',{
+         errors : errors.mapped(),
+         ...product
+        })
+      }
+    },
 
     destroy: (req,res)=>{
       const productsModify = products.filter((product) => {
