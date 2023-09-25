@@ -27,7 +27,7 @@ Tengo 24 años , soy de Bueno Aires. Me gusta pasar mi tiempo libre jugando vide
 [Por las funcionalidades implementadas](https://www.mercadolibre.com.ar/)
 ### ----------------------------------------------------------------------------
 
-# Trello
+<!-- # Trello
 
 
-[C21 Grupo 5 - FootwearFusion](https://trello.com/b/Is7Nvcr4/c21-grupo-5-footwearfusion)
+[C21 Grupo 5 - FootwearFusion](https://trello.com/b/Is7Nvcr4/c21-grupo-5-footwearfusion) -->
