@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head',{
+    title : 'Footwear-Fusion',
+  }) %>
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <main class="home-main">
+
+       <article class="home-main-contenedor">
+        <div class="container products-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="products-title">Resultados de la búsqueda: <%= keywords %></h2>
+                </div>
+                
+                <% if (results.length) { %>
+                    
+                <% for(let product of results){ %>
+                    <div class="home-main-contenedor-card">
+                        <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
+                        <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
+                        
+                        <a href="/products/details/<%= product.id %>"><img class="home-main-img" src="/img/<%= product.image || 'default-image.png' %>" alt="img"></a>
+                        <!-- <span>DESCUENTO (en forma de etiqueta) % OFF</span> -->
+                        <button class="home-main-button-compra"><a href="/products/details/<%= product.id %>">Comprar</a></button>
+                        <!-- <p>NOMBRE ZAPATILLA</p> -->
+                        <p class="home-main-text"><%= product.name %></p>
+                        <div class="home-main-box">
+                            <h4 class="home-main-precio">$<%= product.price %></h4>
+                            <% if (product.discount) { %>
+                                <span class="home-main-discount"><%= product.discount %> % OFF</span>
+                                <% } %>
+                        </div>
+                    </div>
+                    <% } %>
+                    <% }else{ %>
+    
+                        
+                <div class="col-12">
+                    <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+                </div>
+            </div>
+            <% } %>
+        </div>
+       </article>
+
+    </main>
+    <%- include('partials/footer')  %>
+    <%- include('partials/bootstrap') %>
+    
+</body>
+
+</html>
