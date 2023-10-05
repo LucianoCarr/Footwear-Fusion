@@ -58,5 +58,17 @@
       "address": "lanus 1111",
       "province": "NQN",
       "city": "Seleccione..."
+   },
+   {
+      "id": 6,
+      "username": "Eric",
+      "lastname": "Mena",
+      "email": "eric@gmail.com",
+      "role": "user",
+      "password": "$2a$10$Be6OdHr2D1J4wEp/81/FDeX8aIyaau7c.yP72W8KEIOFl/RgFDMlS",
+      "birthday": null,
+      "address": "123",
+      "province": "La Rioja",
+      "city": "CABA"
    }
 ]

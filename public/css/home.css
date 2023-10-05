@@ -21,6 +21,7 @@
     align-items: center;
     display: flex;
     background-color: #35353596;
+    margin: 6px 0;
     
 }
 
@@ -28,8 +29,6 @@
 
 .home-main-button-filtro{
     display: none;
-     
-    
 }
 
 .home-main-filtro button{
@@ -134,8 +133,10 @@
 
 .home-main-carrusel{
     display: block;
-    width: 50%;
+   /*  width: 50%; */
     margin: 0 auto;
+    object-fit: cover;
+    width: 90%;
 } 
 
 
@@ -152,7 +153,7 @@
 
 
 .home-main-filtro button{
-    display: flex;
+    /* display: flex; */
     margin: 8px 8px 8px; 
     background-color: #35353596;
     border: 1px solid silver;
@@ -163,11 +164,11 @@
 }
 
 
-.home-main-button-filtro{
+/* .home-main-button-filtro{
     display: flex; 
     margin: 8px 8px 8px;
      
-}
+} */
 
 .home-main-contenedor{
     width: 100%;
