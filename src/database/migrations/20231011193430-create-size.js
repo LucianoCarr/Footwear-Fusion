@@ -10,10 +10,17 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       size: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       productId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model:{
+            tableName:'Products'
+          }
+        }
       },
       createdAt: {
         allowNull: false,

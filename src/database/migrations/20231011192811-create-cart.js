@@ -10,19 +10,40 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       subtotal: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       total: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       orderId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model:{
+            tableName:'Orders'
+          }
+        }
+      },
+      productId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model:{
+            tableName:'Prodructs'
+          }
+        }
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      deletedAt: {
         allowNull: false,
         type: Sequelize.DATE
       }
