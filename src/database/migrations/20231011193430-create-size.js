@@ -16,11 +16,11 @@ module.exports = {
       productId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references:{
+       /*  references:{
           model:{
             tableName:'Products'
           }
-        }
+        } */
       },
       createdAt: {
         allowNull: false,

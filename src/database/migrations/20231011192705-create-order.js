@@ -20,21 +20,17 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references:{
+        /* references:{
           model:{
             tableName:'Users'
           }
-        }
+        } */
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      deletedAt: {
         allowNull: false,
         type: Sequelize.DATE
       }

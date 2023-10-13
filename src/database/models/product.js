@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Product.belongsTo(models.Category, {
-        as : "category",
-        foreignKey : "categoriesId"
+        as : "categories",
+        foreignKey : "categoryId"
       });
       Product.hasMany(models.Image, {
         as : "images",
@@ -24,24 +24,22 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey : "productId",
         onDelete : "cascade"
       });
-      Product.belongsToMany(models.Order, {
+      /* Product.belongsToMany(models.Order, {
         as : "orders",
         foreignKey : "productId",
         through : "carts",
-        otherKey : "orderId",
+        otherKey : "cartId",
         onDelete : "cascade"
-      });
+      }); */
     }
   }
   Product.init({
     name: DataTypes.STRING,
     price: DataTypes.INTEGER,
     discount: DataTypes.INTEGER,
-    category: DataTypes.STRING,
     description: DataTypes.TEXT,
-    image: DataTypes.STRING,
     stock: DataTypes.STRING,
-    cartId: DataTypes.INTEGER,
+   
     categoryId: DataTypes.INTEGER
   }, {
     sequelize,

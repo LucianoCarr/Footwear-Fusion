@@ -1,15 +1,5 @@
 'use strict';
 
-/* const categoriasArray = ['hombres', 'mujeres', 'nenes']
-
-const categoriasDB = categoriasArray.map(categoria => {
-  return {
-    name : categoria,
-    createdAt : new Date,
-    updatedAt : new Date
-  }
-}) */
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {

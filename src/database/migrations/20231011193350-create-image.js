@@ -16,21 +16,17 @@ module.exports = {
       productId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references:{
+        /* references:{
           model:{
             tableName:'Products'
           }
-        }
+        } */
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      deletedAt: {
         allowNull: false,
         type: Sequelize.DATE
       }

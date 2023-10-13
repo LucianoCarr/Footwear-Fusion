@@ -20,32 +20,15 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER
       },
-      category: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
       description: {
         type: Sequelize.TEXT,
-        allowNull: false
-      },
-      image: {
-        type: Sequelize.STRING,
         allowNull: false
       },
       stock: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      cartId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references:{
-          model:{
-            tableName:'Carts'
-          }
-        }
-      },
-      categoriesId: {
+      categoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
@@ -59,10 +42,6 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      deletedAt: {
         allowNull: false,
         type: Sequelize.DATE
       }
