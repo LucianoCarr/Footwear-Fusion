@@ -12,12 +12,17 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Image.belongsTo(models.Product, {
         as : "product",
-        foreignKey : "productsId"
+        foreignKey : "productId"
       });
     }
   }
   Image.init({
     filename: DataTypes.STRING,
+    others: DataTypes.STRING,
+    others2: DataTypes.STRING,
+    others3: DataTypes.STRING,
+    others4: DataTypes.STRING,
+    others5: DataTypes.STRING,
     productId: DataTypes.INTEGER
   }, {
     sequelize,
