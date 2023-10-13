@@ -9,13 +9,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      adress: {
+      street: {
         type: Sequelize.STRING
       },
       province: {
-        type: Sequelize.STRING
-      },
-      city: {
         type: Sequelize.STRING
       },
       createdAt: {
