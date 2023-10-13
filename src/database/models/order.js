@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         as : "user",
         foreignKey : "userId"
       });
-     /*  Order.belongsToMany(models.Product, {
+      Order.belongsToMany(models.Product, {
         as : "products",
         foreignKey : "cartId",
         through : "carts",
         otherKey : "productId",
         onDelete : "cascade"
-      }); */
+      });
     }
   }
   Order.init({

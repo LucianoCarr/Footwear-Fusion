@@ -21,16 +21,15 @@ module.exports = (sequelize, DataTypes) => {
       });
       Product.hasMany(models.Size, {
         as : "Sizes",
-        foreignKey : "productId",
-        onDelete : "cascade"
+        foreignKey : "productId"
       });
-      /* Product.belongsToMany(models.Order, {
+      Product.belongsToMany(models.Order, {
         as : "orders",
         foreignKey : "productId",
         through : "carts",
         otherKey : "cartId",
         onDelete : "cascade"
-      }); */
+      });
     }
   }
   Product.init({
