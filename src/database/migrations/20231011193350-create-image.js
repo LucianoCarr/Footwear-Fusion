@@ -34,7 +34,8 @@ module.exports = {
         references:{
           model:{
             tableName:'Products'
-          }
+          },
+          key : "id"
         }
       },
       createdAt: {

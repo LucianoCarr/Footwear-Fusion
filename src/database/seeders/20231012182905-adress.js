@@ -8,7 +8,8 @@ module.exports = {
       province : "Buenos Aires",
       createdAt : new Date,
       updatedAt : new Date
-       }], {});
+       },
+      ], {});
   },
 
   async down(queryInterface, Sequelize) {
