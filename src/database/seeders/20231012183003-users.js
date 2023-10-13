@@ -17,7 +17,7 @@ module.exports = {
           adressesId: 1,
           createdAt : new Date,
           updatedAt : new Date,
-          
+          deletedAt : new Date
         },
         {
           name: "Luciano",
@@ -30,7 +30,7 @@ module.exports = {
           adressesId: 1,
           createdAt : new Date,
           updatedAt : new Date,
-          
+          deletedAt : new Date
         },
         {
           name: "Lucas",
@@ -43,7 +43,7 @@ module.exports = {
           adressesId: 1,
           createdAt : new Date,
           updatedAt : new Date,
-          
+          deletedAt : new Date
         },
         {
           name: "luciano",
@@ -56,7 +56,7 @@ module.exports = {
           adressesId: 1,
           createdAt : new Date,
           updatedAt : new Date,
-          
+          deletedAt : new Date
         },
         {
           name: "ISMAEL",
@@ -69,7 +69,7 @@ module.exports = {
           adressesId: 1,
           createdAt : new Date,
           updatedAt : new Date,
-          
+          deletedAt : new Date
         },
         {
           name: "Eric",
@@ -82,7 +82,7 @@ module.exports = {
           adressesId: 1,
           createdAt : new Date,
           updatedAt : new Date,
-             
+          deletedAt : new Date
         },
       ],
       {}

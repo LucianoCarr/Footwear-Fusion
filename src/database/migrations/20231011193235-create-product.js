@@ -20,8 +20,16 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER
       },
+      category: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       description: {
         type: Sequelize.TEXT,
+        allowNull: false
+      },
+      color: {
+        type: Sequelize.STRING,
         allowNull: false
       },
       stock: {
@@ -44,7 +52,11 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
+      deletedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
     });
   },
   async down(queryInterface, Sequelize) {
