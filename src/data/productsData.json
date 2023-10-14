@@ -39,16 +39,16 @@
    },
    {
       "id": 3,
-      "name": "BOTITAS JORDAN AIR 7 RETRO CARDINAL",
+      "name": "Botitas Jordan Air 7 Retro Cardinal",
       "price": 136000,
       "discount": 0,
       "category": "hombre",
       "description": "Botitas Jordan Air 7 Retro Cardinal De Moda Para Hombre Código: Cu9307-106",
-      "image": "blanca-01.webp",
+      "image": "blanca-01.jpg",
       "images": [
-         "blanca-02.webp",
-         "blanca-03.webp",
-         "blanca-04.webp"
+         "blanca-02.jpg",
+         "blanca-03.jpg",
+         "blanca-04.jpg"
       ],
       "color": {
          "text": "blanco",
@@ -96,12 +96,12 @@
    },
    {
       "id": 6,
-      "name": "ZAPATILLAS LITE RACER REBOLD",
+      "name": "Zapatillas Lite Racer Rebold",
       "price": 41000,
       "discount": 25,
       "category": "nene",
       "description": "Inspiradas en el estilo running, estas zapatillas adidas le imprimen energía deportiva a tu look diario. La amortiguación liviana mantiene tus pies cómodos y preparados para todo lo que te depare el día.",
-      "image": "negra-01.webp",
+      "image": "negra-01.jpg",
       "images": [
          "negra-02.avif",
          "negra-03.avif",
@@ -120,11 +120,11 @@
       "discount": 30,
       "category": "hombre",
       "description": "Con sus líneas simples, el look de atletismo tradicional y, por supuesto, la amortiguación Air visible, el Nike Air Max SC es el toque final perfecto para cualquier atuendo.",
-      "image": "blanco-01.webp",
+      "image": "blanco-01.jpg",
       "images": [
-         "blanco-02.webp",
-         "blanco-03.webp",
-         "blanco-04.webp"
+         "blanco-02.jpg",
+         "blanco-03.jpg",
+         "blanco-04.jpg"
       ],
       "color": {
          "text": "blanco",
@@ -139,11 +139,11 @@
       "discount": 5,
       "category": "hombre",
       "description": "Cuando tus entrenamientos se ponen superespecíficos, el Nike Free Metcon 5 te ayuda a llegar a esos lugares profundos para encontrar ese último gramo de fuerza y salir del otro lado en un grito de victoria. Combina estilo con sustancia y flexibilidad en el antepié con estabilidad en la parte superior, perfecto para volar durante un día de cardio o mejorar tu agilidad.",
-      "image": "negro-01.webp",
+      "image": "negro-01.jpg",
       "images": [
-         "negro-02.webp",
-         "negro-03.webp",
-         "negro-04.webp"
+         "negro-02.jpg",
+         "negro-03.jpg",
+         "negro-04.jpg"
       ],
       "color": {
          "text": "negro",
