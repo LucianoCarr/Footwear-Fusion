@@ -9,7 +9,7 @@
             
             <a class="text-decoration-none text-white" href="<%= locals.userLogin ? '/users/profile' : '/users/login' %>">
                 <i class="fa-solid <%= locals.userLogin ? 'fa-id-card' : 'fa-user' %>" style="color: #fafafa;"></i>
-                <%= locals.userLogin && `Hola ${locals.userLogin.username}` %>
+                <%= locals.userLogin && `Hola ${locals.userLogin.name}` %>
             </a>
         </button>
         <button class="header-user">

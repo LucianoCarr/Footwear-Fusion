@@ -16,16 +16,16 @@
                                     <div class="card-body">
                                         <form action="/users/profile?_method=PUT" method="POST" class="row">
                                             <div class="col-12 col-md-6 mb-3">
-                                                <label for="username" class="form-label">Nombre</label>
-                                                <input type="text" class="form-control" id="username" placeholder="ej: Juan"
-                                                    name="username" value="<%= username %>">
-                                                    <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.username?.msg %></span>
+                                                <label for="name" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="name" placeholder="ej: Juan"
+                                                    name="name" value="<%= name %>">
+                                                    <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.name?.msg %></span>
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
-                                                <label for="lastname" class="form-label">Apellido</label>
-                                                <input type="text" class="form-control" id="lastname"
-                                                    placeholder="ej: Rodriguez" name="lastname" value="<%= lastname %>">
-                                                    <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.lastname?.msg %></span>
+                                                <label for="lastName" class="form-label">Apellido</label>
+                                                <input type="text" class="form-control" id="lastName"
+                                                    placeholder="ej: Rodriguez" name="lastName" value="<%= lastName %>">
+                                                    <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.lastName?.msg %></span>
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="birthday" class="form-label">Fecha de nacimiento</label>
