@@ -35,15 +35,13 @@
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="address" class="form-label">Dirección</label>
                                                 <input type="text" class="form-control" id="address"
-                                                    placeholder="Domicilio" name="address" value="<%= adress.street %>">
+                                                    placeholder="Domicilio" name="address" value="">
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="province" class="form-label">Provincia</label>
                                                 <select type="text" class="form-select" id="province" name="province">
                                                     <option hidden value="">Seleccione...</option>
-                                                    <% adresses.forEach( adress => { %>
-                                                        <option <%= adress.id === adressesId ? 'selected' : '' %> value="<%= adress.id %>"><%= adress.province %></option>
-                                                    <% }) %>
+                                                    
                                                 </select>
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
