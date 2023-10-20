@@ -1,7 +1,7 @@
 const { check } = require("express-validator");
 
 module.exports = [
-    check("username")
+    check("name")
       .isLength( {
         min: 2,
       })
@@ -10,7 +10,7 @@ module.exports = [
         ignore:' '
       })
       .withMessage("Solo letras"),
-    check("lastname")
+    check("lastName")
       .isLength({
         min: 2,
       })
