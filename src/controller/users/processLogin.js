@@ -15,7 +15,7 @@ module.exports = (req,res) =>{
             req.session.userLogin = {
                 id: user.id,
                 name: user.name,
-                role: user.roleId,
+                role: user.rolesId,
             }
             res.cookie('footwear', req.session.userLogin,{
                 maxAge : 1000 * 60 * 10

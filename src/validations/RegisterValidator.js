@@ -1,10 +1,6 @@
 const {check, body} = require('express-validator')
 
-const fs = require('fs');
-const path = require('path');
-
-const usersFilePath = path.join(__dirname, '../data/usersData.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models')
 
 module.exports = [
   check("username")
@@ -27,7 +23,7 @@ module.exports = [
     .isEmail()
     .withMessage("Formato inválido")
     .custom((value, { req }) => {
-      const user = users.find((user) => user.email === value);
+      const user = db.User.findOne(value)
 
       if (user) {
         return false;

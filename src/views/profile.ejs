@@ -35,14 +35,14 @@
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="address" class="form-label">Dirección</label>
                                                 <input type="text" class="form-control" id="address"
-                                                    placeholder="Domicilio" name="address" value="<%= address %>">
+                                                    placeholder="Domicilio" name="address" value="<%= adress.street %>">
                                             </div>
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="province" class="form-label">Provincia</label>
                                                 <select type="text" class="form-select" id="province" name="province">
                                                     <option hidden value="">Seleccione...</option>
-                                                    <% provinces.forEach( prov => { %>
-                                                        <option <%= province === prov.name ? 'selected' : '' %> value="<%= prov.name %>"><%= prov.name %></option>
+                                                    <% adresses.forEach( adress => { %>
+                                                        <option <%= adress.id === adressesId ? 'selected' : '' %> value="<%= adress.id %>"><%= adress.province %></option>
                                                     <% }) %>
                                                 </select>
                                             </div>
@@ -50,9 +50,7 @@
                                                 <label for="city" class="form-label">Ciudad</label>
                                                 <select type="text" class="form-select" id="city" name="city">
                                                     <option hidden value="">Seleccione...</option>
-                                                    <% cities.forEach( cit => { %>
-                                                        <option <%= city === cit.name ? 'selected' : '' %> value="<%= cit.name %>"><%= cit.name %></option>
-                                                    <% }) %>
+                                                    
                                                 </select>
                                             </div>
 

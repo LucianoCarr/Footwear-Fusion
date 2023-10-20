@@ -39,7 +39,7 @@ module.exports = {
       },
       adressesId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        
         references:{
           model:{
             tableName:'Adresses'
@@ -55,7 +55,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       deletedAt: {
-        allowNull: false,
+        
         type: Sequelize.DATE
       },
     });

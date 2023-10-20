@@ -19,7 +19,7 @@ router.post('/login', loginValidator, processLogin)
 
 /* profile */
 router.get('/profile',sessionCheckNotLogin, profile);
-router.put('/profile',profileValidator,update)
+router.put('/profile',update)
 
 /*exit*/
 router.get('/exit',exit)
