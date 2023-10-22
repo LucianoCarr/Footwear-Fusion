@@ -1,7 +1,7 @@
 "use strict";
 
 const products = require("../../data/productsData.json");
-const categories = require("../../data/categories.json");
+const categories = require('../../data/categories.json')
 
 const structureProductsDB = products.map(
   ({ name, price, discount, description, image, stock, color, category }) => {

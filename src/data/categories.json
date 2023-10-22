@@ -1,14 +1,14 @@
 [
     {
-      "id":1,
-      "name": "hombres"
+        "id" : 1,
+        "name" : "hombres"
     },
     {
-      "id":2,
-      "name": "mujeres"
+        "id" : 2,
+        "name" : "mujeres"
     },
     {
-      "id":3,
-      "name": "nenes"
+        "id" : 3,
+        "name" : "nenes"
     }
-  ]
+]

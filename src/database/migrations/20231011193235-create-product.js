@@ -37,7 +37,6 @@ module.exports = {
       },
       categoryId: {
         type: Sequelize.INTEGER,
-        
         references:{
           model:{
             tableName:'Categories'
