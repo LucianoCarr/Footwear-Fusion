@@ -16,11 +16,14 @@ const controller = {
   },
 
   details: (req, res) => {
-    const product = products.find((product) => product.id === +req.params.id);
-    return res.render("details", {
-      product,
-      products,
-    });
+    db.Product.findByPk(req.params.id,{
+      include : ['images']
+    })
+    .then(product => {
+      return res.render("details", {
+        product
+      });
+    })
   },
 
   add: (req, res) => {
@@ -31,15 +34,7 @@ const controller = {
     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      const {
-        name,
-        price,
-        discount,
-        category,
-        description,
-        textColor,
-        hexColor,
-      } = req.body;
+      const { name, price, discount, category, description, textColor, hexColor,} = req.body;
 
       const newProduct = {
         id: products[products.length - 1].id + 1,
@@ -49,12 +44,8 @@ const controller = {
         category,
         description: description?.trim(),
         color: { text: textColor, hex: hexColor },
-        image: req.files?.image?.length
-          ? req.files.image[0].filename
-          : "default-image.png",
-        images: req.files?.images?.length
-          ? req.files.images.map((image) => image.filename)
-          : [],
+        image: req.files?.image?.length ? req.files.image[0].filename : "default-image.png",
+        images: req.files?.images?.length ? req.files.images.map((image) => image.filename) : [],
       };
 
       products.push(newProduct);
@@ -114,17 +105,7 @@ const controller = {
 
     try {
       if (errors.isEmpty()) {
-        const {
-          name,
-          price,
-          discount,
-          category,
-          description,
-          stock,
-          textColor,
-          hexColor,
-          rememberImg,
-        } = req.body;
+        const { name, price, discount, category, description, stock, textColor, hexColor, rememberImg,} = req.body;
 
         let imagesRemember = [];
         const newImages =
@@ -133,9 +114,7 @@ const controller = {
           }) || [];
 
         if (
-          rememberImg === "true" &&
-          product.images.length + newImages.length <= 6
-        ) {
+          rememberImg === "true" && product.images.length + newImages.length <= 6) {
           const productFormatDB = product.images.map(({filename,productId})=> {
             return {filename,productId}
           })
@@ -186,9 +165,7 @@ const controller = {
         product.stock = !!stock; // -> Boolean(stock)
         product.description = description?.trim();
         product.color = JSON.stringify({ text: textColor, hex: hexColor });
-        product.image = req.files?.image?.length
-          ? req.files.image[0].filename
-          : product.image;
+        product.image = req.files?.image?.length ? req.files.image[0].filename : product.image;
 
         await product.save();
         await db.Image.destroy({ where: { productId: product.id } });
