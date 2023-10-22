@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       Size.belongsTo(models.Product, {
         as : "product",
         foreignKey : "productId"
-      });
+      }); 
     }
   }
   Size.init({
