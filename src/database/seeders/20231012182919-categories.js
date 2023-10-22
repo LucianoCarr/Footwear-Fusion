@@ -1,24 +1,18 @@
 'use strict';
+const categories = require('../../data/categories.json')
 
+const categoriesFormatDB = categories.map(c => {
+  return {
+    ...c,
+    createdAt:new Date,
+    updatedAt:new Date
+  }
+})
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-      await queryInterface.bulkInsert('Categories', [{
-        name: 'Hombres',
-        createdAt : new Date,
-        updatedAt : new Date
-      },
-    {
-      name: 'Mujeres',
-      createdAt : new Date,
-      updatedAt : new Date
-    },
-  {
-    name: 'Nenes',
-    createdAt : new Date,
-    updatedAt : new Date
-  }], {});
+      await queryInterface.bulkInsert('Categories', categoriesFormatDB, {});
 
   },
 

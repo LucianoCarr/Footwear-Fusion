@@ -11,15 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Product.belongsTo(models.Category, {
-        as : "categories",
+        as : "categoria",
         foreignKey : "categoryId"
-      });
+      }); 
       Product.hasMany(models.Image, {
         as : "images",
         foreignKey : "productId",
-        onDelete : "cascade"
+        onDelete : "cascade" 
       });
-      Product.hasMany(models.Size, {
+       Product.hasMany(models.Size, {
         as : "Sizes",
         foreignKey : "productId"
       });
@@ -29,18 +29,17 @@ module.exports = (sequelize, DataTypes) => {
         through : "carts",
         otherKey : "cartId",
         onDelete : "cascade"
-      });
+      }); 
     }
   }
   Product.init({
     name: DataTypes.STRING,
     price: DataTypes.INTEGER,
     discount: DataTypes.INTEGER,
-    category: DataTypes.STRING,
     description: DataTypes.TEXT,
-    color: DataTypes.STRING,
-    stock: DataTypes.STRING,
-   
+    color: DataTypes.TEXT,
+    stock: DataTypes.BOOLEAN,
+    image: DataTypes.STRING,
     categoryId: DataTypes.INTEGER
   }, {
     sequelize,

@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         through : "carts",
         otherKey : "productId",
         onDelete : "cascade"
-      });
+      }); 
     }
   }
   Order.init({
