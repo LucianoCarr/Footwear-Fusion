@@ -31,38 +31,22 @@ const controller = {
   },
 
   create: (req, res) => {
-      const {name,price,discount,categoryId,description,image,color,stock } = req.body 
+    const {name,price,discount,categoryId,description,image,color,stock } = req.body 
 
-    if (errors.isEmpty()) {
-      const { name, price, discount, category, description, textColor, hexColor,} = req.body;
-
-      const newProduct = {
-        id: products[products.length - 1].id + 1,
-        name: name?.trim(),
-        price: +price,
-        discount: +discount,
-        category,
-        description: description?.trim(),
-        color: { text: textColor, hex: hexColor },
-        image: req.files?.image?.length ? req.files.image[0].filename : "default-image.png",
-        images: req.files?.images?.length ? req.files.images.map((image) => image.filename) : [],
-      };
-
-      products.push(newProduct);
-
-      fs.writeFileSync(
-        productsFilePath,
-        JSON.stringify(products, null, 3),
-        "utf-8"
-      );
-
-      return res.redirect(`/products/details/${newProduct.id}`);
-    } else {
-      return res.render("productAdd", {
-        errors: errors.mapped(),
-        old: req.body,
-      });
-    }
+    db.Product.create({
+     name,
+     price,
+     discount,
+     description,
+     image : null,
+     color :null,
+     stock,
+     categoryId,
+   })
+   .then((newproduct)=> {
+     return res.redirect(`/products/details/${newproduct.id}`);
+   })
+   .catch(error => console.log(error))
   },
 
   edit: async (req, res) => {
