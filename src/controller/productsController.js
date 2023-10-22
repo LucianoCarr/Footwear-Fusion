@@ -17,6 +17,12 @@ const controller = {
   },
   
    details : (req, res) => {
+  /*   db.Product.findByPk(req.params.id)
+    .then(product => {
+      return res.render('details',{
+        ...product.dataValues
+      })
+    }) */
     const product = products.find(product => product.id === +req.params.id)
      return res.render('details', {
       product,
@@ -25,8 +31,14 @@ const controller = {
     },
 
     add : (req, res) => {
-  
-     return res.render('productAdd');
+      db.Category.findAll()
+      .then(categories => {
+        return res.render('productAdd',{
+          categories
+        });
+
+      })
+      .catch(error => console.log(error))
     },
     
     create : (req,res) => {
