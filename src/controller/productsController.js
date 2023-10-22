@@ -16,11 +16,14 @@ const controller = {
   },
 
   details: (req, res) => {
-    const product = products.find((product) => product.id === +req.params.id);
-    return res.render("details", {
-      product,
-      products,
-    });
+    db.Product.findByPk(req.params.id,{
+      include : ['images']
+    })
+    .then(product => {
+      return res.render("details", {
+        product
+      });
+    })
   },
 
   add: (req, res) => {
@@ -30,22 +33,36 @@ const controller = {
   create: (req, res) => {
       const {name,price,discount,categoryId,description,image,color,stock } = req.body 
 
-      const product = db.Product.create({
-        name,
-        price,
-        discount,
-        description,
-        image : null,
-        color :null,
-        stock,
-        categoryId,
-      })
-      .then( ()=> {
-        return res.redirect(`/products/details/${product.id}`
-          
-        );
-      })
+    if (errors.isEmpty()) {
+      const { name, price, discount, category, description, textColor, hexColor,} = req.body;
 
+      const newProduct = {
+        id: products[products.length - 1].id + 1,
+        name: name?.trim(),
+        price: +price,
+        discount: +discount,
+        category,
+        description: description?.trim(),
+        color: { text: textColor, hex: hexColor },
+        image: req.files?.image?.length ? req.files.image[0].filename : "default-image.png",
+        images: req.files?.images?.length ? req.files.images.map((image) => image.filename) : [],
+      };
+
+      products.push(newProduct);
+
+      fs.writeFileSync(
+        productsFilePath,
+        JSON.stringify(products, null, 3),
+        "utf-8"
+      );
+
+      return res.redirect(`/products/details/${newProduct.id}`);
+    } else {
+      return res.render("productAdd", {
+        errors: errors.mapped(),
+        old: req.body,
+      });
+    }
   },
 
   edit: async (req, res) => {
@@ -88,17 +105,7 @@ const controller = {
 
     try {
       if (errors.isEmpty()) {
-        const {
-          name,
-          price,
-          discount,
-          category,
-          description,
-          stock,
-          textColor,
-          hexColor,
-          rememberImg,
-        } = req.body;
+        const { name, price, discount, category, description, stock, textColor, hexColor, rememberImg,} = req.body;
 
         let imagesRemember = [];
         const newImages =
@@ -107,9 +114,7 @@ const controller = {
           }) || [];
 
         if (
-          rememberImg === "true" &&
-          product.images.length + newImages.length <= 6
-        ) {
+          rememberImg === "true" && product.images.length + newImages.length <= 6) {
           const productFormatDB = product.images.map(({filename,productId})=> {
             return {filename,productId}
           })
@@ -160,9 +165,7 @@ const controller = {
         product.stock = !!stock; // -> Boolean(stock)
         product.description = description?.trim();
         product.color = JSON.stringify({ text: textColor, hex: hexColor });
-        product.image = req.files?.image?.length
-          ? req.files.image[0].filename
-          : product.image;
+        product.image = req.files?.image?.length ? req.files.image[0].filename : product.image;
 
         await product.save();
         await db.Image.destroy({ where: { productId: product.id } });
