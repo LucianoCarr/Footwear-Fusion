@@ -1,8 +1,33 @@
 const db = require('../../database/models')
 
-module.exports = (req,res) => {
-    const product = products.find(product => product.id === +req.params.id)
-    return res.render('productEdit',{
-      ...product,
+module.exports = async (req,res) => {
+  try {
+    const config = {
+      attributes:{
+        exclude:['createdAt','updatedAt']
+      },
+      include: [
+        {
+          association: "images",
+          attributes:['filename']
+        },
+        {
+          association: "categoria",
+          attributes:['name']
+        },
+      ],
+    }
+    const product = await db.Product.findByPk(req.params.id, config);
+    const categories = await db.Category.findAll({
+      attributes:['name','id']
     })
+    
+    return res.render("productEdit", {
+      p:product,
+      categories
+    });
+    
+  } catch (error) {
+    console.log(error);
+  }
 }
