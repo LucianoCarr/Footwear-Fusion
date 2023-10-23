@@ -19,14 +19,14 @@
             <form action="" method="POST" class="formulario">
                 <div class="register-nameAndLastname">
                     <div class="casillas-registro name">
-                        <label for="username">Nombre</label>
-                        <input class="formulario-casillas-register <%= locals.errors && (errors.username && 'is-invalid') %>" id="username" name="username" type="text" value="<%= locals.old && (old.username && old.username) %>">
-                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.username && errors.username.msg) %></spam>
+                        <label for="name">Nombre</label>
+                        <input class="formulario-casillas-register <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" type="text" value="<%= locals.old && (old.name && old.name) %>">
+                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                     </div>
-                    <div class="casillas-registro lastname">
-                        <label for="lastname">Apellido</label>
-                        <input class="formulario-casillas-register <%= locals.errors && (errors.lastname && 'is-invalid') %>" id="lastname" name="lastname" type="text" value="<%= locals.old && (old.lastname && old.lastname) %>">
-                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.lastname && errors.lastname.msg) %></spam>
+                    <div class="casillas-registro lastName">
+                        <label for="lastName">Apellido</label>
+                        <input class="formulario-casillas-register <%= locals.errors && (errors.lastName && 'is-invalid') %>" id="lastName" name="lastName" type="text" value="<%= locals.old && (old.lastName && old.lastName) %>">
+                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.lastName && errors.lastName.msg) %></spam>
                     </div>
                 </div>
                 <div class="casillas-registro">

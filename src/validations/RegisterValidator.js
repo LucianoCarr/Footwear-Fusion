@@ -1,20 +1,15 @@
 const {check, body} = require('express-validator')
-
-const fs = require('fs');
-const path = require('path');
-
-const usersFilePath = path.join(__dirname, '../data/usersData.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models')
 
 module.exports = [
-  check("username")
+  check("name")
     .isLength({
       min: 2,
     })
     .withMessage("El nombre es obligatorio")
     .isAlpha("es-ES")
     .withMessage("Solo letras"),
-  check("lastname")
+  check("lastName")
     .isLength({
       min: 2,
     })
@@ -27,14 +22,19 @@ module.exports = [
     .isEmail()
     .withMessage("Formato inválido")
     .custom((value, { req }) => {
-      const user = users.find((user) => user.email === value);
+      return   db.User.findOne({where : {email:value}})
 
-      if (user) {
-        return false;
-      }
-      return true;
-    })
-    .withMessage("El email ya se encuentra registrado"),
+      .then(user => {
+        if(user){
+          return Promise.reject()
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        return Promise.reject("El email ya se encuentra registrado")
+      })
+
+    }),
   check("password").isLength({
     min: 6,
     max: 12,

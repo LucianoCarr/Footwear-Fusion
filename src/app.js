@@ -1,3 +1,4 @@
+require('dotenv').config()
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -5,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override'); 
 const session = require('express-session');
+const paginate = require('express-paginate')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -24,6 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..', 'public')));
 app.use(methodOverride('_method'));
+app.use(paginate.middleware(4,50))
 
 app.use(session({
   secret : "login1234",

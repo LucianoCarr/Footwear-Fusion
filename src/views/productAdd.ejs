@@ -6,7 +6,7 @@
 
         <body class="productAddAndEdit">
             <%- include('partials/header') %>
-            <% if(locals.userLogin?.role === 'admin'){ %>
+            <% if(locals.userLogin?.role === 1){ %>
 <main>
     <div class="row mx-0">
         <div class="col-12 col-md-8 mx-auto mt-5 mb-5">
@@ -25,14 +25,9 @@
                         </div>
                         <!-- color -->
                         <div class="col-12 col-md-6 mb-3">
-                            <label for="color" class="form-label">Color</label>
-                            <div class="col-12 col-md-6 input-group">
-                                <span class="input-group-text p-0" id="basic-addon1">
-        <input class="form-control-sm form-control-color border-0 bg-transparent" type="color" name="hexColor">
-                                </span>
-                                <input class="form-control <%= locals.errors && (errors.textColor && 'is-invalid') %>" type="text" name="textColor" id="color" value="<%= locals.old && (old.textColor && old.textColor) %>">
-                            </div>
-                            <spam class="ms-2 fw-bold"><%= locals.errors && (errors.textColor && errors.textColor.msg) %></spam>
+                            <label for="name" class="form-label">Color</label>
+                            <input type="text" class="form-control <%= locals.errors && (errors.color && 'is-invalid') %>" id="color" name="color" value="<%= locals.old && (old.color && old.color) %>">
+                            <spam class="ms-2 fw-bold"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
                         </div>
                         <!-- precio -->
                         <div class="col-12 col-md-6 mb-3">

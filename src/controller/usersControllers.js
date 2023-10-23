@@ -1,3 +1,5 @@
+const db = require('../database/models')
+
 module.exports = {
        login : require('./users/login'),
        registerPage : require('./users/registerPage'),
