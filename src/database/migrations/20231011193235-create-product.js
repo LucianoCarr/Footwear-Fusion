@@ -29,7 +29,6 @@ module.exports = {
       },
       color: {
         type: Sequelize.TEXT,
-        allowNull: false
       },
       stock: {
         type: Sequelize.BOOLEAN,
