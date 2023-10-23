@@ -1,5 +1,5 @@
 "use strict";
-const products = require("../../data/productsData.json");
+const products = require("../../data/images.json");
 
 const imagesProducts = products.map(({ id, images }) => {
   const imgsFormat = images.map((img) => {

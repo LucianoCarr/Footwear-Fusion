@@ -6,7 +6,7 @@ module.exports = [
     .isLength({
         min:2,
     }).withMessage('Tiene que se al menos 2 caracteres'),
-    check('textColor')
+    check('color')
     .notEmpty().withMessage('El color tiene que se obligatorio'),
     check('price')
     .notEmpty().withMessage('Precio es obligatorio')
