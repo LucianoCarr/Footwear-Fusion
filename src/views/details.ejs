@@ -69,10 +69,7 @@
                             </form>
                             <!-- Color -->
                             <div class="color">
-                                <p>Color: <span class="text-color"><%= product.color.text %></span></p>
-                                <div class="details_conteiner_colors">
-                                    <div class="color" style="background-color:<%= product.color.hex %>"></div>
-                                </div>
+                                <p>Color: <span class="text-color"><%= product.color %></span></p>
                             </div>
                             <!-- Cantidad -->
                             <form class="cantidad" action="#">
@@ -82,8 +79,7 @@
                                         <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
                                         <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
                                     </div>
-                                    <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20"
-                                        name="cantidad" type="number">
+                                    <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
                                 </div>
                             </form>
                             <!-- Botones -->
@@ -92,8 +88,7 @@
                                 <a href="/products/cart">Comprar</a>
                                 <% if(locals.userLogin?.role === 1){ %>
                                 <form action="/products/edit/<%= product.id %>">
-                                    <button class="carrito_trash"><i class="fa-solid fa-pen"
-                                        style="color: #e27396;"></i></button>
+                                    <button class="carrito_trash"><i class="fa-solid fa-pen" style="color: #e27396;"></i></button>
                                 </form>
                                 <div class="btn-group ml-2" role="group">
                                     <button type="button" class="btn btn-danger  " data-bs-toggle="modal" data-bs-target="#modalDelete" <%= product.id %>>

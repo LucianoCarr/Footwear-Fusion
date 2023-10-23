@@ -1,14 +1,8 @@
 const db = require('../database/models')
+const {Op} = require('sequelize')
 
 //const {productList} = require('../services/indexServices')
 //const paginate = require('express-paginate')
-
-const fs = require('fs');
-const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/productsData.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 
 const controller = {
 
@@ -46,13 +40,31 @@ const controller = {
 	  }, */
 
 	index: (req, res) => {
-		
-		db.Product.findAll()
-		.then((products) =>{
+		const products = db.Product.findAll()
+
+		const categoryMan = db.Product.findAll({
+			where : {
+				categoryId : 1
+			}
+		})
+		const categoryWoman = db.Product.findAll({
+			where : {
+				categoryId : 2
+			}
+		})
+		const categoryChild = db.Product.findAll({
+			where : {
+				categoryId : 3
+			}
+		})
+		Promise.all([products, categoryMan, categoryWoman, categoryChild])
+		.then(([products, categoryMan, categoryWoman, categoryChild]) => {
 			
 		return res.render('index', {
-				products
-				
+			products,
+				categoryMan,
+				categoryWoman,
+				categoryChild
 			})
 		})
 
@@ -61,10 +73,27 @@ const controller = {
 	},
 
 	search: (req, res) => {
-		const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()))
-		return res.render('results', {
-			results,
-			keywords : req.query.keywords
+		db.Product.findAll({
+			where : {
+				[Op.or] : [
+					{
+						name : {
+							[Op.substring] : req.query.keywords
+						}
+					},
+					{
+						description : {
+							[Op.substring] : req.query.keywords
+						}
+					}
+				]
+			}
+		})
+		.then(results => {
+			return res.render('results', {
+				results,
+				keywords : req.query.keywords
+			})
 		})
 	}
 };

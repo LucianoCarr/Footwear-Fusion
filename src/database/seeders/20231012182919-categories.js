@@ -1,9 +1,9 @@
 'use strict';
-const category = require('../../data/categories.json')
+const category = ["hombres", "mujeres", "nenes"]
 
-const categoriesFormatDB = category.map(c => {
+const categoriesFormatDB = category.map(categoria => {
   return {
-    ...c,
+    name : categoria,
     createdAt:new Date,
     updatedAt:new Date
   }
