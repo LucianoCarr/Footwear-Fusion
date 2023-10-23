@@ -1,15 +1,17 @@
 const db = require('../../database/models')
 
+const {create} = require('../../services/productsServices')
+
 const { validationResult } = require('express-validator')
 
-module.exports = (req,res) => {
+module.exports = async (req,res) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
 
     const {name, price, discount, categoryId, description, color, stock} = req.body 
 
-     db.Product.create({
+     const data = {
       name,
       price,
       discount,
@@ -19,10 +21,12 @@ module.exports = (req,res) => {
       categoryId,
       image: req.files?.image?.length ? req.files.image[0].filename : "default-image.png",
       images: req.files?.images?.length ? req.files.images.map((image) => image.filename) : [],
-    })
-    .then((newproduct)=> {
-      return res.redirect(`/products/details/${newproduct.id}`);
-    })
+    }
+
+    const newProduct = await create(data)
+  
+      return res.redirect(`/products/details/${newProduct.id}`);
+    
   } else {
     return res.render("productAdd", {
       errors: errors.mapped(),
