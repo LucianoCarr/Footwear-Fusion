@@ -29,3 +29,26 @@ Promise.all([user,adresses])
 .catch(error => console.log(error))
 
 }
+
+
+
+/*module.exports = async (req,res) => {
+
+try {
+ const user = req.session.userLogin.id
+ const userLog = await profileUser(user)
+
+ return res.render('profile',{
+  ...userLog.dataValues
+ })
+} catch (error) {
+  return res.status(error.status || 500).json({
+    ok : false,
+    status : error.status || 500,
+    error : error.message  || 'Hubo un ERROR al cargar el perfil'
+})
+}
+ 
+ 
+
+} */

@@ -15,7 +15,12 @@ const createUser = async (userData) => {
         });
         return user;
     } catch (error) {
-        throw error;
+        console.log(error);
+        throw {
+          status: error.status || 500,
+          message: error.message || "ERROR en el servicio",
+
+        };
     }
 };
 
