@@ -1,11 +1,11 @@
 const db = require('../database/models')
 
-const create = async (data) => {
+const createProduct = async (data) => {
     try {
 
         const {name, price, discount, categoryId, description, color, stock} = data
 
-         const newproduct = await db.Product.create({
+         const newproduct = await db.Product.createProduct({
             name,
             price,
             discount,
@@ -30,5 +30,5 @@ const create = async (data) => {
 }
 
 module.exports = {
-    create
+    createProduct
 }

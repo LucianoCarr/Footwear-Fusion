@@ -1,4 +1,7 @@
 const db = require('../../database/models')
+const fs = require("fs");
+const path = require('path')
+//const modifyProduct = require('../../services/productsServices/modify.Services');
 
 const { validationResult } = require('express-validator')
 
@@ -20,49 +23,52 @@ module.exports = async (req,res) => {
           return { filename: img.filename, productId: product.id };
         }) || [];
 
+        const productFormatDB = product.images.map(
+          ({ filename, productId }) => {
+            return { filename, productId };
+          }
+        );
       if (
-        rememberImg === "true" && product.images.length + newImages.length <= 6) {
-        const productFormatDB = product.images.map(({filename,productId})=> {
-          return {filename,productId}
-        })
+        rememberImg &&
+        product.images.length + newImages.length <= 6
+      ) {
         imagesRemember = [...productFormatDB, ...newImages];
+      }
+
+      else if (!rememberImg && newImages.length <= 6) {
+        product.images.forEach(({filename}) => {
+          const pathFileImgPrimary = path.join(
+            __dirname,
+            `../../../public/img/${filename}`
+          );
+          const existFile = fs.existsSync(pathFileImgPrimary);
+          existFile && fs.unlinkSync(pathFileImgPrimary);
+        });
+        imagesRemember = newImages
+      } 
+
+      else if (
+        (rememberImg && (product.images.length + newImages.length) > 6) 
+        (!rememberImg && newImages.length > 6)
+      ) {
+        newImages.forEach(({filename}) => {
+          const pathFileImgPrimary = path.join(
+            __dirname, `../../../public/img/${filename}`
+          );
+          const existFile = fs.existsSync(pathFileImgPrimary);
+          existFile && fs.unlinkSync(pathFileImgPrimary);
+        });
+        imagesRemember = productFormatDB;
       }
 
       if (req.files?.image?.length) {
         // si vienen
         const pathFileImgPrimary = path.join(
           __dirname,
-          `../../public/img/${product.image}`
+          `../../../public/img/${product.image}`
         );
         const existFile = fs.existsSync(pathFileImgPrimary);
         existFile && fs.unlinkSync(pathFileImgPrimary);
-      }
-
-      if (rememberImg !== "true" && newImages.length <= 6) {
-        product.images.forEach((img) => {
-          const pathFileImgPrimary = path.join(
-            __dirname,
-            `../../public/img/${img}`
-          );
-          const existFile = fs.existsSync(pathFileImgPrimary);
-          existFile && fs.unlinkSync(pathFileImgPrimary);
-        });
-      }
-
-      if (
-        (rememberImg === "true" &&
-          product.images.length + newImages.length > 6) ||
-        (rememberImg !== "true" && newImages.length > 6)
-      ) {
-        newImages.forEach((img) => {
-          const pathFileImgPrimary = path.join(
-            __dirname,
-            `../../public/img/${img}`
-          );
-          const existFile = fs.existsSync(pathFileImgPrimary);
-          existFile && fs.unlinkSync(pathFileImgPrimary);
-        });
-        imagesRemember = product.images;
       }
     
       product.name = name?.trim();
@@ -75,22 +81,25 @@ module.exports = async (req,res) => {
       product.image = req.files?.image?.length ? req.files.image[0].filename : product.image;
 
       await product.save();
-      await db.Image.destroy({ where: { productId: product.id } });
+      if(imagesRemember.length <= 6) {
+        await db.Image.destroy({ where: { productId: product.id } });
+        await db.Image.bulkCreate(imagesRemember);
+      }
 
-      await db.Image.bulkCreate(
-        imagesRemember.length ? imagesRemember : newImages
-      );
-
-      return res.redirect(`/products/details/${req.params.id}`);
+      return res.redirect('/');
     } else {
-      const categories = await db.Category.findAll({attributes:['name','id']})
+      const categories = await db.Category.findAll({
+        attributes: ["name", "id"],
+      });
+      //product.color = JSON.parse(product.color);
+
       return res.render("productEdit", {
         errors: errors.mapped(),
-        p:product,
-        categories
+        p: product,
+        categories,
       });
     }
   } catch (error) {
     console.log(error);
   }
-}
+};

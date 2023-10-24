@@ -25,9 +25,9 @@
                             <img src="/img/<%= product.image || 'default-image.png' %>" class="main-img" alt="imagen">
                         </div>
                         <div class="img-otros">
-                            <% for(let image of product.images) { %>
-                            <img src="/img/<%= image || 'default-image.png' %>" class="views-img" alt="imagen2">
-                            <% } %>
+                            <% product.images.forEach(({filename}) => { %>
+                            <img src="/img/<%= filename || 'default-image.png' %>" class="views-img" alt="imagen2">
+                            <% }) %>
                         </div>
                     </div>
                     <!-- Especificaciones -->
@@ -116,7 +116,7 @@
                 </div>
 
                  <!-- CARROUSEL -->
-                <%- /* include('partials/details-carrousel') */ %>
+                <%- //include('partials/details-carrousel',{products}) %>
                 
             </main>
             <%- include('partials/footer') %>

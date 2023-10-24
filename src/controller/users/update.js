@@ -1,4 +1,6 @@
 const db = require('../../database/models');
+//const updateUser = require('../../services/userServices/update.Services')
+
 const { validationResult } = require('express-validator')
 
 module.exports = (req,res) =>{

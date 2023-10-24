@@ -20,7 +20,8 @@ module.exports = {
           model:{
             tableName:'Products'
           },
-          key : "id"
+          key : "id",
+          onDelete: 'CASCADE'
         } 
       },
       createdAt: {

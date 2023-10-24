@@ -19,7 +19,6 @@
                                 <!-- id -->
                                 <div class="card-body">
                                     <form action="/products/edit/<%= p.id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
-                                          
                                         <!-- conservar imagenes -->
                                         <div class="col-12 col-md-4 mb-3">
                                             <img class="img-fluid border border-danger-subtle img-product-edit" src="/img/<%= p.image %>" alt="">
@@ -27,14 +26,14 @@
                                         <div class="col-12 col-md-8 mb-3 d-inline-flex align-items-center align-content-start gap-2 justify-content-between justify-content-md-start flex-wrap">
                                             <div class="col-12 mb-3">
                                                 <input type="checkbox" checked value="true" class="form-check-input me-2" name="rememberImg" id="rememberImg">
-                                                <label for="rememberImg" class="form-label">Conservar imagenes secundarias</label>
-                                            </div>   
+                                                <label for="rememberImg" class="form-label">Conservar imágenes secundarias</label>
+                                            </div>
                                             <%if(p.images.length){%>
                                                 <% p.images.forEach(({filename}) => { %>
                                                     <img class="img-fluid border border-primary-subtle img-secondary-product-edit" src="/img/<%= filename %>" alt="">
                                                 <%})%>
                                                 <%}else{%>
-                                                    <h4>No hay imagenes secundarias</h4>
+                                                    <h4>No hay imagenes secundarias</h4>        <!-- Fresh Foam X 1080v12 Wide -->
                                                 <%}%>
                                             </div>
                                             <!-- nombre zapatilla -->

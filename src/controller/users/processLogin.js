@@ -1,5 +1,7 @@
-const {validationResult} = require('express-validator');
 const db = require('../../database/models')
+//const LoginUser = require('../../services/userServices/login.Services')
+
+const {validationResult} = require('express-validator');
 
 module.exports = (req,res) =>{
     const errors = validationResult(req)

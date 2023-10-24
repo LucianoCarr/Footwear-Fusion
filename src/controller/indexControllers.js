@@ -6,7 +6,7 @@ const {Op} = require('sequelize')
 
 const controller = {
 
-	/* productList : async (req,res) => {
+	/* index : async (req,res) => {
 		try {
 		  const {total, products} = await productList(req.query.limit,req.skip)
 	 const pagesCount = Math.ceil(total / req.query.limit)
