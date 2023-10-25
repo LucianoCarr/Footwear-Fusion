@@ -30,6 +30,9 @@ module.exports = {
       color: {
         type: Sequelize.TEXT,
       },
+      hexColor: {
+        type: Sequelize.TEXT,
+      },
       stock: {
         type: Sequelize.BOOLEAN,
         allowNull: false

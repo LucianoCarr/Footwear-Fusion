@@ -45,9 +45,14 @@
                                         <!-- color -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="color" class="form-label">Color</label>
-                                            <input type="text" class="form-control <%= locals.errors && (errors.color && 'is-invalid') %>" id="color" name="color" value="<%= p.color %>">
-                                            <spam class="ms-2 fw-bold"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
-                                        </div>
+                                                <div class="col-12 col-md-6 input-group">
+                                                <span class="input-group-text p-0" id="basic-addon1">
+                                                <input class="form-control-sm form-control-color border-0 bg-transparent" type="color" name="hexColor" id="hexColor" value="<%= p.hexColor %>">
+                                                </span>
+                                                 <input type="text" class="form-control <%= locals.errors && (errors.color && 'is-invalid') %>" id="color" name="color" value="<%= p.color %>">
+                                                 </div>
+                                                  <spam class="ms-2 fw-bold"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
+                                             </div>
                                         <!-- precio -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="price" class="form-label">Precio</label>
