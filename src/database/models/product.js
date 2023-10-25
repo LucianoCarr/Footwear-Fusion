@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
     discount: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     color: DataTypes.TEXT,
+    hexColor: DataTypes.TEXT,
     stock: DataTypes.BOOLEAN,
     image: DataTypes.STRING,
     categoryId: DataTypes.INTEGER

@@ -9,10 +9,8 @@ module.exports = [
       min: 2,
     })
     .withMessage("Tiene que se al menos 2 caracteres"),
-  check("hexColor").notEmpty().withMessage("El hex. color es obligatorio"),
-  check("textColor")
-    .notEmpty()
-    .withMessage("El texto del color es obligatorio"),
+    check('color')
+    .notEmpty().withMessage('El color tiene que se obligatorio'),
   check("price")
     .notEmpty()
     .withMessage("Precio es obligatorio")
