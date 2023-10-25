@@ -16,7 +16,7 @@ module.exports = [
           }
       }).then(user => {
           if(!user || !compareSync(value, user.password)){
-              return false
+            return Promise.reject()
           }
       }).catch(() => Promise.reject('Credenciales inválidas'))
       }) 

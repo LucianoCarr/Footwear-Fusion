@@ -21,7 +21,11 @@ try {
 
            await createUser(userData);
            console.log('usuario creado exitosamente ');
-           return res.redirect('/');
+           return res.redirect('login');
+       }else {
+        return res.render('register',
+        {   errors : errors.mapped(),
+            old : req.body});
        }
    } catch (error) {
        return res.status(error.status || 500).json({
