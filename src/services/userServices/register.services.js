@@ -5,11 +5,11 @@ const createUser = async (userData) => {
     try {
         const { name, lastName, email, password, rolesId, adressesId, birthday } = userData;
         const user = await db.User.create({
-            name,
+            name ,
             lastName,
             email,
             password: hashSync(password, 10),
-            rolesId,
+            rolesId :2,
             adressesId,
             birthday,
         });
