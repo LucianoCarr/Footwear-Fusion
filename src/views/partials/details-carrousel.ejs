@@ -1,8 +1,8 @@
 <div class="swiper mySwiper">
     <div class="carrito__conteiner_recomended">
-        <h2>Productos similares</h2>
+        <h2><%= subtitleText %></h2>
     </div>
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" >
         <% products.forEach((p) => { %>
             <div class="swiper-slide">
                 <a class="image_swi" href="/products/details/<%= p.id %>">
@@ -14,7 +14,6 @@
                     </div>
                     <div class="swiper-pagination"></div>
                     <% }) %>
-        
     </div>
 </div>
 

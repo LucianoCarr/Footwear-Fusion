@@ -71,13 +71,13 @@ module.exports = async (req,res) => {
         existFile && fs.unlinkSync(pathFileImgPrimary);
       }
     
-      product.name = name?.trim();
-      product.price = +price;
-      product.discount = +discount;
-      product.categoryId = category;
-      product.stock = !!stock; // -> Boolean(stock)
-      product.description = description?.trim();
-      product.color = color?.trim();
+      product.name = name?.trim() || product.name;
+      product.price = +price  || product.price;
+      product.discount = +discount  || product.discount;
+      product.categoryId = +category  || product.categoryId;
+      product.stock = !!stock  || product.stock; // -> Boolean(stock)
+      product.description = description?.trim()  || product.description;
+      product.color = color?.trim()  || product.color;
       product.image = req.files?.image?.length ? req.files.image[0].filename : product.image;
 
       await product.save();

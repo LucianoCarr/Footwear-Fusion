@@ -1,5 +1,5 @@
 const db = require("../../database/models");
-const {Op} = require('sequelize')
+const { Op } = require('sequelize')
 //const productById = require('../../services/productsServices/detail.Services');
 
 module.exports = async (req, res) => {
@@ -7,7 +7,10 @@ module.exports = async (req, res) => {
   const product = await db.Product.findByPk(productParams, {
     include: ["images"],
   });
-  const products = await db.Product.findAll({
+
+  let messageSubTitle = "PRODUCTOS RELACIONADOS";
+  const isOtherProducts = Math.round(Math.random() * 1)
+  let config = {
     where: {
       [Op.and]: [
         {
@@ -15,15 +18,30 @@ module.exports = async (req, res) => {
         },
         {
           id: {
-            [Op.ne] : productParams
+            [Op.ne]: productParams
           }
         }
       ]
-    },
-  });
+    }
+  }
+  if (isOtherProducts) {
+    messageSubTitle = "OTROS PRODUCTOS"
+    config = {
+      where:
+      {
+        id: {
+          [Op.ne]: productParams
+        }
+      }
+    }
+  }
+
+
+  const products = await db.Product.findAll(config);
 
   return res.render("details", {
     product,
     products,
+    subtitleText: messageSubTitle,
   });
 };

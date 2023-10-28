@@ -27,7 +27,7 @@ module.exports = [
       if (
         (rememberImg &&
           product.images.length + req.files?.images?.length > 6) ||
-        (!rememberImg && newImages.length > 6)
+        (!rememberImg &&  req.files?.images?.length > 6)
       ) {
         throw new Error("La cantidad maxima de imágenes en el producto son 6.");
       }

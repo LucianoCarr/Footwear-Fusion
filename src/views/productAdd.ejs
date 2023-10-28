@@ -49,10 +49,10 @@
                         <div class="col-12 col-md-6 mb-3">
                             <label for="category" class="form-label">Categoría</label>
                             <select class="form-select <%= locals.errors && (errors.category && 'is-invalid') %>" aria-label="Default select example" name="category" id="category" value="<%= locals.old && (old.category && old.category) %>">
-                                <option disabled selected>None</option>
-                                <option value="men">Hombre</option>
-                                <option value="women">Mujer</option>
-                                <option value="child">Niños</option>
+                                <option disabled selected>Seleccionar...</option>
+                                <% categories.forEach(({name,id}) => { %>
+                                    <option value="<%= id %>"><%= name %></option>
+                                <% }) %>
                             </select>
                             <spam class="ms-2 fw-bold"><%= locals.errors && (errors.category && errors.category.msg) %></spam>
                         </div>

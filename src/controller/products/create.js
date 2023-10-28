@@ -21,12 +21,20 @@ module.exports = (req,res) => {
       stock,
       categoryId,
       image: req.files?.image?.length ? req.files.image[0].filename : "default-image.png",
-      images: req.files?.images?.length ? req.files.images.map((image) => image.filename) : [],
-    
+     // images: req.files?.images?.length ? req.files.images.map((image) => image.filename) : [],
     })
 
     .then((newproduct)=> {
-	      return res.redirect(`/products/details/${newproduct.id}`);
+        
+      const newImages =
+      req.files?.images?.map((img) => {
+        return { filename: img.filename, productId: newproduct.id };
+      }) || [];
+
+      db.Image.bulkCreate(newImages).then(() => {
+        return res.redirect(`/products/details/${newproduct.id}`);
+      })
+
       })
     } else {
       return res.render("productAdd", {
