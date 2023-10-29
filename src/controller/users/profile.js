@@ -1,6 +1,6 @@
 const db = require('../../database/models')
 //const profileUser = require('../../services/userServices/profile.Services')
-
+const moment = require("moment");
 module.exports = (req,res) => {
 
 const id = req.session.userLogin.id    
@@ -14,13 +14,9 @@ const id = req.session.userLogin.id
 Promise.all([user,adresses])
 
 .then(([user,adresses]) => {
-
-    const birthday = new Date(user.birthday).toISOString();
-    console.log(birthday.split('T')[0]);
-    console.log(user);
     return res.render('profile',{
         ...user.dataValues,
-        birthday : birthday.split('T')[0],
+        moment,
         adresses 
        
         
