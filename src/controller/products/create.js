@@ -15,7 +15,7 @@ module.exports = (req,res) => {
     db.Product.create({
       name,
       price,
-      discount,
+      discount : discount  || 0,
       description,
       color,
       stock,
