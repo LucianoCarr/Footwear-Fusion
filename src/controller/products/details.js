@@ -3,7 +3,8 @@ const { Op } = require('sequelize')
 //const productById = require('../../services/productsServices/detail.Services');
 
 module.exports = async (req, res) => {
-  const productParams = req.params.id
+  try {
+    const productParams = req.params.id
   const product = await db.Product.findByPk(productParams, {
     include: ["images"],
   });
@@ -44,4 +45,7 @@ module.exports = async (req, res) => {
     products,
     subtitleText: messageSubTitle,
   });
+  } catch (error) {
+    console.log(error);
+  }
 };
