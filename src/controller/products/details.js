@@ -37,7 +37,6 @@ module.exports = async (req, res) => {
     }
   }
 
-
   const products = await db.Product.findAll(config);
 
   return res.render("details", {

@@ -24,11 +24,8 @@ module.exports = async (req, res) => {
       await img.destroy()
     });
 
-   
     await product.destroy()
-   
-
-
+    
     return res.redirect("/");
   } catch (error) {
     console.log(error);
