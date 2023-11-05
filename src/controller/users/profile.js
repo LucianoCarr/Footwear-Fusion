@@ -9,7 +9,7 @@ module.exports = async (req,res) => {
   const user = await db.User.findByPk(id)
 
     return res.render('profile',{
-        user,
+      ...user.dataValues,
         moment
        
         

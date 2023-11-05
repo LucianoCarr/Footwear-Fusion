@@ -19,39 +19,35 @@
                                                 <!-- Nombre -->
                                                 <label for="name" class="form-label">Nombre</label>
                                                 <input type="text" class="form-control" id="name" placeholder="ej: Juan"
-                                                    name="name" value="<%= user.name %>">
+                                                    name="name" value="<%= name %>">
                                                     <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.name?.msg %></span>
                                             </div>
                                             <!-- Apellido -->
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="lastName" class="form-label">Apellido</label>
                                                 <input type="text" class="form-control" id="lastName"
-                                                    placeholder="ej: Rodriguez" name="lastName" value="<%= user.lastName %>">
+                                                    placeholder="ej: Rodriguez" name="lastName" value="<%= lastName %>">
                                                     <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.lastName?.msg %></span>
                                             </div>
                                             <!-- Fecha de nacimiento -->
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="birthday" class="form-label">Fecha de nacimiento</label>
                                                 <input type="date" class="form-control" id="birthday" name="birthday" 
-                                                value="<%= moment(user.birthday).format('YYYY-MM-DD') %>">
+                                                value="<%= moment(birthday).format('YYYY-MM-DD') %>">
                                             </div>
                                             <!-- Direccion -->
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="adress" class="form-label">Dirección</label>
                                                 <input type="text" class="form-control" id="adress"
-                                                    placeholder="Domicilio" name="adress" value="<%= user.adress %>">
+                                                    placeholder="Domicilio" name="adress" value="<%= adress %>">
                                             </div>
                                             <!-- Provincia -->
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="province" class="form-label">Provincia</label>
                                                 <select type="text" class="form-select" id="province" name="province">
                                                     <option hidden value="">Seleccione...</option>
-                                                    <% users.forEach(({province}) => { %>
-                                                        <option value="<%= province %>"></option>
-                                                    <% }) %>
                                                 </select>
                                             </div>
-
                                             <div class="d-flex justify-content-end">
                                                 <button type="submit" class="btn btn-dark">Guardar cambios</button>
                                             </div>
