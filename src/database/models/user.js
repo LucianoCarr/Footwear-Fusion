@@ -14,10 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         as : "role",
         foreignKey : "rolesId"
       });
-      User.belongsTo(models.Adress, {
-        as : "adress",
-        foreignKey : "adressesId"
-      });
       User.hasMany(models.Order, {
         as : "orders",
         foreignKey : "ordersId",
@@ -32,7 +28,8 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     birthday: DataTypes.DATE,
     rolesId: DataTypes.INTEGER,
-    adressesId: DataTypes.INTEGER
+    adress: DataTypes.STRING,
+    province: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',

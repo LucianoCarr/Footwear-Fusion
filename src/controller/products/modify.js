@@ -18,32 +18,28 @@ module.exports = async (req,res) => {
     if (errors.isEmpty()) {
       const { name, price, discount, category, description, stock, color, rememberImg,} = req.body;
       let imagesRemember = [];
-      const newImages =
-        req.files?.images?.map((img) => {
+      const newImages = req.files?.images?.map((img) => {
           return { filename: img.filename, productId: product.id };
         }) || [];
 
-        const productFormatDB = product.images.map(
-          ({ filename, productId }) => {
+        const productFormatDB = product.images.map(({ filename, productId }) => {
             return { filename, productId };
           }
         );
+
       if (
-        rememberImg &&
-        product.images.length + newImages.length <= 6
-      ) {
+        rememberImg && product.images.length + newImages.length <= 6) {
         imagesRemember = [...productFormatDB, ...newImages];
       }
 
-      else if (!rememberImg && newImages.length <= 6) {
-        product.images.forEach(({filename}) => {
-          const pathFileImgPrimary = path.join(
-            __dirname,
-            `../../../public/img/${filename}`
+      else if (!rememberImg && newImages.length <= 6) { product.images.forEach(({filename}) => {
+          const pathFileImgPrimary = path.join(__dirname, `../../../public/img/${filename}`
           );
+
           const existFile = fs.existsSync(pathFileImgPrimary);
           existFile && fs.unlinkSync(pathFileImgPrimary);
         });
+
         imagesRemember = newImages
       } 
 
@@ -51,10 +47,7 @@ module.exports = async (req,res) => {
         (rememberImg && (product.images.length + newImages.length) > 6) 
         (!rememberImg && newImages.length > 6)
       ) {
-        newImages.forEach(({filename}) => {
-          const pathFileImgPrimary = path.join(
-            __dirname, `../../../public/img/${filename}`
-          );
+        newImages.forEach(({filename}) => { const pathFileImgPrimary = path.join(__dirname, `../../../public/img/${filename}`);
           const existFile = fs.existsSync(pathFileImgPrimary);
           existFile && fs.unlinkSync(pathFileImgPrimary);
         });
@@ -63,10 +56,7 @@ module.exports = async (req,res) => {
 
       if (req.files?.image?.length) {
         // si vienen
-        const pathFileImgPrimary = path.join(
-          __dirname,
-          `../../../public/img/${product.image}`
-        );
+        const pathFileImgPrimary = path.join(__dirname, `../../../public/img/${product.image}`);
         const existFile = fs.existsSync(pathFileImgPrimary);
         existFile && fs.unlinkSync(pathFileImgPrimary);
       }

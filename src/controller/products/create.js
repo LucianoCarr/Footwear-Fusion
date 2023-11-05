@@ -12,7 +12,7 @@ module.exports = async (req,res) => {
   
       const {name, price, discount, categoryId, description, color, stock} = req.body 
   
-       const newproduct = await db.Product.create({
+       const newProduct = await db.Product.create({
         name,
         price,
         discount : discount  || 0,
@@ -25,12 +25,12 @@ module.exports = async (req,res) => {
       })
   
         const newImages = await req.files?.images?.map((img) => {
-          return { filename: img.filename, productId: newproduct.id };
+          return { filename: img.filename, productId: newProduct.id };
         }) || [];
   
-        db.Image.bulkCreate(newImages).then(() => {
-          return res.redirect(`/products/details/${newproduct.id}`);
-        })
+        await db.Image.bulkCreate(newImages)
+
+          return res.redirect(`/products/details/${newProduct.id}`);
 
     } else {
         return res.render("productAdd", {

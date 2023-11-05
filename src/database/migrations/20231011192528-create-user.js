@@ -37,14 +37,11 @@ module.exports = {
           }
         }
       },
-      adressesId: {
-        type: Sequelize.INTEGER,
-        
-        references:{
-          model:{
-            tableName:'Adresses'
-          }
-        }
+      adress: {
+        type: Sequelize.STRING,
+      },
+      province: {
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
@@ -55,7 +52,6 @@ module.exports = {
         type: Sequelize.DATE
       },
       deletedAt: {
-        
         type: Sequelize.DATE
       },
     });

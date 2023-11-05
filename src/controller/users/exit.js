@@ -1,6 +1,6 @@
-module.exports = (req,res) =>{
-    req.session.destroy();
-    res.cookie('footwear',null,{
+module.exports = async (req,res) =>{
+    await req.session.destroy();
+    await res.cookie('footwear',null,{
         maxAge : -1
     })
 

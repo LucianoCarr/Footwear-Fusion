@@ -1,17 +1,16 @@
 const {validationResult} = require('express-validator');
 const db = require('../../database/models')
 
-module.exports = (req,res) =>{
+module.exports = async (req,res) =>{
     const errors = validationResult(req)
 
     if(errors.isEmpty()){
-     
-        db.User.findOne({
+    
+        const user = await db.User.findOne({
             where : {
                 email : req.body.email
             }
         })
-        .then((user) =>{
             req.session.userLogin = {
                 id: user.id,
                 name: user.name,
@@ -21,12 +20,10 @@ module.exports = (req,res) =>{
                 maxAge : 1000 * 60 * 10
             })
             return res.redirect('/')
-        })
-        .catch((error) => console.log(error));
-       
+
     }else{
         return res.render('login',{
             errors : errors.mapped()
-     })
+        })
     }
 }
