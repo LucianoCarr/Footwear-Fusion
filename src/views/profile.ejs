@@ -46,11 +46,13 @@
                                                 <label for="province" class="form-label">Provincia</label>
                                                 <select type="text" class="form-select" id="province" name="province">
                                                     <option hidden value="">Seleccione...</option>
-                                                    <% users.forEach(({province}) => { %>
-                                                        <option value="<%= province %>"></option>
+                                                    <% provinces.forEach(({ nombre }) => { %>
+                                                        <option value="<%= nombre %>" <% if (nombre === user.province) { %>selected<% } %>><%= nombre %></option>
                                                     <% }) %>
                                                 </select>
                                             </div>
+                                            
+                                            
 
                                             <div class="d-flex justify-content-end">
                                                 <button type="submit" class="btn btn-dark">Guardar cambios</button>

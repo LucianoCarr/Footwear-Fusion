@@ -1,20 +1,25 @@
-const db = require('../../database/models')
-//const profileUser = require('../../services/userServices/profile.Services')
+const db = require('../../database/models');
 const moment = require("moment");
+const fetch = require('node-fetch');
 
-module.exports = async (req,res) => {
+const API = 'https://apis.datos.gob.ar/georef/api/provincias?';
+
+module.exports = async (req, res) => {
   try {
-    const id = await req.session.userLogin.id    
+    const id = await req.session.userLogin.id;
+    const user = await db.User.findByPk(id);
 
-  const user = await db.User.findByPk(id)
-
-    return res.render('profile',{
-        user,
-        moment
-       
-        
-    })
+    
+    const response = await fetch(API);
+    const data = await response.json();
+    const provinces = data.provincias; 
+    
+    return res.render('profile', {
+      user,
+      moment,
+      provinces,
+    });
   } catch (error) {
     console.log(error);
   }
-}
+};
