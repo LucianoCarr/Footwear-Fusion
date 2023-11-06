@@ -25,5 +25,8 @@
     "mysql2": "^3.6.1",
     "node-fetch": "^2.7.0",
     "sequelize": "^6.33.0"
-  }
+  },
+  "nodemonConfig": {
+    "ignore": ["public/js/*"]
+}
 }

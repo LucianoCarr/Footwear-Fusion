@@ -40,7 +40,7 @@
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="name" class="form-label">Nombre zapatilla</label>
                                             <input type="text" class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" value="<%= p.name %>">
-                                            <spam class="ms-2 fw-bold"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
+                                            <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                                         </div>
                                         <!-- color -->
                                         <div class="col-12 col-md-6 mb-3">
@@ -51,13 +51,13 @@
                                                 </span>
                                                  <input type="text" class="form-control <%= locals.errors && (errors.color && 'is-invalid') %>" id="color" name="color" value="<%= p.color %>">
                                                  </div>
-                                                  <spam class="ms-2 fw-bold"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
+                                                  <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
                                              </div>
                                         <!-- precio -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="price" class="form-label">Precio</label>
                                             <input type="text" class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>" id="price" name="price" value="<%= p.price %>">
-                                            <spam class="ms-2 fw-bold"><%= locals.errors && (errors.price && errors.price.msg) %></spam>
+                                            <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.price && errors.price.msg) %></spam>
                                         </div>
                                         <!-- descuento -->
                                         <div class="col-12 col-md-6 mb-3">
@@ -104,7 +104,7 @@
                                                     <span><i class="fa-solid fa-file-arrow-up fs-4 me-1"></i></span>
                                                     Imagenes Secundarias</label>
                                                 <input type="file" name="images" id="images" class="d-none" multiple>
-                                                <spam class="ms-2 fw-bold text-danger"><%= locals.errors && (errors.images && errors.images.msg) %></spam>
+                                                <spam class="ms-2 fw-bold error-products text-danger"><%= locals.errors && (errors.images && errors.images.msg) %></spam>
                                             </div>
                                         </div>
                                         <!-- descripcion -->

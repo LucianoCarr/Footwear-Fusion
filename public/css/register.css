@@ -62,6 +62,10 @@
     gap: 10px
 }
 
+.error-register {
+    color: rgba(94, 84, 142, 1);
+}
+
 @media (min-width: 768px) {
     .register-nameAndLastname{
         width: 100%;

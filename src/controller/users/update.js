@@ -30,9 +30,19 @@ module.exports = async (req,res) =>{
                 }
             )
 
+<<<<<<< HEAD
          /*    if (fetch(`${API}&nombre=${province}`)) {
                 return data.json()
             } */
+=======
+            if (province) {
+                const response = await fetch(`${API}&nombre=${province}`);
+                if (response.ok) {
+                  const data = await response.json();
+                  
+                }
+              }
+>>>>>>> 4f80d8b535a916c9923b904f8ae243ab89794852
                 
                 
                 req.session.userLogin.name = name;
