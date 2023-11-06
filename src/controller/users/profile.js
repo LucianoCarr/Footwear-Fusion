@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
     const provinces = data.provincias; 
     
     return res.render('profile', {
-      user,
+      ...user.dataValues,
       moment,
       provinces,
     });

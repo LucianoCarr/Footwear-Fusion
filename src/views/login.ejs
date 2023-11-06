@@ -15,12 +15,12 @@
                             <div class="casillas-registro">
                                 <label for="email">Email</label>
                                 <input class="formulario-casillas" id="email" type="email" name="email">
-                                <span class="ms-2 fw-bold" style="color: #e27396;"><%= locals.errors?.email?.msg %></span>
+                                <span class="ms-2 fw-bold error-login"><%= locals.errors?.email?.msg %></span>
                             </div>
                             <div class="casillas-registro1">
                                 <label for="password">Contraseña</label>
                                 <input class="formulario-casillas" id="password" type="password" name="password">
-                                <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.password?.msg %></span>
+                                <span class="ms-2 fw-bold error-login"><%= locals.errors?.password?.msg %></span>
                                 <i class="fa-solid fa-eye"></i>
                                 <div class="d-flex justify-content-between">
                                     <div class="form-check gap-1 ">

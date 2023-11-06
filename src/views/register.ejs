@@ -21,30 +21,30 @@
                     <div class="casillas-registro name">
                         <label for="name">Nombre</label>
                         <input class="formulario-casillas-register <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" type="text" value="<%= locals.old && (old.name && old.name) %>">
-                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
+                        <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                     </div>
                     <div class="casillas-registro lastName">
                         <label for="lastName">Apellido</label>
                         <input class="formulario-casillas-register <%= locals.errors && (errors.lastName && 'is-invalid') %>" id="lastName" name="lastName" type="text" value="<%= locals.old && (old.lastName && old.lastName) %>">
-                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.lastName && errors.lastName.msg) %></spam>
+                        <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.lastName && errors.lastName.msg) %></spam>
                     </div>
                 </div>
                 <div class="casillas-registro">
                     <label for="email">Email</label>
                     <input class="formulario-casillas-register <%= locals.errors && (errors.email && 'is-invalid') %>" id="email" type="email" name="email" value="<%= locals.old && (old.email && old.email) %>">
-                    <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.email && errors.email.msg) %></spam>
+                    <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.email && errors.email.msg) %></spam>
                 </div>
                 <div class="conteiner-passwords">
                     <div class="casillas-registro1 register-password">
                         <label for="password">Contraseña</label>
                         <input class="formulario-casillas-register <%= locals.errors && (errors.password && 'is-invalid') %>" id="password" type="password" name="password">
-                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.password && errors.password.msg) %></spam>
+                        <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.password && errors.password.msg) %></spam>
                         <i class="fa-solid fa-eye"></i>
                     </div>
                     <div class="casillas-registro1 register-password1">
                         <label for="password2">Confirmar Contraseña</label>
                         <input class="formulario-casillas-register <%= locals.errors && (errors.password2 && 'is-invalid') %>" id="password2" type="password" name="password2">
-                        <spam class="ms-2 fw-bold"  style="color: rgba(94, 84, 142, 1);"><%= locals.errors && (errors.password2 && errors.password2.msg) %></spam>
+                        <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.password2 && errors.password2.msg) %></spam>
                         <i class="fa-solid fa-eye"></i>
                     </div>
                 </div>

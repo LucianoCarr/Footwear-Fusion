@@ -113,6 +113,10 @@
   border: 1px solid #e27396;
 }
 
+.error-login {
+  color: #e27396;
+}
+
 @media (min-width: 520px) {
 
   .card-login,
