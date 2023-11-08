@@ -23,19 +23,23 @@ module.exports = async (req,res) => {
         image: req.files?.image?.length ? req.files.image[0].filename : "default-image.png",
        // images: req.files?.images?.length ? req.files.images.map((image) => image.filename) : [],
       })
-  
-        const newImages = await req.files?.images?.map((img) => {
-          return { filename: img.filename, productId: newProduct.id };
-        }) || [];
-  
-        await db.Image.bulkCreate(newImages)
-
+      
+      const newImages = await req.files?.images?.map((img) => {
+        return { filename: img.filename, productId: newProduct.id };
+      }) || [];
+      
+      await db.Image.bulkCreate(newImages)
+      
           return res.redirect(`/products/details/${newProduct.id}`);
 
     } else {
+
+      const categories = await db.Category.findAll()
+
         return res.render("productAdd", {
           errors: errors.mapped(),
           old: req.body,
+          categories
         });
       }
   } catch (error) {
