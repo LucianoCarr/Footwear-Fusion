@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `footwear-fusioon` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `footwear-fusioon`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: footwear-fusioon
@@ -16,23 +14,6 @@ USE `footwear-fusioon`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `adresses`
---
-
-DROP TABLE IF EXISTS `adresses`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `adresses` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `street` varchar(255) DEFAULT NULL,
-  `province` varchar(255) DEFAULT NULL,
-  `createdAt` datetime NOT NULL,
-  `updatedAt` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `carts`
@@ -81,18 +62,13 @@ DROP TABLE IF EXISTS `images`;
 CREATE TABLE `images` (
   `id` int NOT NULL AUTO_INCREMENT,
   `filename` varchar(255) NOT NULL,
-  `others` varchar(255) DEFAULT NULL,
-  `others2` varchar(255) DEFAULT NULL,
-  `others3` varchar(255) DEFAULT NULL,
-  `others4` varchar(255) DEFAULT NULL,
-  `others5` varchar(255) DEFAULT NULL,
   `productId` int NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `productId` (`productId`),
   CONSTRAINT `images_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,18 +103,19 @@ CREATE TABLE `products` (
   `name` varchar(255) NOT NULL,
   `price` int NOT NULL,
   `discount` int DEFAULT NULL,
-  `category` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `description` text NOT NULL,
-  `color` varchar(255) NOT NULL,
-  `stock` varchar(255) NOT NULL,
-  `categoryId` int NOT NULL,
+  `color` text,
+  `hexColor` text,
+  `stock` tinyint(1) NOT NULL,
+  `categoryId` int DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
-  `deletedAt` datetime NOT NULL,
+  `deletedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `categoryId` (`categoryId`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -204,16 +181,15 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `birthday` datetime DEFAULT NULL,
-  `rolesId` int NOT NULL,
-  `adressesId` int NOT NULL,
+  `rolesId` int DEFAULT NULL,
+  `adress` varchar(255) DEFAULT NULL,
+  `province` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
-  `deletedAt` datetime NOT NULL,
+  `deletedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `rolesId` (`rolesId`),
-  KEY `adressesId` (`adressesId`),
-  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`rolesId`) REFERENCES `roles` (`id`),
-  CONSTRAINT `users_ibfk_2` FOREIGN KEY (`adressesId`) REFERENCES `adresses` (`id`)
+  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`rolesId`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -226,4 +202,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-13 18:55:34
+-- Dump completed on 2023-11-06  9:42:49

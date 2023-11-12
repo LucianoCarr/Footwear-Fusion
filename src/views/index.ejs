@@ -13,23 +13,20 @@
       
       <%- include('partials/home-carrousel') %>
 
-      <div class="home-main-filtro">
-        <button><p> FILTRO <i class="fa-solid fa-chevron-down"></i> </p></button>
-        <button><p>CATEGORIA <i class="fa-solid fa-chevron-down"></p></i></button>
-        <button><p>TALLE <i class="fa-solid fa-chevron-down"></i></p></button>
-        <button><p>PRECIO <i class="fa-solid fa-chevron-down"></i></p></button>
-    </div>
+        <div class="home-main-banner">
+            <img src="/img/banner-4.jpg" class="banner-4" height="10%" alt="">
+        </div>
 
-       <article class="home-main-contenedor" id="algo">
+       <article class="home-main-contenedor" id="see">
   <%- include('partials/card') %>
        </article>
 
        <!-- Pagination -->
+      <nav aria-label="...">
        <ul class="pagination">
-         <li class="page-item pag-principal"><a class="page-link" href="/">Ver Todas<span class="sr-only">(current)</span></a></li>
+        <li class="page-item"><a class="page-link" href="/">Ver todas</a></li>
        </ul>
-       <nav aria-label="..." class="">
-         <ul class="pagination">
+        <ul class="pagination">
           <li class="page-item"><a class="page-link" href="/?page=1&limit=4">1</a></li>
           <li class="page-item"><a class="page-link" href="/?page=2&limit=4">2</a></li>
           <li class="page-item"><a class="page-link" href="/?page=3&limit=4">3</a></li>

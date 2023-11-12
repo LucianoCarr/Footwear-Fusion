@@ -1,8 +1,8 @@
 const db = require('../../database/models');
 //const updateUser = require('../../services/userServices/update.Services')
 
-const fetch = require('node-fetch')
-const API = 'https://apis.datos.gob.ar/georef/api/provincias?'
+//const fetch = require('node-fetch')
+//const API = 'https://apis.datos.gob.ar/georef/api/provincias?'
 
 const { validationResult } = require('express-validator')
 
