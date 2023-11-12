@@ -7,12 +7,12 @@ const paginate = require('express-paginate')
 const controller = {
 	index: async (req, res) => {  
 		try {
-			const products = await db.Product.findAll(/* {limit: req.query.limit, offset: req.skip} */)
+			const products = await db.Product.findAll({limit: req.query.limit, offset: req.skip})
 
-	/* 		const total = products.count;
+			const total = products.count;
 	        const pagesCount = Math.ceil(total / req.query.limit)
             const currentPage = req.query.page
-            const pages = paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage) */
+            const pages = paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage)
 			
 
 		const categoryMan = await db.Product.findAll({
@@ -36,10 +36,10 @@ const controller = {
 				categoryMan,
 				categoryWoman,
 				categoryChild,
-			/* 	total,
+				total,
 				pagesCount,
 				currentPage,
-				pages, */
+				pages,
 			})
 		} catch (error) {
 			console.log(error);

@@ -13,38 +13,34 @@
       
       <%- include('partials/home-carrousel') %>
 
-        <div class="home-main-filtro">
-            <button><p> FILTRO <i class="fa-solid fa-chevron-down"></i> </p></button>
-            <button><p>CATEGORIA <i class="fa-solid fa-chevron-down"></p></i></button>
-            <button><p>TALLE <i class="fa-solid fa-chevron-down"></i></p></button>
-            <button><p>PRECIO <i class="fa-solid fa-chevron-down"></i></p></button>
-        </div>
+      <div class="home-main-filtro">
+        <button><p> FILTRO <i class="fa-solid fa-chevron-down"></i> </p></button>
+        <button><p>CATEGORIA <i class="fa-solid fa-chevron-down"></p></i></button>
+        <button><p>TALLE <i class="fa-solid fa-chevron-down"></i></p></button>
+        <button><p>PRECIO <i class="fa-solid fa-chevron-down"></i></p></button>
+    </div>
 
        <article class="home-main-contenedor">
   <%- include('partials/card') %>
        </article>
 
-      <nav aria-label="...">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item">
-            <a class="page-link" href="">2 <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
+       <!-- Pagination -->
+       <ul class="pagination">
+         <li class="page-item pag-principal"><a class="page-link" href="/">Ver Todas<span class="sr-only">(current)</span></a></li>
+       </ul>
+       <nav aria-label="..." class="">
+         <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="/?page=1&limit=4">1</a></li>
+          <li class="page-item"><a class="page-link" href="/?page=2&limit=4">2</a></li>
+          <li class="page-item"><a class="page-link" href="/?page=3&limit=4">3</a></li>
         </ul>
       </nav>
-      <!-- /?page=3&limit=3 -->
 
     </main>
     <%- include('partials/footer')  %>
     <%- include('partials/bootstrap') %>
     
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

@@ -29,7 +29,8 @@ module.exports = (sequelize, DataTypes) => {
     birthday: DataTypes.DATE,
     rolesId: DataTypes.INTEGER,
     adress: DataTypes.STRING,
-    province: DataTypes.STRING
+    province: DataTypes.STRING,
+    //localidad: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',

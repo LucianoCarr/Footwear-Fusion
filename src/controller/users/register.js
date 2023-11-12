@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-        const { name, lastName, email, password, rolesId, adressesId, birthday, adress, province } = req.body;
+        const { name, lastName, email, password, rolesId, adressesId, birthday, adress, province, localidad } = req.body;
 
         const userData = {
             name,
@@ -20,6 +20,7 @@ module.exports = async (req, res) => {
             birthday: null,
             adress: null,
             province: null,
+            //localidad: null,
         };
 
         await createUser(userData);

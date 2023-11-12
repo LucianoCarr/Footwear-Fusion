@@ -11,6 +11,7 @@ const userStructure = [
     rolesId: 1,
     adress: null,
     province: null,
+    /* localidad: null, */
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -24,6 +25,7 @@ const userStructure = [
     rolesId: 1,
     adress: null,
     province: null,
+    /* localidad: null, */
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -37,6 +39,7 @@ const userStructure = [
     rolesId: 1,
      adress: null,
     province: null,
+    /* localidad: null, */
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -50,6 +53,7 @@ const userStructure = [
     rolesId: 1,
      adress: null,
     province: null,
+    /* localidad: null, */
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -63,6 +67,7 @@ const userStructure = [
     rolesId: 2,
      adress: null,
     province: null,
+    /* localidad: null, */
     createdAt : new Date,
     updatedAt : new Date
   },
@@ -76,6 +81,7 @@ const userStructure = [
     rolesId: 2,
      adress: null,
     province: null,
+    /* localidad: null, */
     createdAt : new Date,
     updatedAt : new Date
   },

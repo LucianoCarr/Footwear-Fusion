@@ -121,6 +121,9 @@
     margin: 15px 0 15px 0;
 }
 
+.pagination {
+    place-content: center;
+}
 
 /*tablet*/
 @media (min-width: 361px){

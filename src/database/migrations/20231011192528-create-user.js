@@ -43,6 +43,9 @@ module.exports = {
       province: {
         type: Sequelize.STRING,
       },
+      /* localidad: {
+        type: Sequelize.STRING,
+      }, */
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
