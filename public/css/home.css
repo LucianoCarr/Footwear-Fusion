@@ -1,10 +1,14 @@
 /*main*/
 
+img, svg {
+    vertical-align: middle;
+    width: -webkit-fill-available;
+}
+
 .home-main{
     display: flex;
     width: 100%;
     flex-direction: column;
-    
 }
 
 .home-main-carrusel{
@@ -15,30 +19,9 @@
     background-color: rgb(216, 29, 216);
 }
 
-.home-main-filtro{
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    background-color: #35353596;
+.banner-4{
+   display: none;
     margin: 6px 0;
-    
-}
-
- 
-
-.home-main-button-filtro{
-    display: none;
-}
-
-.home-main-filtro button{
-    width: 100%;
-    padding-top: 10px;
-    background-color: #35353596;
-    border: 1px solid silver;
-    color: white; 
-     
-     
 }
 
 .home-main-contenedor{
@@ -47,7 +30,6 @@
     padding: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
-       
 }
 
 .home-main-contenedor-card{
@@ -78,7 +60,6 @@
 
     border: none; 
     background-color: transparent;
-     
 }
 
 .home-main-button-cora{
@@ -88,7 +69,6 @@
 
     border: none; 
     background-color: transparent;
-     
 }
 
 .home-main-img{
@@ -104,7 +84,6 @@
     display: flex;
     align-items: center;
     padding: 15px; 
-
 }
 
 .home-main-button-compra a{
@@ -121,6 +100,9 @@
     margin: 15px 0 15px 0;
 }
 
+.pagination {
+    place-content: center;
+}
 
 /*tablet*/
 @media (min-width: 361px){
@@ -128,18 +110,16 @@
 .home-main{
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .home-main-carrusel{
     display: block;
-   /*  width: 50%; */
-    margin: 0 auto;
-    object-fit: cover;
-    width: 100%;
 } 
 
-
+.banner-4{
+    min-width: -webkit-fill-available;
+   display: block;
+}
 
 .home-main-filtro{
     width: 100%;
@@ -149,26 +129,6 @@
    
     
 }
-
-
-
-.home-main-filtro button{
-    /* display: flex; */
-    margin: 8px 8px 8px; 
-    background-color: #35353596;
-    border: 1px solid silver;
-    color: white;
-    height: 60px;
-    font-size: 12px;
-    
-}
-
-
-/* .home-main-button-filtro{
-    display: flex; 
-    margin: 8px 8px 8px;
-     
-} */
 
 .home-main-contenedor{
     width: 100%;
@@ -183,9 +143,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
-
-
 
 }
 
@@ -212,7 +169,6 @@
 
         .home-main-carrusel{
             width: 60%;
+            align-self: center;
         } 
-        
-    
     }
