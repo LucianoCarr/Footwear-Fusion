@@ -32,7 +32,7 @@ const controller = {
 		})
 			
 		return res.render('index', {
-			products,
+				products,
 				categoryMan,
 				categoryWoman,
 				categoryChild,
@@ -46,7 +46,88 @@ const controller = {
 		}
 	},
 
+	categoryMan: async (req, res) => {
+		try {
+					
+			const products = await db.Product.findAll({
+				include : ['categoria'],
+				where: {
+					categoryId : 1
+				}
+			});
+			
+			return res.render('index', {
+				products,
+				
+			});
+		} catch (error) {
+			console.log(error);
+			res.status(500).send('Error interno del servidor');
+		}
+	},
 
+	categoryWoman: async (req, res) => {
+		try {
+					
+			const products = await db.Product.findAll({
+				include : ['categoria'],
+				where: {
+					categoryId : 2
+				}
+			});
+			
+			return res.render('index', {
+				products,
+				
+			});
+		} catch (error) {
+			console.log(error);
+			res.status(500).send('Error interno del servidor');
+		}
+	},
+
+	categoryChild: async (req, res) => {
+		try {
+					
+			const products = await db.Product.findAll({
+				include : ['categoria'],
+				where: {
+					categoryId : 3
+				}
+			});
+			
+			return res.render('index', {
+				products,
+				
+			});
+		} catch (error) {
+			console.log(error);
+			res.status(500).send('Error interno del servidor');
+		}
+	},
+	ofertas: async (req, res) => {
+		try {
+			const products = await db.Product.findAll();
+	
+			
+			const ofertas = products.filter(product => product.discount >= 5);
+
+			if (ofertas) {
+				return res.render('index', {
+					products : ofertas,
+				});
+			}else{
+				
+				console.log("no hay ofertas");
+				return res.redirect('/')
+			}
+	
+
+		} catch (error) {
+			console.log(error);
+			res.status(500).send('Error interno del servidor');
+		}
+	},
 	search: async (req, res) => {
 		try {
 			const  results = await db.Product.findAll({
