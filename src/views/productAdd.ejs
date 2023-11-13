@@ -21,7 +21,7 @@
                         <div class="col-12 col-md-6 mb-3">
                             <label for="name" class="form-label">nombre zapatilla</label>
                             <input type="text" class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" value="<%= locals.old && (old.name && old.name) %>">
-                            <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
+                            <spam class="ms-2 fw-bold error-products" id="msgError-name"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                         </div>
                         <!-- color -->
                      <div class="col-12 col-md-6 mb-3">
@@ -32,13 +32,13 @@
                             </span>
                              <input type="text" class="form-control <%= locals.errors && (errors.color && 'is-invalid') %>" id="color" name="color" value="<%= locals.old && (old.color && old.color) %>">
                              </div>
-                              <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
+                              <spam class="ms-2 fw-bold error-products" id="msgError-color"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
                          </div>
                         <!-- precio -->
                         <div class="col-12 col-md-6 mb-3">
                             <label for="price" class="form-label">Precio</label>
                             <input type="text" class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>" id="price" name="price" value="<%= locals.old && (old.price && old.price) %>">
-                            <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.price && errors.price.msg) %></spam>
+                            <spam class="ms-2 fw-bold error-products" id="msgError-price"><%= locals.errors && (errors.price && errors.price.msg) %></spam>
                         </div>
                         <!-- descuento -->
                         <div class="col-12 col-md-6 mb-3">
@@ -54,7 +54,7 @@
                                     <option value="<%= id %>"><%= name %></option>
                                 <% }) %>
                             </select>
-                            <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.category && errors.category.msg) %></spam>
+                            <spam class="ms-2 fw-bold error-products" id="msgError-category"><%= locals.errors && (errors.category && errors.category.msg) %></spam>
                         </div>
                         <!-- stock -->
                         <div class="col-12 col-md-6 mb-3">
@@ -122,6 +122,6 @@
 <% } %>
 
                 <%- include('partials/footer') %>
-
+<script src="/js/productAdd.js"></script>
         </body>
 </html>

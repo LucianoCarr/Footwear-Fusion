@@ -20,14 +20,14 @@
                                                 <label for="name" class="form-label">Nombre</label>
                                                 <input type="text" class="form-control" id="name" placeholder="ej: Juan"
                                                     name="name" value="<%= name %>">
-                                                    <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.name?.msg %></span>
+                                                    <span class="ms-2 fw-bold error-login" id="msgError-name" ><%= locals.errors?.name?.msg %></span>
                                             </div>
                                             <!-- Apellido -->
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="lastName" class="form-label">Apellido</label>
                                                 <input type="text" class="form-control" id="lastName"
                                                     placeholder="ej: Rodriguez" name="lastName" value="<%= lastName %>">
-                                                    <span class="ms-2 fw-bold"  style="color: #e27396;"><%= locals.errors?.lastName?.msg %></span>
+                                                    <span class="ms-2 fw-bold error-login" id="msgError-lastName" ><%= locals.errors?.lastName?.msg %></span>
                                             </div>
                                             <!-- Fecha de nacimiento -->
                                             <div class="col-12 col-md-6 mb-3">
@@ -40,6 +40,7 @@
                                                 <label for="adress" class="form-label">Dirección</label>
                                                 <input type="text" class="form-control" id="adress"
                                                     placeholder="Domicilio" name="adress" value="<%= adress %>">
+                                                    <span class="ms-2 fw-bold error-login" id="msgError-adress" ><%= //locals.errors?.adress?.msg %></span>
                                             </div>
                                             <!-- Provincia -->
                                             <div class="col-12 col-md-6 mb-3">
@@ -50,6 +51,7 @@
                                                         <option value="<%= nombre %>" <% if (nombre === province) { %>selected<% } %>><%= nombre %></option>
                                                     <% }) %>
                                                 </select>
+                                                <spam class="ms-2 fw-bold error-login" id="msgError-province"><%= /* locals.errors && (errors.province && errors.province.msg) */ %></spam>
                                             </div>
                                              <!-- Localidad -->
 
@@ -64,6 +66,7 @@
                     </div>
                 </main>
                 <%- include('partials/footer') %>
+                <script src="/js/profile.js"></script>
         </body>
 
 </html>

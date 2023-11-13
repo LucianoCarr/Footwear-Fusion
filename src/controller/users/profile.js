@@ -15,10 +15,12 @@ module.exports = async (req, res) => {
     const data = await response.json();
     const provinces = data.provincias.sort((a,b) => a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0 )
 
-   /*  const result = await fetch(API2);
+
+
+    /* const result = await fetch(API2);
     const datos = await result.json();
-    const localidad = datos.localidades.map(e => e.provincia.nombre).sort((a,b) => a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0 )
- */
+    const localidad = datos.localidades.sort((a,b) => a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0 ) */
+
     return res.render('profile', {
       ...user.dataValues,
       moment,

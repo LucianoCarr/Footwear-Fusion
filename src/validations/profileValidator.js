@@ -19,4 +19,9 @@ module.exports = [
         ignore:' '
       })
       .withMessage("Solo letras"),
+/*       check('adress')
+      .isLength({
+        min: 6,
+      })
+    .matches(/^[a-zA-Z0-9\s,'-]*$/).withMessage('Direccion tiene que llevar calle y numero'), */
     ]
