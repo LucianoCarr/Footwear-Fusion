@@ -18,7 +18,7 @@
                                 </div>
                                 <!-- id -->
                                 <div class="card-body">
-                                    <form action="/products/edit/<%= p.id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
+                                    <form action="/products/edit/<%= p.id %>?_method=PUT" method="POST" class="row" id="form-edit" enctype="multipart/form-data">
                                         <!-- conservar imagenes -->
                                         <div class="col-12 col-md-4 mb-3">
                                             <img class="img-fluid border border-danger-subtle img-product-edit" src="/img/<%= p.image %>" alt="">
@@ -40,7 +40,7 @@
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="name" class="form-label">Nombre zapatilla</label>
                                             <input type="text" class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" value="<%= p.name %>">
-                                            <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
+                                            <spam class="ms-2 fw-bold error-products" id="msgError-name"><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                                         </div>
                                         <!-- color -->
                                         <div class="col-12 col-md-6 mb-3">
@@ -51,13 +51,13 @@
                                                 </span>
                                                  <input type="text" class="form-control <%= locals.errors && (errors.color && 'is-invalid') %>" id="color" name="color" value="<%= p.color %>">
                                                  </div>
-                                                  <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
+                                                  <spam class="ms-2 fw-bold error-products" id="msgError-color"><%= locals.errors && (errors.color && errors.color.msg) %></spam>
                                              </div>
                                         <!-- precio -->
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="price" class="form-label">Precio</label>
                                             <input type="text" class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>" id="price" name="price" value="<%= p.price %>">
-                                            <spam class="ms-2 fw-bold error-products"><%= locals.errors && (errors.price && errors.price.msg) %></spam>
+                                            <spam class="ms-2 fw-bold error-products" id="msgError-price"><%= locals.errors && (errors.price && errors.price.msg) %></spam>
                                         </div>
                                         <!-- descuento -->
                                         <div class="col-12 col-md-6 mb-3">
@@ -72,6 +72,7 @@
                                                     <option value="<%= id %>" <%= p.categoryId == id && 'selected' %>><%= name %></option>
                                                 <% }) %>
                                             </select>
+                                            <spam class="ms-2 fw-bold error-products" id="msgError-category"><%= locals.errors && (errors.category && errors.category.msg) %></spam>
                                         </div>
                                         <!-- stock -->
                                         <div class="col-12 col-md-6 mb-3">
@@ -112,6 +113,7 @@
                                             <label for="description" class="form-label">Descripción</label>
                                             <textarea name="description" id="description" rows="5" class="form-control"
                                                 style="resize: none;"><%= p.description %></textarea>
+                                                <spam class="ms-2 fw-bold error-products" id="msgError-description"></spam>
                                         </div>
                                         <div class="col-12 d-flex justify-content-between gap-2 mb-3">
                                             <button type="submit" class="btn btn-primary">Guardar cambios</label>
@@ -126,7 +128,7 @@
                     </div>
                 </main>
                 <% } %>
-
+                <script src="/js/productEdit.js"></script>
                 <%- include('partials/footer') %>
 
         </body>
