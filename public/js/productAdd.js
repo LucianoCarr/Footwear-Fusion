@@ -13,7 +13,7 @@ window.onload = function () {
                 $('msgError-name').innerHTML = "El nombre es obligatorio";
                 this.classList.add("is-invalid");
                 break;
-            case !/^[A-Za-z]+$/.test(this.value) :
+            case !/^[A-Za-z0-9\s]+$/.test(this.value) :
                 $('msgError-name').innerHTML = "Solo caracteres alfabéticos";
                 this.classList.add("is-invalid");
                 break
