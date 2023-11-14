@@ -15,13 +15,15 @@
                             <div class="casillas-registro">
                                 <label for="email">Email</label>
                                 <input class="formulario-casillas" id="email" type="email" name="email">
-                                <span class="ms-2 fw-bold error-login"><%= locals.errors?.email?.msg %></span>
+                                <spam id="errorEmail" class="ms-2 fw-bold error-login"><%= locals.errors?.email?.msg %></spam>
                             </div>
                             <div class="casillas-registro1">
                                 <label for="password">Contraseña</label>
                                 <input class="formulario-casillas" id="password" type="password" name="password">
-                                <span class="ms-2 fw-bold error-login"><%= locals.errors?.password?.msg %></span>
-                                <i class="fa-solid fa-eye"></i>
+                               
+                                <spam id="errorPassword" class="ms-2 fw-bold error-login"><%= locals.errors?.password?.msg %></spam>
+                                 <i id="button-eye" class="fa-solid fa-eye "></i> 
+                                
                                 <div class="d-flex justify-content-between">
                                     <div class="form-check gap-1 ">
                                         <input class="" type="checkbox" id="remember" name="remember">
@@ -40,7 +42,9 @@
                         </form>
                     </div>
                 </main>
+                <script src="/js/loginUser.js"></script>
                 <%- include('partials/footer') %>
+                
         </body>
 
 </html>
