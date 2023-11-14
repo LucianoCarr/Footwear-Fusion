@@ -72,11 +72,11 @@
         display: flex;
     }
     .name{
-        width:50%;
+        width:49%;
         padding-right: 2px;
     }
-    .lastname{
-        width:50%;
+    .lastName{
+        width:49%;
         padding-left: 2px;
     }
 }
