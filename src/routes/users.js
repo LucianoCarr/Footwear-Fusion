@@ -13,7 +13,7 @@ const router = express.Router();
 
 /* registro */
 router.get('/register', sessionCheckLogin, registerPage);
-router.post('/register', registerValidator, register);
+router.post('/register', registerValidator,register );
 
 /* login */
 router.get('/login', sessionCheckLogin, login)

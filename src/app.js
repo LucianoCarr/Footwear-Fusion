@@ -11,6 +11,7 @@ const paginate = require('express-paginate')
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const apisRoutes = require('./routes/api') 
 const userSession = require('./middlewares/userSession');
 const cookieCheck = require('./middlewares/cookieCheck');
 
@@ -41,6 +42,7 @@ app.use(userSession)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products',productsRouter)
+app.use('/api',apisRoutes)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

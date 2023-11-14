@@ -16,39 +16,46 @@
                 <img src="/img/logo-transform(whrite).png" alt="">
             </div>
             <h3>REGISTRO</h3>
-            <form action="" method="POST" class="formulario">
+            <form id="formAdd" action="" method="POST" class="formulario">
                 <div class="register-nameAndLastname">
                     <div class="casillas-registro name">
                         <label for="name">Nombre</label>
-                        <input class="formulario-casillas-register <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" type="text" value="<%= locals.old && (old.name && old.name) %>">
-                        <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.name && errors.name.msg) %></spam>
+                        <input class="formulario-casillas-register  <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" type="text" value="<%= locals.old && (old.name && old.name) %>">
+                        <spam id="errorName" class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                     </div>
                     <div class="casillas-registro lastName">
                         <label for="lastName">Apellido</label>
                         <input class="formulario-casillas-register <%= locals.errors && (errors.lastName && 'is-invalid') %>" id="lastName" name="lastName" type="text" value="<%= locals.old && (old.lastName && old.lastName) %>">
-                        <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.lastName && errors.lastName.msg) %></spam>
+                        <spam id="errorLastName" class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.lastName && errors.lastName.msg) %></spam>
                     </div>
                 </div>
                 <div class="casillas-registro">
                     <label for="email">Email</label>
                     <input class="formulario-casillas-register <%= locals.errors && (errors.email && 'is-invalid') %>" id="email" type="email" name="email" value="<%= locals.old && (old.email && old.email) %>">
-                    <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.email && errors.email.msg) %></spam>
+                    <spam id="errorEmail" class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.email && errors.email.msg) %></spam>
                 </div>
                 <div class="conteiner-passwords">
                     <div class="casillas-registro1 register-password">
                         <label for="password">Contraseña</label>
                         <input class="formulario-casillas-register <%= locals.errors && (errors.password && 'is-invalid') %>" id="password" type="password" name="password">
-                        <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.password && errors.password.msg) %></spam>
-                        <i class="fa-solid fa-eye"></i>
+                        <spam id="errorPassword" class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.password && errors.password.msg) %></spam>
+                        <i id="button-eye" class="fa-solid fa-eye"></i>
                     </div>
                     <div class="casillas-registro1 register-password1">
                         <label for="password2">Confirmar Contraseña</label>
                         <input class="formulario-casillas-register <%= locals.errors && (errors.password2 && 'is-invalid') %>" id="password2" type="password" name="password2">
-                        <spam class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.password2 && errors.password2.msg) %></spam>
-                        <i class="fa-solid fa-eye"></i>
+                        <spam id="errorPassword2" class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.password2 && errors.password2.msg) %></spam>
+                        <i id="button-eye2" class="fa-solid fa-eye"></i>
                     </div>
                 </div>
                 <div class="conteiner-buttons">
+                    <div class="col-12 col-md-6 mb-3">
+                            
+                        <small class="text-danger ms-2"id="errores">
+                           
+                          </small>
+                    </div>
+
                     <div class="formulario-boton">
                         <button class="boton1" type="submit">Crear Cuenta</button>
                     </div>
@@ -59,6 +66,7 @@
             </form>
         </div>
     </main>
+    <script src="/js/registerUser.js"></script>
     <%- include('partials/footer') %>
 </body>
 
