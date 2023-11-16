@@ -14,3 +14,11 @@
 main {
   background-color: var(--colorFondo);
 }
+
+.formulario-casillas-register.valido {
+  border: solid 2px rgb(64, 198, 221);
+}
+
+.formulario-casillas-register.invalido {
+  border: solid 2px rgb(192, 15, 15);
+}
