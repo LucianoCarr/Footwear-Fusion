@@ -167,13 +167,13 @@ img, svg {
 }
 @media (min-width: 1025px){
 
-    /*     .home-main-carrusel{
+      /*   .home-main-carrusel{
             width: 60%;
             align-self: center;
-        } 
+        }  */
 
         .banner-4{
             display: none;
              margin: 6px 0;
-         } */
+         }
     }
