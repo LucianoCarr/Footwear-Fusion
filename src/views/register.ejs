@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- hacer una clase para is valid y pasar la contraseña hasheada -->
 <%- include('partials/head',{
     title : 'Footwear-Fusion | Register',
     
@@ -21,12 +21,12 @@
                     <div class="casillas-registro name">
                         <label for="name">Nombre</label>
                         <input class="formulario-casillas-register  <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" name="name" type="text" value="<%= locals.old && (old.name && old.name) %>">
-                        <spam id="errorName" class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.name && errors.name.msg) %></spam>
+                        <spam id="errorName" class="ms-2 fw-bold error-register "  ><%= locals.errors && (errors.name && errors.name.msg) %></spam>
                     </div>
                     <div class="casillas-registro lastName">
                         <label for="lastName">Apellido</label>
                         <input class="formulario-casillas-register <%= locals.errors && (errors.lastName && 'is-invalid') %>" id="lastName" name="lastName" type="text" value="<%= locals.old && (old.lastName && old.lastName) %>">
-                        <spam id="errorLastName" class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.lastName && errors.lastName.msg) %></spam>
+                        <spam id="errorlastName" class="ms-2 fw-bold error-register"  ><%= locals.errors && (errors.lastName && errors.lastName.msg) %></spam>
                     </div>
                 </div>
                 <div class="casillas-registro">
