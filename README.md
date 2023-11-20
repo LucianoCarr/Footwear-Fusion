@@ -1,6 +1,6 @@
 # Footwear-Fusion
 
- Somos Footwear-Fusion, un grupo pensado en la comodidad del calzado de nuestros clientes,nos pueden llamar la familia F-F. Nuestro calzado va dirigido a esas personas que no se identifican con las zapatillas del mercado actual,tenemos profesionales pensando en la singularidad que hoy en dia es escasa en el mundo con plena globalizacion,recibimos ideas de nuestros clientes.
+Somos Footwear-Fusion, un grupo pensado en la comodidad del calzado de nuestros clientes,nos pueden llamar la familia F-F. Nuestros productos son la combinación perfecta de funcionalidad y moda, aportándote el mejor rendimiento tecnológico que necesitás y el estilo que buscás. Nuestros asociados alrededor del mundo dan vida a nuestras ideas gracias a su gran talento y creatividad. Al mismo tiempo que ofrecemos los mejores productos del mercado, nos sentimos comprometidos a aportar algo más allá de ello. Y ya que creemos en nuestro éxito, defendemos y aseguramos que todos tengan la misma oportunidad.
 ##       **pensalo && lo diseñamos !.** 
 ### ----------------------------------------------------------------------------
 

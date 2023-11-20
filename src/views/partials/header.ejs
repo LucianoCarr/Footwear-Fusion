@@ -3,21 +3,23 @@
     <!-- user login link -->
     <div class="header--conteiner-user">
         <button class="header-user">
-            <% if(locals.userLogin?.role === 1){ %>
-            <a href="/products/add"><i class="fa-solid fa-file-circle-plus" style="color: #fafafa;"></i></a>
-            <% } %>
-            
-            <a class="text-decoration-none text-white" href="<%= locals.userLogin ? '/users/profile' : '/users/login' %>">
-                <i class="fa-solid <%= locals.userLogin ? 'fa-id-card' : 'fa-user' %>" style="color: #fafafa;"></i>
-                <%= locals.userLogin && `Hola ${locals.userLogin.name}` %>
-            </a>
+            <% if(locals.userLogin?.role===1){ %>
+                <a href="/products/add"><i class="fa-solid fa-file-circle-plus" style="color: #fafafa;"></i></a>
+                <% } %>
+
+                    <a class="text-decoration-none text-white"
+                        href="<%= locals.userLogin ? '/users/profile' : '/users/login' %>">
+                        <i class="fa-solid <%= locals.userLogin ? 'fa-id-card' : 'fa-user' %>"
+                            style="color: #fafafa;"></i>
+                        <%= locals.userLogin && `Hola ${locals.userLogin.name}` %>
+                    </a>
         </button>
         <button class="header-user">
             <% if (locals.userLogin) { %>
                 <div class="header-user">
                     <a href="/users/exit"><i class="fa-solid fa-right-from-bracket" style="color: #fafafa;"></i></a>
                 </div>
-            <% } %>
+                <% } %>
         </button>
     </div>
 
@@ -36,17 +38,21 @@
         <h1>FootwearFusion</h1>
 
         <!-- search bar | DESKTOP -->
-        <form action="/search" method="GET" class="header-form">
-            <input type="text" name="keywords"  placeholder="Buscar">
-            <button type="submit" ><i class="fas fa-search"></i></button>
+        <form action="/search" method="GET" class="header-form" id="form-search">
+            <div class="search">
+                <input type="text" name="keywords" id="search" placeholder="Buscar">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <spam class="ms-2 fw-bold error-products" id="errores"></spam>
         </form>
+
 
         <!-- shopping cart icon -->
         <div class="header--button-car">
             <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-        
-        
+
+
         <!-- links navigation -->
 
         <ul class="header--navbar">
@@ -55,10 +61,11 @@
             <li><a href="/woman">MUJER</a></li>
             <li><a href="/child">NIÑOS</a></li>
             <li><a href="/ofertas">OFERTAS</a></li>
-            <li><a href="">ABOUT</a></li>
+            <li><a href="/about">ABOUT</a></li>
         </ul>
 
 
     </nav>
+    <script src="/js/search.js"></script>
 
 </header>
