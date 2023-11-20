@@ -154,6 +154,9 @@ const controller = {
 			console.log(error);
 		}
 	},
+	about: (req,res) => {
+		res.render('about')
+	}
 }
 
 module.exports = controller;
