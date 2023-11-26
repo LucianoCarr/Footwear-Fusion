@@ -20,14 +20,12 @@
                 <table class="table carrito__view-tablet-desktop" style="border:2px solid rgba(94, 84, 142, 1)">
                     <thead>
                         <tr class="">
-                            <th scope="col">Image</th>
-                            <th scope="col">Detalle</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Nombre</th>
                             <th scope="col">Talle</th>
                             <th scope="col">Color</th>
                             <th scope="col">Cantidad</th>
                             <th scope="col">Precio</th>
-                            <th scope="col">Descuento</th>
-                            <th scope="col">Subtotal</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -36,31 +34,18 @@
                         <tr>
                             <!-- IMAGE -->
                             <td scope="col"> <img src="/img/zapa-1.jpg" style="width: 100px;" alt=""></td>
-                            <!-- DETAIL -->
+                            <!-- NAME -->
                             <td scope="col">
-                                <p>Lorem, ipsum.</p>
+                                <p>zapatilla</p>
                             </td>
                             <!-- SIZE -->
                             <td scope="col"><select name="talle" id="select">
                                     <option disabled selected>None</option>
                                     <option value="1">36</option>
-                                    <option value="2">37</option>
-                                    <option value="3">38</option>
-                                    <option value="4">39</option>
-                                    <option value="4">40</option>
-                                    <option value="4">41</option>
-                                    <option value="4">42</option>
-                                    <option value="4">43</option>
-                                    <option value="4">44</option>
-                                    <option value="4">45</option>
                                 </select></td>
                             <!-- COLOR -->
                             <td scope="col">
                                 <div class="circle"></div>
-                            </td>
-                            <!-- PRICE -->
-                            <td scope="col">
-                                <p>$1000</p>
                             </td>
                             <!-- QUANTITY -->
                             <td scope="col"><label for="cantidad">
@@ -72,10 +57,6 @@
                                         <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
                                     </div>
                                 </label></td>
-                            <!-- PROVIDER -->
-                            <td scope="col">
-                                <p>Lorem, ipsum.</p>
-                            </td>
                             <!-- SUBPRICE -->
                             <td scope="col">
                                 <p>$1000</p>
@@ -97,10 +78,10 @@
                                 <div class="carrito__conteinerImg carrito__card_info carrito__card_info-img">
                                     <img src="/img/zapa-1.jpg" alt="">
                                 </div>
-                                <!-- DETAIL -->
+                                <!-- NAME -->
                                 <div class="carrito__card_info carrito__card_info-detail">
-                                    <h4>Detalle</h4>
-                                    <p>Lorem, ipsum.</p>
+                                    <h4>Nombre</h4>
+                                    <p>zapatilla</p>
                                 </div>
                                 <!-- SIZE -->
                                 <div class="carrito__card_info carrito__card_info-size">
@@ -109,15 +90,6 @@
                                     <select name="talle" id="select">
                                         <option disabled selected>None</option>
                                         <option value="1">36</option>
-                                        <option value="2">37</option>
-                                        <option value="3">38</option>
-                                        <option value="4">39</option>
-                                        <option value="4">40</option>
-                                        <option value="4">41</option>
-                                        <option value="4">42</option>
-                                        <option value="4">43</option>
-                                        <option value="4">44</option>
-                                        <option value="4">45</option>
                                     </select>
                                 </div>
                                 <!-- COLOR -->
@@ -162,78 +134,6 @@
                             </div>
                         </div>
                     </article>
-                    <!-- PRODUCTO 2 -->
-                    <article class="carrito__article">
-                        <div class="carrito__conteiner_card">
-                            <div class="carrito__card_container-items">
-                                <!-- IMAGE -->
-                                <div class="carrito__conteinerImg carrito__card_info carrito__card_info-img">
-                                    <img src="/img/zapa-otro-3.jpg" alt="">
-                                </div>
-                                <!-- DETAIL -->
-                                <div class="carrito__card_info carrito__card_info-detail">
-                                    <h4>Detalle</h4>
-                                    <p>Lorem, ipsum.</p>
-                                </div>
-                                <!-- SIZE -->
-                                <div class="carrito__card_info carrito__card_info-size">
-                                    <h4>Talle</h4>
-                                    <label for="select"></label>
-                                    <select name="talle" id="select">
-                                        <option disabled selected>None</option>
-                                        <option value="1">36</option>
-                                        <option value="2">37</option>
-                                        <option value="3">38</option>
-                                        <option value="4">39</option>
-                                        <option value="4">40</option>
-                                        <option value="4">41</option>
-                                        <option value="4">42</option>
-                                        <option value="4">43</option>
-                                        <option value="4">44</option>
-                                        <option value="4">45</option>
-                                    </select>
-                                </div>
-                                <!-- COLOR -->
-                                <div class="carrito__card_info carrito__card_info-color">
-                                    <h4>Color</h4>
-                                    <div class="circle1"></div>
-                                </div>
-                                <!-- PRICE -->
-                                <div class="carrito__card_info carrito__card_info-price">
-                                    <h4>Precio</h4>
-                                    <p>$1000</p>
-                                </div>
-                                <!-- QUANTITY -->
-                                <div class="carrito__card_info carrito__card_info-quantity">
-                                    <h4>Cantidad</h4>
-                                    <label for="cantidad">
-                                        <div class="carrito_addProduc">
-                                            <div class="carrito_sum-rest">
-                                                <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
-                                                <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
-                                            </div>
-                                            <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
-                                        </div>                                    </label>
-                                </div>
-                                <!-- PROVIDER -->
-                                <div class="carrito__card_info carrito__card_info-provider">
-                                    <h4>Distribuidor</h4>
-                                    <p>Lorem, ipsum.</p>
-                                </div>
-                                <!-- SUBPRICE -->
-                                <div class="carrito__card_info carrito__card_info-subprice">
-                                    <h4>Precio Subtotal</h4>
-                                    <p>$1000</p>
-                                </div>
-                                <!-- TRASH -->
-                                <div class="carrito__trash_conteiner">
-                                    <h4></h4>
-                                    <button class="carrito_trash"><i class="fa-solid fa-trash"
-                                            style="color: #e27396;"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
                 </div>
                 <!-- RESUMEN -->
                 <div class="carrito__box_resumen">
@@ -249,13 +149,11 @@
                             </div>
                         </div>
                         <div class="carrito__conteiner_finCompr">
-                            <a href=""><button class="carrito__button_finCompr" type="button">Finalizar
-                                    compra</button></a>
-
+                            <a href="#"><button class="carrito__button_finCompr" type="button">Finalizar compra</button></a>
                         </div>
                         <div class="carrito__conteiner_nextTrash">
                             <a href="/">Continuar comprando</a>
-                            <a href="">Vaciar carro</a>
+                            <a onclick="removeItems()" href="#">Vaciar carro</a>
                         </div>
                     </div>
                 </div>
@@ -270,6 +168,7 @@
     <%- include('partials/footer') %>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/js/carousel-swiper.js"></script>
+    <script src="/js/cart.js"></script>
 </body>
 
 </html>

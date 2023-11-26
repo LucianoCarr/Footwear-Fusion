@@ -7,12 +7,12 @@
 .carrito_conteiner h4,
 .carrito_conteiner p {
     margin: 5px 0 5px 0;
+    
 }
 
-/* .carrito__conteiner_rgba{
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 5px;
-} */
+.carrito_conteiner{
+    text-align: -webkit-center;
+}
 
 .carrito__conteiner_rgba h2,
 .carrito__conteiner_recomended h2 {
@@ -188,7 +188,7 @@
 
     .carrito__view-tablet-desktop {
         display: table;
-        width: 100%;
+        width: 80%;
     }
 
     .carrito__card_container-items {
