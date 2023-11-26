@@ -1,20 +1,49 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css">
 <% for(let product of products){ %>
 
-    <div class="home-main-contenedor-card">
-        <button class="home-main-button-ojo"><i class="fa-regular fa-heart"></i></button>
-        <button class="home-main-button-cora"><i class="fa-solid fa-eye"></i></button>
-        
-        <a href="/products/details/<%= product.id %>"><img class="home-main-img" src="/img/<%= product.image || 'default-image.png' %>" alt="img"></a>
-        <!-- <span>DESCUENTO (en forma de etiqueta) % OFF</span> -->
-        <button class="home-main-button-compra"><a href="/products/details/<%= product.id %>">Comprar</a></button>
-        <!-- <p>NOMBRE ZAPATILLA</p> -->
-        <p class="home-main-text"><%= product.name %></p>
-        <div class="home-main-box">
-            <h4 class="home-main-precio">$<%= product.price %></h4>
-            <% if (product.discount) { %>
-                <span class="home-main-discount"><%= product.discount %> % OFF</span>
-                <% } %>
+    <div class="home_card col-lg-4 col-md-6 mb-4">
+        <div class="card">
+            <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+                <a href="/products/details/<%= product.id %>"><img class="w-100"
+                        src="/img/<%= product.image || 'default-image.png' %>" alt="img"></a>
+
+                <a href="/products/details/<%= product.id %>">
+                    <div class="mask">
+                        <div class="d-flex justify-content-start align-items-end h-100">
+                            <h5><span class="badge bg-danger ms-2">
+                                    <%= product.discount || "-" %> % OFF
+                                </span></h5>
+                        </div>
+                    </div>
+                    <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="card-body">
+                <a href="" class="text-reset">
+                    <h5 class="card-title mb-3">
+                        <%= product.name %>
+                    </h5>
+                </a>
+                <!-- <a href="" class="text-reset">
+              <p></p>
+            </a> -->
+                <h6 class="mb-3">
+                    <strong>$<%= product.price %></strong>
+                    <% if (product.discount) { %>
+                        <span class="ms-2 text-danger">$<%= product.price - product.price * product.discount / 100 %>
+                                </span>
+                        <% } %>
+                </h6>
+                <div class="d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary btn-rounded" data-mdb-ripple-init>
+                        <a class="text-light fs-6" href="/products/details/<%= product.id %>">Comprar</a>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-
+    </div>
     <% } %>
