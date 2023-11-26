@@ -31,74 +31,12 @@ img, svg {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.home-main-contenedor-card{
-    width:100%;
-    border: solid 1px black;
-    position: relative;
-    background-color: rgba(242, 233, 228, 0.5);
-    box-shadow: 0px 0px 10px 2px rgba(94, 84, 142, 1);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.home-main-box {
-    display: flex;
-  }
-
-  .home-main-discount {
-    color: rgb(155, 223, 53);
-  }
-
-.home-main-button-ojo{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    border: none; 
-    background-color: transparent;
-}
-
-.home-main-button-cora{
-    position: absolute;
-    top: 10px;
-    right: 40px;
-
-    border: none; 
-    background-color: transparent;
-}
-
-.home-main-img{
+.home_card{
     width: 100%;
 }
 
-.home-main-button-compra{
-    margin-top: 15px;
-    border-radius: 150px;
-    height: 35px;
-    background-color: black;
-    border: solid 1px gray;
-    display: flex;
-    align-items: center;
-    padding: 15px; 
-}
 
-.home-main-button-compra a{
-    color: white;
-    text-decoration: none;
-}
 
-.home-main-text{
-    margin-top: 10px ;
-    text-align: center;
-}
-
-.home-main-precio{
-    margin: 15px 0 15px 0;
-}
 
 .pagination {
     place-content: center;
@@ -121,47 +59,21 @@ img, svg {
    display: block;
 }
 
-.home-main-filtro{
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    display: flex;
-   
-    
-}
 
-.home-main-contenedor{
-    width: 100%;
-    align-items: center;
-    flex-direction: row;
-    display: flex;
-    
-}
-
-.home-main-contenedor-card{
-    width: 49%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
 }
 
 
 /*desktop*/
-@media (min-width: 769px){
+@media (min-width: 569px){
 
-.home-main-contenedor-card{
-    width: 23%;
-    }
-
-.home-main-filtro button{
-        justify-content: center;
-        font-size: 15px;
-        
-    } 
     .home-main-carrusel{
         width: 100%;
+    }
+    .home_card{
+        width: 48%;
     } 
+   
     
 
 }
@@ -176,4 +88,7 @@ img, svg {
             display: none;
              margin: 6px 0;
          }
+         .home_card{
+            width: 23%;
+        } 
     }
