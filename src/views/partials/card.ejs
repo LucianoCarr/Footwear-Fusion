@@ -5,15 +5,11 @@
     <div class="home_card col-lg-4 col-md-6 mb-4">
         <div class="card">
             <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                <a href="/products/details/<%= product.id %>"><img class="w-100"
-                        src="/img/<%= product.image || 'default-image.png' %>" alt="img"></a>
-
+                <a href="/products/details/<%= product.id %>"><img class="w-100" src="/img/<%= product.image || 'default-image.png' %>" alt="img"></a>
                 <a href="/products/details/<%= product.id %>">
                     <div class="mask">
                         <div class="d-flex justify-content-start align-items-end h-100">
-                            <h5><span class="badge bg-danger ms-2">
-                                    <%= product.discount || "-" %> % OFF
-                                </span></h5>
+                            <h5><span class="badge bg-danger ms-2"> <%= product.discount || "-" %> % OFF </span></h5>
                         </div>
                     </div>
                     <div class="hover-overlay">
@@ -22,19 +18,11 @@
                 </a>
             </div>
             <div class="card-body">
-                <a href="" class="text-reset">
-                    <h5 class="card-title mb-3">
-                        <%= product.name %>
-                    </h5>
-                </a>
-                <!-- <a href="" class="text-reset">
-              <p></p>
-            </a> -->
+                    <h5 class="card-title mb-3"> <%= product.name %> </h5>
                 <h6 class="mb-3">
                     <strong>$<%= product.price %></strong>
                     <% if (product.discount) { %>
-                        <span class="ms-2 text-danger">$<%= product.price - product.price * product.discount / 100 %>
-                                </span>
+                        <span class="ms-2 text-danger">$<%= product.price - product.price * product.discount / 100 %> </span>
                         <% } %>
                 </h6>
                 <div class="d-md-flex justify-content-md-end">
