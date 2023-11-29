@@ -32,6 +32,10 @@
     transition: all 0.5s;
 }
 
+::marker {
+    display: none;
+}
+
 .footer_conteiner i:hover {
     color: #e27396;
 }
