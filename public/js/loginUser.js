@@ -1,32 +1,31 @@
-const s = id => document.getElementById(id);
 
 window.onload = function () {
         //-------------------email----------------------//
-        s('email').addEventListener('focus',function(e){
-            s('errorEmail').innerHTML = null;
+       document.getElementById('email').addEventListener('focus',function(e){
+           document.getElementById('errorEmail').innerHTML = null;
             this.classList.remove('is-invalid')
         })
-        s('email').addEventListener('blur',function(e){
+       document.getElementById('email').addEventListener('blur',function(e){
             switch (true) {
                 case !this.value.trim():
-                       s('errorEmail').innerHTML = 'El email es obligatorio';
+                      document.getElementById('errorEmail').innerHTML = 'El email es obligatorio';
                        this.classList.add('is-invalid');
                     break;          
                 default:
-                    s('errorEmail').innerHTML = null;
+                   document.getElementById('errorEmail').innerHTML = null;
                     this.classList.remove('is-invalid')
                     break;
             }
         }) 
         //------------------email--------------------------//
-        s('email').addEventListener('change',async function(e){
+       document.getElementById('email').addEventListener('change',async function(e){
             if(this.value.trim()){
             try {
               const response = await fetch(`/api/check-email?email=${this.value}`) 
               const result = await response.json()
               
               if(!result.data){
-                s('errorEmail').innerHTML = 'El mail no es valido '
+               document.getElementById('errorEmail').innerHTML = 'El mail no es valido '
                 this.classList.add('is-invalid')
               }
             } catch (error) {
@@ -34,21 +33,21 @@ window.onload = function () {
             }}
         })
        //-------------------password----------------------//
-    s('password').addEventListener('focus',function(e){
+   document.getElementById('password').addEventListener('focus',function(e){
     console.log('Focus event 1');
-    s('errorPassword').innerHTML = null;
+   document.getElementById('errorPassword').innerHTML = null;
         this.classList.remove('is-invalid')
 
     })
-    s('password').addEventListener('blur',function(e){
+   document.getElementById('password').addEventListener('blur',function(e){
         console.log('Blur event 2');
         switch (true) {
             case !this.value.trim():
-                   s('errorPassword').innerHTML = 'La contraseña es obligatorio';
+                  document.getElementById('errorPassword').innerHTML = 'La contraseña es obligatorio';
                    this.classList.toggle('is-invalid')
                 break;
             default:
-                s('errorPassword').innerHTML = null;
+               document.getElementById('errorPassword').innerHTML = null;
                 this.classList.toggle('is-invalid')
                 break;
         }
@@ -56,9 +55,9 @@ window.onload = function () {
 
         //-------------------password----------------------//
 
-        s('password').addEventListener('change',async function(e){
+       document.getElementById('password').addEventListener('change',async function(e){
             console.log('Change event try');
-            s('errorPassword').innerHTML = null;
+           document.getElementById('errorPassword').innerHTML = null;
             this.classList.remove('is-invalid'); 
             if(this.value.trim()){
             try {
@@ -67,11 +66,11 @@ window.onload = function () {
               const result = await response.json()
               
               if(!result.data){
-                s('errorPassword').innerHTML = 'La contraseña no es valida'
+               document.getElementById('errorPassword').innerHTML = 'La contraseña no es valida'
                 this.classList.add('is-invalid') 
               }else{
                 //limpiar campo
-                s('errorPassword').innerHTML = null;
+               document.getElementById('errorPassword').innerHTML = null;
                 this.classList.remove('is-invalid');
               }
             } catch (error) {
@@ -80,9 +79,9 @@ window.onload = function () {
         })
 
        //-------------------button-eye----------------------// 
-    s('button-eye').addEventListener('click', function (e) {
-        s('errorPassword').innerHTML = null;
-        s('password').classList.remove('error-login');
+   document.getElementById('button-eye').addEventListener('click', function (e) {
+       document.getElementById('errorPassword').innerHTML = null;
+       document.getElementById('password').classList.remove('error-login');
     
         this.classList.toggle('fa-eye');
         this.classList.toggle('fa');
