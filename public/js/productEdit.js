@@ -61,7 +61,7 @@ window.onload = function () {
     document.getElementById('price').addEventListener('blur', function(e) {
         switch (true) {
             case !this.value.trim():
-                s('msgError-price').innerHTML = "El precio es obligatorio";
+                document.getElementById('msgError-price').innerHTML = "El precio es obligatorio";
                 this.classList.add("is-invalid");
                 break;
             case !/^[\d]+$/.test(this.value) :
@@ -89,7 +89,7 @@ window.onload = function () {
     document.getElementById('category').addEventListener('blur', function(e) {
         switch (true) {
             case !/^[\d]+$/.test(this.value) :
-                s('msgError-category').innerHTML = "Categoria es obligatoria";
+                document.getElementById('msgError-category').innerHTML = "Categoria es obligatoria";
                 this.classList.add("is-invalid");
                 break
             default:
@@ -103,10 +103,9 @@ window.onload = function () {
 
     /* Descripción */
     document.getElementById('description').addEventListener('focus', function() {
-        s('msgError-description').innerHTML = null;
+        document.getElementById('msgError-description').innerHTML = null;
         this.classList.remove("is-invalid");
     });
-document.getElementById
     document.getElementById('description').addEventListener('blur', function(e) {
         switch (true) {
             case !this.value.trim():

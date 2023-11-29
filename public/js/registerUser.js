@@ -153,7 +153,7 @@ window.onload = function (){
         this.classList.toggle('fa-solid');
         this.classList.toggle('fa-eye-slash');
     
-        const passwordInput = s('password');
+        const passwordInput = document.getElementById('password');
         passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
     });
 
@@ -168,7 +168,7 @@ window.onload = function (){
         this.classList.toggle('fa-solid');
         this.classList.toggle('fa-eye-slash');
     
-        const passwordInput = s('password2');
+        const passwordInput = document.getElementById('password2');
         passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
     });
 
