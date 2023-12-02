@@ -8,7 +8,7 @@ module.exports = {
         productId : 1,
         orderId : 1,
         createdAt : new Date,
-      updatedAt : new Date
+        updatedAt : new Date
       }], {});
   },
 
