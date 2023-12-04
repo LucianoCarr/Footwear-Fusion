@@ -34,13 +34,13 @@ window.onload = function () {
         })
        //-------------------password----------------------//
    document.getElementById('password').addEventListener('focus',function(e){
-    console.log('Focus event 1');
+    
    document.getElementById('errorPassword').innerHTML = null;
         this.classList.remove('is-invalid')
 
     })
    document.getElementById('password').addEventListener('blur',function(e){
-        console.log('Blur event 2');
+        
         switch (true) {
             case !this.value.trim():
                   document.getElementById('errorPassword').innerHTML = 'La contraseña es obligatorio';
@@ -56,7 +56,7 @@ window.onload = function () {
         //-------------------password----------------------//
 
        document.getElementById('password').addEventListener('change',async function(e){
-            console.log('Change event try');
+            
            document.getElementById('errorPassword').innerHTML = null;
             this.classList.remove('is-invalid'); 
             if(this.value.trim()){
@@ -92,5 +92,35 @@ window.onload = function () {
         const passwordInput = document.getElementById('password');
         passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
     });
+
+
+const form = document.getElementById('formLogin');
+
+    form.addEventListener('submit',  function (e) {
+        e.preventDefault()
+        
+        if (!document.getElementById('email').value.trim()) {
+
+            console.log('Email is empty. Preventing form submission.');
+            document.getElementById('errorEmail').innerHTML = 'El email es obligatorio';
+            document.getElementById('email').classList.add('is-invalid');
+            e.preventDefault(); 
+        } 
+
+        
+        if (!document.getElementById('password').value.trim()) {
+
+            console.log('Password is empty. Preventing form submission.');
+
+            document.getElementById('errorPassword').innerHTML = 'La contraseña es obligatoria';
+            document.getElementById('password').classList.add('is-invalid');
+            e.preventDefault(); 
+        } 
+
+        if (!document.getElementById('email').classList.contains('is-invalid') && !document.getElementById('password').classList.contains('is-invalid')) {
+            this.submit();
+        }
+    });
+
 };
  

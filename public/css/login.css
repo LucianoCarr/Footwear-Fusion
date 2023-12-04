@@ -95,6 +95,14 @@
   text-align: center;
 }
 
+.formulario-boton p{
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .boton {
   background-color: transparent;
   color: #e5e5e5;
