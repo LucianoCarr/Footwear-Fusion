@@ -1,44 +1,48 @@
 /*main*/
 
-img, svg {
+img,
+svg {
     vertical-align: middle;
     width: -webkit-fill-available;
 }
 
-.home-main{
+.home-main {
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 
-.home-main-carrusel{
+.home-main-carrusel {
     display: none;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon  {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     background-color: rgb(216, 29, 216);
 }
 
-.banner-4{
-   display: none;
+.banner-4 {
+    display: none;
     margin: 6px 0;
 }
 
-.home-main-contenedor{
+.home-main-contenedor {
     width: 100%;
     display: flex;
     padding: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.home_card{
+
+.home_card {
     width: 100%;
 }
 
 .sky {
     position: fixed;
-    align-self: self-end;
-    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
 }
 
 
@@ -47,21 +51,21 @@ img, svg {
 }
 
 /*tablet*/
-@media (min-width: 361px){
+@media (min-width: 361px) {
 
-.home-main{
-    flex-direction: column;
-    justify-content: space-between;
-}
+    .home-main {
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-.home-main-carrusel{
-    display: block;
-} 
+    .home-main-carrusel {
+        display: block;
+    }
 
-.banner-4{
-    min-width: -webkit-fill-available;
-   display: block;
-}
+    .banner-4 {
+        min-width: -webkit-fill-available;
+        display: block;
+    }
 
 
 
@@ -69,30 +73,33 @@ img, svg {
 
 
 /*desktop*/
-@media (min-width: 569px){
+@media (min-width: 569px) {
 
-    .home-main-carrusel{
+    .home-main-carrusel {
         width: 100%;
     }
-    .home_card{
+
+    .home_card {
         width: 48%;
-    } 
-   
-    
+    }
+
+
 
 }
-@media (min-width: 1025px){
 
-      /*   .home-main-carrusel{
+@media (min-width: 1025px) {
+
+    /*   .home-main-carrusel{
             width: 60%;
             align-self: center;
         }  */
 
-        .banner-4{
-            display: none;
-             margin: 6px 0;
-         }
-         .home_card{
-            width: 23%;
-        } 
+    .banner-4 {
+        display: none;
+        margin: 6px 0;
     }
+
+    .home_card {
+        width: 23%;
+    }
+}
