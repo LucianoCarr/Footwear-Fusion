@@ -6,8 +6,8 @@ const {
   clearCart,
   addProduct,
   removeProduct,
-  lessQuantity,
-  moreQuantity,
+  saveTotal,
+  changeStatus,
 } = require("../controller/cartControllers");
 /* /api */
 router.get("/check-email", checkMail);
@@ -16,10 +16,10 @@ router.get("/check-password", checkPassword);
 /* /api/cart */
 /* SHOPPING CART */
 router.post("/cart", getCart);
-router.post("/cart/more", clearCart);
-router.post("/cart/less", addProduct);
-router.post("/cart/add", removeProduct);
-router.post("/cart/remove", lessQuantity);
-router.post("/cart/clear", moreQuantity);
+router.patch("/cart/changeStatus", changeStatus);
+router.patch("/cart/saveTotal", saveTotal);
+router.post("/cart/add", addProduct);
+router.delete("/cart/remove", removeProduct);
+router.delete("/cart/clear", clearCart);
 
 module.exports = router;

@@ -25,6 +25,16 @@ module.exports = (sequelize, DataTypes) => {
   Order.init(
     {
       date: { type: DataTypes.DATE, defaultValue: new Date() },
+      status: {
+        type: DataTypes.STRING,
+        defaultValue: "pending",
+        validate: {
+          isIn: {
+            args: [["pending", "completed", "canceled"]],
+            msg: 'Los valores válidos son ["pending", "completed" , "canceled"]',
+          },
+        },
+      },
       total: { type: DataTypes.INTEGER, defaultValue: 0 },
       userId: DataTypes.INTEGER,
     },

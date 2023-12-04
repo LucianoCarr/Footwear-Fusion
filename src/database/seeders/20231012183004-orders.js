@@ -7,6 +7,7 @@ module.exports = {
       await queryInterface.bulkInsert('Orders', [{
       date: new Date,
       total: 1,
+      status:"pending",
       userId: 1,
       createdAt : new Date,
       updatedAt : new Date

@@ -7,8 +7,10 @@ module.exports = async (req, res) => {
       where: { userId: req.session.userLogin?.id || req.body.userId },
       include: ["products"],
     });
-    sendResponse(res,"success", {cartProducts:order.products})
-  } catch ({message}) {
-    sendResponse(res,"error", {message}, 500);
+    sendResponse(res, "success", {
+      data: { products: order.products, total: order.total },
+    });
+  } catch ({ message }) {
+    sendResponse(res, "error", { message }, 500);
   }
 };
