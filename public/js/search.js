@@ -4,7 +4,7 @@ window.onload = function () {
    document.getElementById('form-search').addEventListener('submit',function(e){
         e.preventDefault()
 
-        const elementForm = s('form-search').elements
+        const elementForm = document.getElementById('form-search').elements
         let error = false
 
         for (let i = 0; i < elementForm.length; i++) {
