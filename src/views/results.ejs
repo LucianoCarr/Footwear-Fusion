@@ -39,10 +39,8 @@
                             <div class="card-body">
                                     <h5 class="card-title mb-3"> <%= product.name %> </h5>
                                 <h6 class="mb-3">
-                                    <strong>$<%= product.price %></strong>
-                                    <% if (product.discount) { %>
-                                        <span class="ms-2 text-danger">$<%= product.price - product.price * product.discount / 100 %> </span>
-                                        <% } %>
+                                    <strong style="font-size: 26px;">$<%= product.discount? product.price - product.price * product.discount / 100 : product.price %></strong>
+                                    
                                 </h6>
                                 <div class="d-md-flex justify-content-md-end">
                                     <button type="button" class="btn btn-primary btn-rounded" data-mdb-ripple-init>
