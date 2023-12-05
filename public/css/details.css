@@ -108,10 +108,12 @@
 
 .sub-price {
   text-decoration: line-through 2px;
+  font-size: 13px;
 }
 
 .discount {
   color: rgb(155, 223, 53);
+  font-size: 13px;
 }
 
 .etiqueta {
@@ -128,6 +130,9 @@
   
 }
 .talle p,.precio p,.color p,.cantidad p{
+  margin: 5px;
+}
+.precio b{
   margin: 5px;
 }
 
@@ -163,7 +168,7 @@
 
 .carrito {
   width: 100%;
-  margin: 22px 0;
+  margin: 4px 0;
   justify-content: end;
   gap: 5px;
 }
@@ -185,6 +190,28 @@
   transition: all 0.5s;
   display: flex;
   align-items: center;
+}
+.carrito-detail-trash{
+  margin: 4px 0;
+}
+.carrito-detail-trash a {
+  border: solid 2px red;
+  border-radius: 10px;
+  padding: 3px;
+  font-size: 12px;
+  background-color: transparent;
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+}
+.carrito-detail-trash a:hover{
+  color: rgba(94, 84, 142, 1);
+  border-color: rgba(94, 84, 142, 1);
+  font-weight: bold;
 }
 
 .carrito a:hover {
@@ -233,8 +260,7 @@
     border-top: none;
     margin: 0 auto;
     flex-wrap: wrap;
-    justify-content: start;
-    gap: 10px;
+    gap: 5px;
   }
 
   .nombre-zapatilla {

@@ -39,9 +39,9 @@
                                 <p>Precio:</p>
                                 <p class="sub-price"> $<%= product.price %></p>
                                 /
-								<b class="discount"><%= product.discount %>% OFF</b>
+								<b class="discount"><%= product.discount %>%OFF</b>
                                 =
-                                <b style="font-size: 26px;">$<%= product.price - ((product.price * product.discount / 100).toFixed(0)) %></b>
+                                <b style="font-size: 16px;">$<%= product.price - ((product.price * product.discount / 100).toFixed(0)) %></b>
                             </div>
                             <% } else { %>
                             <div class="precio">
@@ -96,15 +96,14 @@
                             <!-- Botones -->
                             <div class="carrito">
                                 <a onclick="messageAdd()" href="#">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></a>
-                                <a href="/products/cart">Comprar</a>
                                 <% if(locals.userLogin?.role === 1){ %>
                                 <form action="/products/edit/<%= product.id %>">
-                                    <button class="carrito_trash"><i class="fa-solid fa-pen" style="color: #e27396;"></i></button>
+                                    <a href="/products/edit/<%= product.id %>" class="carrito p-3 fs-5"><i class="fa-solid fa-pen" style="color: #e27396;"></i></a>
                                 </form>
-                                <div class="btn-group ml-2" role="group">
-                                    <button type="button" class="btn btn-danger  " data-bs-toggle="modal" data-bs-target="#modalDelete" <%= product.id %>>
+                                <div class="carrito-detail-trash " role="group">
+                                    <a type="button" class="fs-5 p-3" data-bs-toggle="modal" data-bs-target="#modalDelete" <%= product.id %>>
                                         <i class="fa-regular fa-trash-can"></i>
-                                    </button>
+                                    </a>
                                 </div>
                                 <% } %>
                             </div>
