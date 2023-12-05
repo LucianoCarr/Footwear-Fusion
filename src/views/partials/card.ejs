@@ -5,13 +5,12 @@
     <div class="home_card col-lg-4 col-md-6 mb-4">
         <div class="card">
             <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                <a href="/products/details/<%= product.id %>"><img class="w-100"
-                        src="/img/<%= product.image || 'default-image.png' %>" alt="img"></a>
+                <a href="/products/details/<%= product.id %>"><img class="w-100" src="/img/<%= product.image || 'default-image.png' %>" alt="img"></a>
                 <a href="/products/details/<%= product.id %>">
                     <div class="mask">
                         <div class="d-flex justify-content-start align-items-end h-100">
-                            <h5><span class="badge bg-danger ms-2">
-                                    <%= product.discount || "-" %> % OFF
+                            <h5><span class="etiqueta">
+                                    <%= product.discount? `${product.discount} % OFF` : null %> 
                                 </span></h5>
                         </div>
                     </div>
@@ -25,8 +24,7 @@
                     <%= product.name %>
                 </h5>
                 <div class=" d-flex justify-content-between">
-                    <strong class="fs-4">$<%= product.discount? product.price - product.price * product.discount / 100 :
-                            product.price %></strong>
+                    <strong class="fs-4">$<%= product.price/*  product.discount? product.price - product.price * product.discount / 100 : product.price */ %></strong>
                     <button type="button" class="btn btn-primary btn-rounded" data-mdb-ripple-init>
                         <a class="text-light fs-6" href="/products/details/<%= product.id %>">Comprar</a>
                     </button>

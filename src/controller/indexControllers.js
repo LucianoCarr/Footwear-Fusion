@@ -13,7 +13,6 @@ const controller = {
 	        const pagesCount = Math.ceil(total / req.query.limit)
             const currentPage = req.query.page
             const pages = paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage)
-			
 
 		const categoryMan = await db.Product.findAll({
 			where : {

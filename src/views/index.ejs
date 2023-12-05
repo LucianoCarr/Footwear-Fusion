@@ -16,21 +16,11 @@
         <div class="home-main-banner">
             <img src="/img/banner-4.jpg" class="banner-4" height="10%" alt="">
         </div>
-       <article class="home-main-contenedor">
+       <article id="cartas" class="home-main-contenedor">
   <%- include('partials/card') %>
        </article>
 
-       <!-- Pagination -->
-      <nav aria-label="...">
-       <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="/">Ver todas</a></li>
-       </ul>
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="/?page=1&limit=4">1</a></li>
-          <li class="page-item"><a class="page-link" href="/?page=2&limit=4">2</a></li>
-          <li class="page-item"><a class="page-link" href="/?page=3&limit=4">3</a></li>
-        </ul>
-      </nav>
+  <%- include('partials/pagination') %>
 
     </main>
 
