@@ -115,10 +115,15 @@
                                                 style="resize: none;"><%= p.description %></textarea>
                                                 <spam class="ms-2 fw-bold error-products" id="msgError-description"></spam>
                                         </div>
-                                        <div class="col-12 d-flex justify-content-between gap-2 mb-3">
-                                            <button type="submit" class="btn btn-primary">Guardar cambios</label>
-                                        
+                                        <div class="d-flex justify-content-between">
+                                        <div class="col-6 d-flex  gap-2 mb-3">
+                                            <button type="submit" class="btn" style="background-color: #5e548e; color: white;">Guardar cambios</button>
+                                             
                                         </div>
+                                        <div class="col-6d-flex  mb-3">
+                                        <a href="/products/details/<%= p.id %>" class="btn btn-dark">Salir sin guardar</a>
+                                        </div>
+                                    </div>
                                     </form>
                                     
                                 </div>

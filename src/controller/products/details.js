@@ -6,8 +6,12 @@ module.exports = async (req, res) => {
   try {
     const productParams = req.params.id
   const product = await db.Product.findByPk(productParams, {
-    include: ["images"],
+    include: ["images","categoria"],
   });
+
+ 
+
+  
 
   let messageSubTitle = "PRODUCTOS RELACIONADOS";
   const isOtherProducts = Math.round(Math.random() * 1)
@@ -43,6 +47,7 @@ module.exports = async (req, res) => {
     product,
     products,
     subtitleText: messageSubTitle,
+    
   });
   } catch (error) {
     console.log(error);

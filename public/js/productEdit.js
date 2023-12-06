@@ -106,36 +106,31 @@ window.onload = function () {
         document.getElementById('msgError-description').innerHTML = null;
         this.classList.remove("is-invalid");
     });
-    document.getElementById('description').addEventListener('blur', function(e) {
-        switch (true) {
-            case !this.value.trim():
-                document.getElementById('msgError-description').innerHTML = "La descripción es obligatoria";
-                this.classList.add("is-invalid");
-                break;
-            case this.value.trim().length < 20 :
-                document.getElementById('msgError-description').innerHTML = "Mínimo veinte caracteres";
-                this.classList.add("is-invalid");
-                break
-            default:
-                document.getElementById('msgError-description').innerHTML = null;
-                this.classList.remove("is-invalid");
-                this.classList.add("is-valid");
-                break;
-        }
-    });
-    document.getElementById('form-edit').addEventListener('submit',function(e){
-        e.preventDefault()
 
-        const elementForm = s('form-edit').elements
-        let error = false
 
+    
+   /* document.getElementById('form-edit').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        const elementForm = document.getElementById('form-edit').elements;
+        let error = false;
+    
         for (let i = 0; i < elementForm.length; i++) {
-
-            if (!elementForm[i].value.trim() || elementForm[i].classList.contains('is-invalid')){
-                elementForm[i].classList.add('is-invalid')
-                document.getElementById('errores').innerHTML = 'Hay errores en la carga de datos'
-                error = true
+            if (!elementForm[i].value.trim() || elementForm[i].classList.contains('is-invalid')) {
+                console.log(elementForm);
+                elementForm[i].classList.add('is-invalid');
+                document.getElementById('errores').innerHTML = 'Hay errores en la carga de datos';
+                error = true;
             }
-            ! error && this.submit()
-        }})
+        }
+    
+        if (error) {
+            console.log("Error en el envío del formulario. Revise los campos.");
+        } else {
+            console.log("Formulario enviado correctamente.");
+            this.submit();
+        }
+    });*/
+    
 }
+
