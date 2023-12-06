@@ -7,7 +7,11 @@ module.exports = [
         min:2,
     }).withMessage('Tiene que se al menos 2 caracteres'),
     check('color')
-    .notEmpty().withMessage('El color tiene que se obligatorio'),
+    .notEmpty().withMessage('El color tiene que se obligatorio')
+    .isAlpha("es-ES",{
+        ignore:' '
+      })
+      .withMessage("Solo letras"),
     check('price')
     .notEmpty().withMessage('Precio es obligatorio')
     .isInt({
