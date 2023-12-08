@@ -38,7 +38,31 @@ const totalProductInDb = async(req,res) => {
     }
 }
 
+//-------------------
+const totalOfertas = async (req,res) => {
+    try {
+        const total = await db.Product.count({
+            where: {
+                discount: {
+                    [db.Sequelize.Op.gt]: 0,
+                },
+            },
+        });
+
+        return res.status(200).json({
+            ok: true,
+            data: total,
+        });
+    } catch (error) {
+        return res.status(error.status || 500).json({
+            ok : false,
+            msg : error.message || "Upss, hubo un error"
+           })
+    }
+}
+
 module.exports = {
     getAllCategory,
-    totalProductInDb
+    totalProductInDb,
+    totalOfertas
 }

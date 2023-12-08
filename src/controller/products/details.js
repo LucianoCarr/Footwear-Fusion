@@ -4,13 +4,11 @@ const { Op } = require('sequelize')
 
 module.exports = async (req, res) => {
   try {
-    const productParams = req.params.id
+  const productParams = req.params.id
   const product = await db.Product.findByPk(productParams, {
-    include: ["images","categoria"],
-  });
-
- 
-
+    include: ["images","categoria"]
+    
+    });
   
 
   let messageSubTitle = "PRODUCTOS RELACIONADOS";
@@ -42,7 +40,7 @@ module.exports = async (req, res) => {
   }
 
   const products = await db.Product.findAll(config);
-
+  console.log(product);
   return res.render("details", {
     product,
     products,
