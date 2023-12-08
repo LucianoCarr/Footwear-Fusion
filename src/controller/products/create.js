@@ -19,7 +19,7 @@ module.exports = async (req,res) => {
         description,
         color,
         stock,
-        categoryId,
+        categoryId : categoryId || 1,
         image: req.files?.image?.length ? req.files.image[0].filename : "default-image.png",
        // images: req.files?.images?.length ? req.files.images.map((image) => image.filename) : [],
       })
