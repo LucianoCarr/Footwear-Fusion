@@ -46,6 +46,12 @@ export const SideBar = () => {
 					<span>User</span></Link>
 			</li>
 
+			<li className={`nav-item ${pathname === '/' && 'active'}`}>
+				<Link className="nav-link" to="http://localhost:3000/">
+					<i className="fas fa-fw fa-users"></i>
+					<span>Volver</span></Link>
+			</li>
+
 			
 			<hr className="sidebar-divider d-none d-md-block"/>
       </ul>

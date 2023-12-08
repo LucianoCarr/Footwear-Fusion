@@ -3,28 +3,28 @@ import { MetricItem } from './MetricItem'
 
 
 
-export const Metrics = ({totalProducts}) => {
+export const Metrics = ({totalProducts,ofertas}) => {
 	const items = [
 		{
 	    id : crypto.randomUUID(),
 		color : "primary",
 		title : "Productos disponibles",
 		value : totalProducts,
-		icon : "fa-film"
+		icon : "fa-gift"
 		},
 	{	
 		id : crypto.randomUUID(),
 		color : "success",
 		title : "Categorias",
 		value : 3,
-		icon : "fa-award"
+		icon : "fa-users"
 	},
 	{	
 		id : crypto.randomUUID(),
 		color : "warning",
 		title : "Ofertas",
-		value : 49,
-		icon : "fa-user"
+		value : ofertas,
+		icon : "fa-tag"
 	},
 ]
   return (
@@ -39,5 +39,6 @@ export const Metrics = ({totalProducts}) => {
 
 Metrics.propTypes = {
 	totalProducts : PropTypes.number,
+	ofertas : PropTypes.number
 	
 }
