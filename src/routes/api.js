@@ -9,6 +9,7 @@ const {
   saveTotal,
   changeStatus,
 } = require("../controller/cartControllers");
+const { getAllCategory, totalProductInDb } = require("../controller/apis/ProductsApiController");
 /* /api */
 router.get("/check-email", checkMail);
 router.get("/check-password", checkPassword);
@@ -21,5 +22,8 @@ router.patch("/cart/saveTotal", saveTotal);
 router.post("/cart/add", addProduct);
 router.delete("/cart/remove", removeProduct);
 router.delete("/cart/clear", clearCart);
+
+router.get('/categories',getAllCategory)
+router.get('/products/count',totalProductInDb)
 
 module.exports = router;

@@ -7,6 +7,7 @@ const logger = require('morgan');
 const methodOverride =  require('method-override'); 
 const session = require('express-session');
 const paginate = require('express-paginate')
+const cors = require('cors')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -16,7 +17,7 @@ const userSession = require('./middlewares/userSession');
 const cookieCheck = require('./middlewares/cookieCheck');
 
 const app = express();
-
+app.use(cors())
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
