@@ -81,22 +81,15 @@
                                     <div class="color" style="background-color:<%= product.hexColor %>"></div>
                                 </div>
                             </div>
-                         
-                         
-                            <!-- Cantidad -->
-                            <form class="cantidad" action="#">
-                                <p>Cantidad:</p>
-                                <div class="carrito_addProduc">
-                                    <div class="carrito_sum-rest">
-                                        <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
-                                        <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
-                                    </div>
-                                    <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
-                                </div>
-                            </form>
                             <!-- Botones -->
-                            <div class="carrito">
-                                <a onclick="addProductToCart('<%= product.id %>')" href="#">Agregar al carrito<i class="p-2 fa-solid fa-cart-shopping"></i></a>
+                            <div class="carrito ">
+                                <% if(locals.userLogin){ %>
+                                    <a onclick="addProductToCart('<%= product.id %>')" href="#">Agregar al carrito<i class="p-2 fa-solid fa-cart-shopping"></i></a>
+                                    <% }else { %>
+                                        <div class="back_to_top">
+                                            <p class="text-body-tertiary">Debes loguearte para comprar</p>
+                                        </div>
+                                        <% } %>
                                 <% if(locals.userLogin?.role === 1){ %>
                                 <form action="/products/edit/<%= product.id %>">
                                     <a href="/products/edit/<%= product.id %>" class="carrito p-3 fs-5"><i class="fa-solid fa-pen" style="color: #e27396;"></i></a>
