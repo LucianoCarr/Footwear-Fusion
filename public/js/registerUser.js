@@ -13,7 +13,7 @@ window.onload = function (){
                 document.getElementById('errorName').innerHTML = 'El nombre es obligatorio ';
                    this.classList.add('invalido')
                 break;
-                case  !/^[A-Za-z]+$/.test(this.value):
+                case  !/^[A-Za-z\s]+$/.test(this.value):
                     document.getElementById('errorName').innerHTML = 'No se permiten numeros ';
                     this.classList.add('invalido')
                     break;
@@ -42,7 +42,7 @@ window.onload = function (){
                 document.getElementById('errorlastName').innerHTML = 'El apellido es obligatorio ';
                 this.classList.add('invalido');
                 break;
-            case !/^[A-Za-z]+$/.test(this.value):
+            case !/^[A-Za-z\s]+$/.test(this.value):
                 document.getElementById('errorlastName').innerHTML = 'No se permiten numeros ';
                 this.classList.add('invalido');
                 break;
@@ -130,7 +130,7 @@ window.onload = function (){
                    document.getElementById('errorPassword2').innerHTML = 'Debes confirmar tu contraseña';
                    this.classList.add('invalido')
                 break;
-            case this.value.trim() !== s('password').value.trim():
+            case this.value.trim() !== document.getElementById('password').value.trim():
                     document.getElementById('errorPassword2').innerHTML = 'Las contraseñas no coinciden';
                     this.classList.add('invalido');
                 break;
@@ -173,7 +173,7 @@ window.onload = function (){
     });
 
     //-------------------validando campos vacios--------------//
-    document.getElementById('formAdd').addEventListener('submit',function(e){
+/*     document.getElementById('formAdd').addEventListener('submit',function(e){
         e.preventDefault()
     
         const elementForm = document.getElementById('formAdd').elements
@@ -190,5 +190,5 @@ window.onload = function (){
         }
             if (!error) {
             this.submit();
-        }})
+        }}) */
 }
