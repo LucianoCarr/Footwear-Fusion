@@ -25,7 +25,7 @@ const structureProductsDB = [
     color: "azul",
     hexColor: "#007ab3",
     stock: true,
-    categoryId: 1,
+    categoryId: 2,
     createdAt : new Date,
     updatedAt : new Date
   },
