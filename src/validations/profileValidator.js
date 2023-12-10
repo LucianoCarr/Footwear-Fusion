@@ -19,6 +19,8 @@ module.exports = [
         ignore:' '
       })
       .withMessage("Solo letras"),
+      check('province')
+      .notEmpty().withMessage('provincia es obligatoria')
 /*       check('adress')
       .isLength({
         min: 6,

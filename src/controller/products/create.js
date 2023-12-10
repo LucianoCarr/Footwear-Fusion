@@ -10,14 +10,16 @@ module.exports = async (req,res) => {
 
     if (errors.isEmpty()) {
   
-      const {name, price, discount,category,description, color, stock} = req.body 
-      
-       const newProduct = await db.Product.create({
+      const {name, price, discount,category,description, color, hexColor, sizes, stock} = req.body 
+
+      const newProduct = await db.Product.create({
         name,
         price,
         discount : discount  || 0,
         description,
+        sizes,
         color,
+        hexColor,
         stock,
         categoryId : category ,
         image: req.files?.image?.length ? req.files.image[0].filename : "default-image.png",

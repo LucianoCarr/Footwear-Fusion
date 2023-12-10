@@ -7,14 +7,18 @@ module.exports = [
       min: 2,
     })
     .withMessage("El nombre es obligatorio")
-    .isAlpha("es-ES")
+    .isAlpha("es-ES",{
+      ignore:' '
+    })
     .withMessage("Solo letras"),
   check("lastName")
     .isLength({
       min: 2,
     })
     .withMessage("El apellido es obligatorio")
-    .isAlpha("es-ES")
+    .isAlpha("es-ES",{
+      ignore:' '
+    })
     .withMessage("Solo letras"),
   body("email")
     .notEmpty()

@@ -16,7 +16,7 @@ module.exports = async (req,res) => {
   try {
       
     if (errors.isEmpty()) {
-      const { name, price, discount, category, description, stock, color, rememberImg,} = req.body;
+      const { name, price, discount, category, description, stock, color, hexColor, rememberImg,} = req.body;
       let imagesRemember = [];
       const newImages = req.files?.images?.map((img) => {
           return { filename: img.filename, productId: product.id };
@@ -68,8 +68,8 @@ module.exports = async (req,res) => {
       product.stock = !!stock  || product.stock; // -> Boolean(stock)
       product.description = description?.trim()  || product.description;
       product.color = color?.trim()  || product.color;
+      product.hexColor = hexColor?.trim() || product.hexColor;
       product.image = req.files?.image?.length ? req.files.image[0].filename : product.image;
-
       await product.save();
       if(imagesRemember.length <= 6) {
         await db.Image.destroy({ where: { productId: product.id } });
