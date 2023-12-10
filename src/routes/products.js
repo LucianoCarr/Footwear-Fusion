@@ -7,9 +7,10 @@ const router = express.Router();
 /* Validators */
 const productAddValidator = require('../validations/productAddValidator')
 const productEditValidator = require('../validations/productEditValidator');
+const sessionCheckNotLogin = require('../middlewares/sessionCheckNotLogin');
 
 /* /produtcs */
-router.get('/cart', cart)
+router.get('/cart',sessionCheckNotLogin ,cart)
 router.get('/details/:id', details)
 
 /* CREATE PRODUCT */
