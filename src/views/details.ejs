@@ -103,7 +103,7 @@
                             </form>
                             <!-- Botones -->
                             <div class="carrito ">
-                                <a onclick="messageAdd()" href="#">Agregar al carrito<i class="p-2 fa-solid fa-cart-shopping"></i></a>
+                                <a onclick="addProductToCart('<%= product.id %>')" href="#">Agregar al carrito<i class="p-2 fa-solid fa-cart-shopping"></i></a>
                                 <% if(locals.userLogin?.role === 1){ %>
                                 <form action="/products/edit/<%= product.id %>">
                                     <a href="/products/edit/<%= product.id %>" class="carrito p-3 fs-5"><i class="fa-solid fa-pen" style="color: #e27396;"></i></a>
@@ -143,9 +143,9 @@
                 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
                 <script src="/js/carousel-swiper.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-                <script src="/js/cart.js"></script>
-
+                <script src="/js/addProductToCart.js"></script>
                 <script src="/js/movile.js"></script>
+
     </body>
 
 </html>

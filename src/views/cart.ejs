@@ -73,69 +73,7 @@
                 <!-- VIEW MOBILE -->
                 <div class="carrito__view-mobile">
                     <!-- PRODUCTO 1 -->
-                    <article class="carrito__article">
-                        <div class="carrito__conteiner_card">
-                            <div class="carrito__card_container-items">
-                                <!-- IMAGE -->
-                                <div class="carrito__conteinerImg carrito__card_info carrito__card_info-img">
-                                    <img src="/img/zapa-1.jpg" alt="">
-                                </div>
-                                <!-- NAME -->
-                                <div class="carrito__card_info carrito__card_info-detail">
-                                    <h4>Nombre</h4>
-                                    <p>zapatilla</p>
-                                </div>
-                                <!-- SIZE -->
-                                <div class="carrito__card_info carrito__card_info-size">
-                                    <h4>Talle</h4>
-                                    <label for="select"></label>
-                                    <select name="talle" id="select">
-                                        <option disabled selected>None</option>
-                                        <option value="1">36</option>
-                                    </select>
-                                </div>
-                                <!-- COLOR -->
-                                <div class="carrito__card_info carrito__card_info-color">
-                                    <h4>Color</h4>
-                                    <div class="circle"></div>
-                                </div>
-                                <!-- PRICE -->
-                                <div class="carrito__card_info carrito__card_info-price">
-                                    <h4>Precio</h4>
-                                    <p>$1000</p>
-                                </div>
-                                <!-- QUANTITY -->
-                                <div class="carrito__card_info carrito__card_info-quantity">
-                                    <h4>Cantidad</h4>
-                                    <label for="cantidad">
-                                        <div class="carrito_addProduc">
-                                            <div class="carrito_sum-rest">
-                                                <i class="fa-solid fa-caret-up" style="color: #000000;"></i>
-                                                <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
-                                            </div>
-                                            <input class="carrito__input_number" id="cantidad" value="1" min="1" max="20" name="cantidad" type="number">
-                                        </div>
-                                    </label>
-                                </div>
-                                <!-- PROVIDER -->
-                                <div class="carrito__card_info carrito__card_info-provider">
-                                    <h4>Distribuidor</h4>
-                                    <p>Lorem, ipsum.</p>
-                                </div>
-                                <!-- SUBPRICE -->
-                                <div class="carrito__card_info carrito__card_info-subprice">
-                                    <h4>Precio Subtotal</h4>
-                                    <p>$1000</p>
-                                </div>
-
-                                <div class="carrito__trash_conteiner">
-                                    <h4></h4>
-                                    <button class="carrito_trash"><i class="fa-solid fa-trash"
-                                            style="color: #e27396;"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                   <!-- ... -->
                 </div>
                 <!-- RESUMEN -->
                 <div class="carrito__box_resumen">
@@ -143,19 +81,19 @@
                         <div class="carrito__conteiner_arti">
                             <div class="carrito_arti">
                                 <p>Total de articulos:</p>
-                                <h4 id="totalArticles">2</h4>
+                                <h4 id="totalArticles">0</h4>
                             </div>
                             <div class="carrito_total">
                                 <p>Total:</p>
-                                <h4>$<span id="totalPriceOrder">2000</span></h4>
+                                <h4>$<span id="totalPriceOrder">0</span></h4>
                             </div>
                         </div>
                         <div class="carrito__conteiner_finCompr">
-                            <a href="#"><button class="carrito__button_finCompr" type="button">Finalizar compra</button></a>
+                            <a href="#"><button class="carrito__button_finCompr" type="button" onclick="confirmPurchase()">Realizar compra</button></a>
                         </div>
                         <div class="carrito__conteiner_nextTrash">
                             <a href="/">Continuar comprando</a>
-                            <a onclick="removeItems()" href="#">Vaciar carro</a>
+                            <a onclick="clearShoppingCart()" href="#">Vaciar carro</a>
                         </div>
                     </div>
                 </div>

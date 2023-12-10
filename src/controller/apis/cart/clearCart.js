@@ -13,6 +13,11 @@ module.exports = async (req, res) => {
       where: { orderId: order.id },
     });
 
+    if(isDelete) {
+      order.total = 0
+      await order.save()
+    }
+
     return sendResponse(
       res,
       "success",
