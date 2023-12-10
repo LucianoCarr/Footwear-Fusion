@@ -95,7 +95,7 @@
                                 </div>
                             </form>
                             <!-- Botones -->
-                            <div class="carrito ">
+                            <div class="carrito">
                                 <a onclick="addProductToCart('<%= product.id %>')" href="#">Agregar al carrito<i class="p-2 fa-solid fa-cart-shopping"></i></a>
                                 <% if(locals.userLogin?.role === 1){ %>
                                 <form action="/products/edit/<%= product.id %>">
@@ -107,6 +107,9 @@
                                     </a>
                                 </div>
                                 <% } %>
+                            </div>
+                            <div class="back_to_top">
+                                <a href="/" class="text-body-tertiary"><i class="fa-solid fa-arrow-rotate-left"></i> volver al inicio</a>
                             </div>
                             
                         </div>

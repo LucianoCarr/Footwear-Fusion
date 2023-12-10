@@ -86,7 +86,6 @@
 }
 
 .card-especificaciones {
-  display: flex;
   flex-wrap: wrap;
   width: 90%;
   margin: auto;
@@ -219,6 +218,12 @@
   border-color: rgba(94, 84, 142, 1);
   font-weight: bold;
 }
+.back_to_top{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
 .descripcion-detalles {
   display: none;
@@ -327,7 +332,7 @@
 /* TABLET */
 @media (min-width: 768px) {
   .card-descripcion-detalles {
-    margin-top: 47px;
+    margin-top: 64px;
   }
 }
 
@@ -342,6 +347,6 @@
     width: 80%;
   }
   .card-descripcion-detalles {
-    margin-top: 47px;
+    margin-top: 64px;
   }
 }
