@@ -195,11 +195,13 @@ const paintProducts = (products) => {
   );
   containerProductsDesktop.innerHTML = "";
   containerProductsMobile.innerHTML = "";
-  products.forEach((prod) => {
+  if(products) {
+    products.forEach((prod) => {
     const { structureCardDesktop, structureCardMobile } = createCard(prod);
     containerProductsDesktop.innerHTML += structureCardDesktop;
     containerProductsMobile.innerHTML += structureCardMobile;
-  });
+    });
+  } 
 };
 
 const getCart = async () => {
@@ -210,7 +212,7 @@ const getCart = async () => {
     paintProducts(data.products);
     totalOrder = data.total;
     paintTotal(totalOrder);
-    paintTotalArt(data.products.length);
+    paintTotalArt(data.products?.length || 0);
   } catch (error) {
     console.log(error);
   }
