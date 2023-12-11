@@ -131,8 +131,8 @@
 .talle p,.precio p,.color p,.cantidad p{
   margin: 5px;
 }
-.precio b{
-  margin: 5px;
+.precio-final{
+  font-size: 18px;
 }
 
 .color {

@@ -48,13 +48,12 @@
                                                 <select type="text" class="form-select" id="province" name="province">
                                                     <option hidden value="">Seleccione...</option>
                                                     <% provinces.forEach(({ nombre }) => { %>
-                                                        <option value="<%= nombre %>"><%= nombre %></option>
+                                                        <option value="<%= nombre %>" <%= (nombre === province) ? 'selected' : '' %>><%= nombre %></option>
                                                     <% }) %>
                                                 </select>
                                                 <spam class="ms-2 fw-bold error-login" id="msgError-province"><%= locals.errors && (errors.province && errors.province.msg) %></spam>
                                             </div>
                                              <!-- Localidad -->
-
                                             <div class="d-flex justify-content-end gap-2">
                                                 <button type="submit" class="btn" style="background-color: #5e548e; color: white;">Guardar cambios</button>
                                                 <a href="/" class="btn btn-dark">Salir sin guardar</a>

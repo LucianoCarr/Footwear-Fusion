@@ -149,6 +149,16 @@ body {
     grid-area: links;
 }
 
+.resultNotFound{
+    width: 30%;
+    text-align: center;
+}
+
+.products-result {
+    text-align: center;
+    color: tomato;
+}
+
 @media (min-width:520px) {
     .header--conteiner-nav img {
         width: 60px;

@@ -35,18 +35,18 @@
                         <div class="card-especificaciones">
                             <!-- precio -->
                             <% if (product.discount) { %>
-                            <div class="precio">
+                            <div class="precio" style="place-items: center;">
                                 <p>Precio:</p>
                                 <p class="sub-price"> $<%= product.price %></p>
                                 /
 								<b class="discount"><%= product.discount %>%OFF</b>
                                 =
-                                <b style="font-size: 16px;">$<%= product.price - ((product.price * product.discount / 100).toFixed(0)) %></b>
+                                <b class="precio-final">$<%= product.price - ((product.price * product.discount / 100).toFixed(0)) %></b>
                             </div>
                             <% } else { %>
                             <div class="precio">
                                 <p>Precio:</p>
-                                <p style="font-size: 26px;"> $<%= product.price %></p>
+                                <p style="font-size: 18px;"> $<%= product.price %></p>
                             </div>
                            <% } %>
                            <div class="precio">
@@ -87,7 +87,7 @@
                                     <a onclick="addProductToCart('<%= product.id %>')" href="#">Agregar al carrito<i class="p-2 fa-solid fa-cart-shopping"></i></a>
                                     <% }else { %>
                                         <div class="back_to_top">
-                                            <p class="text-body-tertiary">Debes loguearte para comprar</p>
+                                            <a href="/users/login" class="text-body-tertiary">Debes loguearte para comprar</a>
                                         </div>
                                         <% } %>
                                 <% if(locals.userLogin?.role === 1){ %>
