@@ -10,7 +10,7 @@ export const Metrics = ({totalProducts,ofertas}) => {
 		color : "primary",
 		title : "Productos disponibles",
 		value : totalProducts,
-		icon : "fa-gift"
+		icon : "fa-shoe-prints"
 		},
 	{	
 		id : crypto.randomUUID(),
