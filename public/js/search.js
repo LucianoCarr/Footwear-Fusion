@@ -1,6 +1,6 @@
 
 window.onload = function () {
-    /* Search */
+    // Search
    document.getElementById('form-search').addEventListener('submit',function(e){
         e.preventDefault()
 
@@ -9,7 +9,7 @@ window.onload = function () {
 
         for (let i = 0; i < elementForm.length; i++) {
 
-            if (!elementForm[i].value.trim() || elementForm[i].classList.contains('is-invalid')){
+            if (!elementForm[i].value.trim()  || elementForm[i].classList.contains('is-invalid')){
                 elementForm[i].classList.add('is-invalid')
                document.getElementById('errores').innerHTML = 'No puede enviarse vacio'
                 error = true
