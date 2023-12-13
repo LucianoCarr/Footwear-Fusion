@@ -29,14 +29,7 @@ export const FormSearch = ({getMovies}) => {
   )
 }
 
-<<<<<<< HEAD
-export default FormSearch
-
-
-FormSearch.prototypes = {
-  getMovies : PropTypes.func
-=======
 FormSearch.Proptypes = {
     getMovies : Proptypes.func
->>>>>>> b4c1f54c665caa5c6b5f64ce071b692dfb02d950
+
 }
