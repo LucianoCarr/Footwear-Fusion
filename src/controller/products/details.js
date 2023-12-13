@@ -11,14 +11,15 @@ module.exports = async (req, res) => {
     });
   
 
-  let messageSubTitle = "PRODUCTOS RELACIONADOS";
-  const isOtherProducts = Math.round(Math.random() * 1)
+  //let messageSubTitle = "PRODUCTOS RELACIONADOS";
+    let messageSubTitle = "OTROS PRODUCTOS"
+  //const isOtherProducts = Math.round(Math.random() * 1)
   let config = {
     where: {
       [Op.and]: [
-        {
+       /*  {
           categoryId: product.categoryId
-        },
+        }, */
         {
           id: {
             [Op.ne]: productParams
@@ -27,7 +28,7 @@ module.exports = async (req, res) => {
       ]
     }
   }
-  if (isOtherProducts) {
+ /*  if (isOtherProducts) {
     messageSubTitle = "OTROS PRODUCTOS"
     config = {
       where:
@@ -37,10 +38,12 @@ module.exports = async (req, res) => {
         }
       }
     }
-  }
+  } */
 
   const products = await db.Product.findAll(config);
   console.log(product);
+
+  
   return res.render("details", {
     product,
     products,
