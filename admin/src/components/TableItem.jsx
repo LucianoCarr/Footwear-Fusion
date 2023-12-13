@@ -1,27 +1,31 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
-const TableItem = ({product : { name, price, cateoryId, color}}) => {
+export const TableItem = ({product : {name,color,price,discount,categoria}}) => {
   return (
-      <tr>
+    <tr>
     <td>{name}</td>
-    <td>${price}</td>
-    <td>{discount}</td>
-    <td>{cateoryId}</td>
     <td>{color}</td>
+    <td>{price}</td>
+    <td>{discount}</td>
+    <td>{categoria.name}</td>
+    
     <td>
-      <div className="d-flex">
-        <button className="btn btn-sm btn-outline-success mr-3"><i className="fas fa-pencil-alt"></i></button>
-        <button className="btn btn-sm btn-outline-danger"><i className="fas fa-trash-alt"></i></button>
+      <div className='d-flex'>
+      <button className='btn btn-sm btn-outline-success mr-3' >
+        <i className='fas fa-pencil-alt' aria-hidden="true"></i>
+      </button>
+      <button className='btn btn-sm btn-outline-danger' >
+        <i className='fas fa-trash-alt' aria-hidden="true"></i>
+      </button>
       </div>
     </td>
   </tr>
-   
-   )
+  )
 }
 
 TableItem.propTypes = {
-  product : PropTypes.object,
-   
+    product : PropTypes.object,
+  
 }
 
-export default TableItem
+

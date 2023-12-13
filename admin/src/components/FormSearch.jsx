@@ -1,33 +1,42 @@
-import PropTypes from "prop-types";
+import Proptypes, { func } from 'prop-types'
 import { useState } from "react"
-import { Form } from "react-bootstrap";
+import { Form } from "react-bootstrap"
 
-const FormSearch = ({getMovies}) => {
-    const [valuesForm, setValuesForm] = useState({})
-
+export const FormSearch = ({getMovies}) => {
+    const [valuesForm,setValuesForm] = useState({})
     const handleInputChange = ({target}) => {
         setValuesForm({
             ...valuesForm,
-            [target.name] : target.value
+            [target.name] :  target.value
         })
     }
+
     const handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
+        getMovies(`/api/v1/movies?keyword=${valuesForm.keyword}`)
     }
 
   return (
-    <Form onSubmit={handleSubmit} className="d-flex"> 
-    <div className="input-group mb-3">
-      <input type='text' name='keyword' className='form-control' onChange={handleInputChange} />
-      <button className='btn btn-putline-dark' type='submit'><i className='fa fa-search'></i></button>
-      </div>
+    <Form onSubmit={handleSubmit}>
+        <div className="input-group ">
+        
+        <input type="text" name="keyword" className="form-control" placeholder='Buscar' onChange={handleInputChange}/>
+        <button className="btn btn-outline-dark input-group-text">
+            <i className="fa fa-search"></i>
+        </button>
+        </div>
     </Form>
   )
 }
 
+<<<<<<< HEAD
 export default FormSearch
 
 
 FormSearch.prototypes = {
   getMovies : PropTypes.func
+=======
+FormSearch.Proptypes = {
+    getMovies : Proptypes.func
+>>>>>>> b4c1f54c665caa5c6b5f64ce071b692dfb02d950
 }

@@ -1,50 +1,135 @@
-import { Form, FormControl, FormGroup, FormLabel } from "react-bootstrap"
+import { useEffect, useState } from "react"
+import { Button, Form } from "react-bootstrap"
+import { UseFetch } from "../hooks/UseFetch"
 
+import PropTypes from "prop-types"
 
-const FormProduct = () => {
-
+export const FormProduct = ({products,setProducts}) => {
   
+  const [categories,setCategories] = useState([])
+ 
+  const getData = async () => {
+    const categories = await UseFetch('categories')
+    setCategories([...categories.data])
+  }
+  useEffect(()=> {
+    
+    getData()
+  },[])
+
+  const [formValues,setFormValues] = useState({
+    name : "",
+    color :"",
+    price : "",
+    discount : "",
+    description :"",
+    categoryId :""
+  })
+
+  const handleInpuntChange = ({target}) => {
+    setFormValues({
+      ...formValues,
+      [target.name] : target.value
+    })
+  }
+
+  const handleSubmitFormCreate = async (event) => {
+    event.preventDefault()
+
+    if([formValues.name,formValues.price,formValues.description,formValues.categoryId].includes("")){
+      alert("no envie el formulario vacio")
+      return
+    }
+     
+    const {data} = await UseFetch("products","POST",formValues)
+
+    console.log(data)
+    
+    setProducts([
+      ...products,
+      data
+    ])
+  }
+
   return (
-    <Form className="row">
-      {/* Nombre */}
-<FormGroup className="form-floating mb-3">
-  <FormControl type="text" name="name"  className="form-control"  placeholder="nombre" />
+    <Form className="row" onSubmit={handleSubmitFormCreate}>
+      <Form.Group className="mb-3 col-12">
+        <Form.Label>Nombre</Form.Label>
+        <Form.Control type="text" placeholder="Nombre zapatilla" 
+        name="name"
+        onChange={handleInpuntChange}/>
+        
+      </Form.Group>
 
-  <FormLabel>Nombre</FormLabel>
-</FormGroup>
-{/* Precio */}
-<FormGroup className="form-floating mb-3">
-  <FormControl type="number" name="price" placeholder="Precio" />
 
-  <FormLabel>Precio</FormLabel>
-</FormGroup>
-{/* Descuento */}
-<FormGroup className="form-floating mb-3">
-  <FormControl type="number" name="discount" placeholder="Descuento" />
+      <Form.Group className="mb-3 col-12 col-md-6">
+        <Form.Label>Precio</Form.Label>
+        <Form.Control type="number"
+        name="price"
+        onChange={handleInpuntChange}/>
+        
+      </Form.Group>
 
-  <FormLabel>Descuento</FormLabel>
-</FormGroup>
-{/* Color */}
-<FormGroup className="form-floating mb-3">
-  <FormControl type="text" name="color" placeholder="Color" />
+      <Form.Group className="mb-3 col-12 col-md-6">
+        <Form.Label>Descuento</Form.Label>
+        <Form.Control type="number"
+        name="discount"
+        onChange={handleInpuntChange}/>
+        </Form.Group>
 
-  <FormLabel>Color</FormLabel>
-</FormGroup>
+        <Form.Group className="mb-3 col-12 ">
+        <Form.Label>Color</Form.Label>
+        <Form.Control type="color"
+        name="hexColor"
+        onChange={handleInpuntChange}/>
+        </Form.Group>
 
-{/* Categoria */}
-<FormGroup className="form-floating mb-3">
-<select className="form-control" name="CategoryId" placeholder="Categoria">
-  <option hidden defaultChecked>
-    Categoria
-  </option>
+        
+      
 
-  </select>
-</FormGroup>
+      <Form.Group className="mb-3 col-12">
+      <Form.Label>Categoría</Form.Label>
+      <Form.Select className="form-control"
+      name="categoryId"
+      onChange={handleInpuntChange}>
 
-<button type="submit" className="w-100 mb-3" variant="outline-dark">Guardar</button>
-<button className="w-100" variant="outline-secondary">Cancelar</button>
-    </Form>  
+     <option hidden >Selecciona..</option>
+      {
+        categories.map((categoria,index)=> <option key={index+categoria.name} value={categoria.id}>{categoria.name}</option>)
+      }
+      </Form.Select>
+    
+      </Form.Group>
+
+      <Form.Group className="mb-3 col-12 ">
+        <Form.Label>Descripcion</Form.Label>
+        <Form.Control as="textarea" type="text"
+        name="description"
+        onChange={handleInpuntChange}/>
+  
+        
+      </Form.Group>
+
+      <Form.Group className="mb-3 col-12">
+      <div className="d-flex justify-content-between">
+      <Button  variant="outline-dark">
+        Cancelar
+      </Button>
+
+      <Button type="submit"  variant="outline-dark">
+        Guardar
+      </Button>
+      </div>
+      </Form.Group>
+    </Form>
   )
 }
 
-export default FormProduct
+
+FormProduct.propTypes = {
+  products: PropTypes.array,
+  setProducts : PropTypes.func
+}
+
+
+
