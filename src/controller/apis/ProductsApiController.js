@@ -21,7 +21,9 @@ const getAllCategory = async (req,res) => {
     }
 }
 
-//--------------------
+
+
+//-----------------------
 const totalProductInDb = async(req,res) => {
     try {
         const total = await db.Product.count()
@@ -61,8 +63,55 @@ const totalOfertas = async (req,res) => {
     }
 }
 
+const getAllProducts = async (req,res) => {
+    try {
+        const categories = await db.Product.findAll({
+            include : ['categoria','images']
+        })
+
+        return res.status(200).json({
+            ok : true,
+            data : categories
+        })
+    } catch (error) {
+       return res.status(error.status || 500).json({
+        ok : false,
+        msg : error.message || "Upss, hubo un error"
+       })
+    }
+}
+
+const createProduct = async (req,res)=>{
+    try {
+        const {name,price,color,discount,categoryId,description} = req.body
+        const newProduct = await db.Product.create({
+            name : name?.trim(),
+            price,
+            color,
+            discount: discount || 0,
+            categoryId,
+            description: description.trim()
+
+        })
+
+        return res.status(200).json({
+            ok : true,
+            data : newProduct,
+            msg : "Producto creado con exito"
+        })
+    } catch (error) {
+       return res.status(error.status || 500).json({
+        ok : false,
+        msg : error.message || "Upss, hubo un error",
+        date : null
+       })
+    }
+}
+
 module.exports = {
     getAllCategory,
     totalProductInDb,
-    totalOfertas
+    totalOfertas,
+    getAllProducts,
+    createProduct
 }

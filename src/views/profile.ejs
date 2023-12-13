@@ -46,9 +46,9 @@
                                             <div class="col-12 col-md-6 mb-3">
                                                 <label for="province" class="form-label">Provincia</label>
                                                 <select type="text" class="form-select" id="province" name="province">
-                                                    <option hidden value="">Seleccione...</option>
+                                                    <option hidden value="<%=  %>">Seleccione...</option>
                                                     <% provinces.forEach(({ nombre }) => { %>
-                                                        <option value="<%= nombre %>"><%= nombre %></option>
+                                                        <option value="<%= nombre %>" <%= (nombre === province) ? 'selected' : '' %>><%= nombre %></option>
                                                     <% }) %>
                                                 </select>
                                                 <spam class="ms-2 fw-bold error-login" id="msgError-province"><%= locals.errors && (errors.province && errors.province.msg) %></spam>
