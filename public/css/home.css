@@ -92,10 +92,15 @@ svg {
 
 @media (min-width: 1025px) {
 
-    /*   .home-main-carrusel{
-            width: 60%;
-            align-self: center;
-        }  */
+      .home-main-carrusel{
+            width: 100%;
+            /* align-self: center; */
+            /* border: solid 40px #e9ecef; */
+            border-top: solid 10px #e9ecef;
+            border-left: solid 40px #e9ecef;
+            border-right: solid 40px #e9ecef;
+            border-bottom: solid 20px #e9ecef;
+        } 
 
     .banner-4 {
         display: none;

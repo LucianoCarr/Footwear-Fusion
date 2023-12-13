@@ -52,7 +52,6 @@
                            <div class="precio">
                             <p>Categoría:</p>
                             <p><%= product.categoria.name %></p>
-                            
                         </div>
                             <!-- Talle -->
                             <form class="talle" action="#">
@@ -87,7 +86,7 @@
                                     <a onclick="addProductToCart('<%= product.id %>')" href="#">Agregar al carrito<i class="p-2 fa-solid fa-cart-shopping"></i></a>
                                     <% }else { %>
                                         <div class="back_to_top">
-                                            <a href="/users/login" class="text-body-tertiary">Debes loguearte para comprar</a>
+                                            <a href="/users/login" class="text-body-tertiary border-0">Debes loguearte para comprar</a>
                                         </div>
                                         <% } %>
                                 <% if(locals.userLogin?.role === 1){ %>
