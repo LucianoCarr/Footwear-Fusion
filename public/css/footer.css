@@ -92,11 +92,7 @@
     overflow: hidden;
     margin: 0;
 }
-.home-footer-section-div a{
-    height: 0;
-    overflow: hidden;
-    
-}
+
 .home-footer-section-div a:hover{
     color: #e27396;
 }

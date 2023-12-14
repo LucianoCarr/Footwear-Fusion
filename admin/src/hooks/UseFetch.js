@@ -1,4 +1,4 @@
-export const UseFetch = async (endpoint,method = "GET",data) => {
+export const UseFetch = async (endpoint, method = "GET", data) => {
 
     const base_url = import.meta.env.VITE_APP_API_URL;
  
@@ -9,7 +9,7 @@ export const UseFetch = async (endpoint,method = "GET",data) => {
             headers : {
                 'Content-Type' : 'application/json'
             },
-            body : JSON.stringify(data) || null
+            body : data && JSON.stringify(data),
             
         });
         const result = await response.json();

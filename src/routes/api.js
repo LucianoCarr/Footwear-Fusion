@@ -9,7 +9,7 @@ const {
   saveTotal,
   changeStatus,
 } = require("../controller/cartControllers");
-const { getAllCategory, totalProductInDb, totalOfertas, getAllProducts, createProduct } = require("../controller/apis/ProductsApiController");
+const { getAllCategory, totalProductInDb, totalOfertas, getAllProducts, createProduct, updateProduct, deleteProduct } = require("../controller/apis/ProductsApiController");
 /* /api */
 router.get("/check-email", checkMail);
 router.get("/check-password", checkPassword);
@@ -23,11 +23,16 @@ router.post("/cart/add", addProduct);
 router.delete("/cart/remove", removeProduct);
 router.delete("/cart/clear", clearCart);
 
+/* Categorias */
 router.get('/categories',getAllCategory)
 
+/* CRUD REACT */
 router.get('/products/count',totalProductInDb)
 router.get('/products/discount',totalOfertas)
 router.get('/products',getAllProducts)
 
 router.post('/products',createProduct)
+router.put('/products/:id', updateProduct)
+router.delete('/products/:id', deleteProduct)
+
 module.exports = router;

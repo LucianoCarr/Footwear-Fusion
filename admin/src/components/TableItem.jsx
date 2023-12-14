@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export const TableItem = ({product : {name,color,price,discount,categoria}}) => {
+export const TableItem = ({product : {id,name,color,price,discount,categoria}, handleEditForm, handleDeleteProduct}) => {
   return (
     <tr>
     <td>{name}</td>
@@ -11,10 +11,10 @@ export const TableItem = ({product : {name,color,price,discount,categoria}}) => 
     
     <td>
       <div className='d-flex'>
-      <button className='btn btn-sm btn-outline-success mr-3' >
+      <button className='btn btn-sm btn-outline-success mr-3' onClick={() => handleEditForm(id)} >
         <i className='fas fa-pencil-alt' aria-hidden="true"></i>
       </button>
-      <button className='btn btn-sm btn-outline-danger' >
+      <button className='btn btn-sm btn-outline-danger' onClick={() => handleDeleteProduct(id)} >
         <i className='fas fa-trash-alt' aria-hidden="true"></i>
       </button>
       </div>
@@ -25,6 +25,8 @@ export const TableItem = ({product : {name,color,price,discount,categoria}}) => 
 
 TableItem.propTypes = {
     product : PropTypes.object,
+    handleEditForm : PropTypes.func,
+    handleDeleteProduct : PropTypes.func,
   
 }
 
