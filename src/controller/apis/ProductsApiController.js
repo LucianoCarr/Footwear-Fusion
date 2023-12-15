@@ -83,15 +83,17 @@ const getAllProducts = async (req,res) => {
 
 const createProduct = async (req,res)=>{
     try {
-        const {name,price,color,discount,categoryId,description} = req.body
-        
+        const {name,price,color,discount,categoryId,description,hexColor} = req.body
+        console.log(req.body);
         const newProduct = await db.Product.create({
-            name : name.trim(),
+            name : name?.trim(),
             price,
             color,
             discount: discount || 0,
             categoryId,
-            description: description?.trim()
+            description: description?.trim(),
+            hexColor,
+            stock : true
         })
 
         const product = await db.Product.findByPk(newProduct.id,{
@@ -104,10 +106,11 @@ const createProduct = async (req,res)=>{
             msg : "Producto creado con exito"
         })
     } catch (error) {
+        console.log(error);
        return res.status(error.status || 500).json({
         ok : false,
         msg : error.message || "Upss, hubo un error",
-        date : null
+        data : null
        })
     }
 }
@@ -142,7 +145,7 @@ const updateProduct = async (req,res)=>{
        return res.status(error.status || 500).json({
         ok : false,
         msg : error.message || "Upss, hubo un error",
-        date : null
+        data : null
        })
     }
 }
@@ -164,7 +167,7 @@ const deleteProduct = async (req, res) => {
         return res.status(error.status || 500).json({
             ok : false,
             msg : error.message || "Upss, hubo un error",
-            date : null
+            data : null
            })
     }
 }

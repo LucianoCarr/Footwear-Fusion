@@ -21,7 +21,7 @@ export const ListProductsPage = () => {
     categoryId :""
   });
 
-  const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
 
   const handleEditForm = (idProduct) => {
 
@@ -47,7 +47,7 @@ setProducts([...productFiltered])
   }
 
   const getData = async () => {
-    const {data} = await UseFetch('products')
+    const {data} = await UseFetch("products")
    setProducts(data)
   }
 
@@ -73,7 +73,7 @@ const handlePageClick = (event) => {
         <Col xs={12} lg={4}> 
           <Card className='mb-3'>
             <Card.Header>
-              <CardTitle>{'Agregar'} Producto</CardTitle>
+              <CardTitle>{'Editar'} Producto</CardTitle>
             </Card.Header>
             <Card.Body>
               <FormProduct products={products} setProducts={setProducts} formValues={formValues} setFormValues={setFormValues} />

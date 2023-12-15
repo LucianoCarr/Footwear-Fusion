@@ -1,8 +1,10 @@
 const db = require('../../database/models');
 //const updateUser = require('../../services/userServices/update.Services')
 
-const fetch = require('node-fetch')
-const API = 'https://apis.datos.gob.ar/georef/api/provincias?'
+const moment = require("moment");
+const fetch = require('node-fetch');
+
+const API = 'https://apis.datos.gob.ar/georef/api/provincias?';
 
 const { validationResult } = require('express-validator')
 
@@ -10,7 +12,15 @@ module.exports = async (req,res) =>{
     try {
 
         const errors = validationResult(req)
-     
+
+        const id = await req.session.userLogin.id;
+        const user = await db.User.findByPk(id);
+    
+        
+        const response = await fetch(API);
+        const data = await response.json();
+        const provinces = data.provincias.sort((a,b) => a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0 )
+    
         if(errors.isEmpty()){
             let {name,lastName,birthday, adress, province} = req.body
             
@@ -47,6 +57,14 @@ module.exports = async (req,res) =>{
                 }
                 return res.redirect('/')
 
+        } else {
+            return res.render("profile", { 
+                errors: errors.mapped(),
+                 old: req.body,
+                 ...user.dataValues,
+                 moment,
+                provinces,
+             });
         }
     } catch (error) {
         console.log(error);

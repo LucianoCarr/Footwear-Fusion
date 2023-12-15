@@ -27,7 +27,7 @@ export const FormProduct = ({products,setProducts,formValues,setFormValues}) => 
   const handleSubmitForm = async (event) => {
     event.preventDefault()
 
-    if([formValues.name,formValues.price,formValues.categoryId].includes("")){
+    if([formValues.name,formValues.price,formValues.categoryId,formValues.description,formValues.color].includes("")){
       alert("no envie el formulario vacio")
       return
     }
@@ -53,6 +53,7 @@ export const FormProduct = ({products,setProducts,formValues,setFormValues}) => 
       id : null,
       name : "",
       color :"",
+      hexColor: "",
       price : "",
       discount : "",
       description :"",
@@ -91,12 +92,14 @@ export const FormProduct = ({products,setProducts,formValues,setFormValues}) => 
         />
         </Form.Group>
 
-       {/*  <Form.Group className="mb-3 col-12 col-md-6 ">
+        <Form.Group className="mb-3 col-12 col-md-6 ">
         <Form.Label>Campo de color</Form.Label>
         <Form.Control type="color"
         name="hexColor"
-        onChange={handleInpuntChange}/>
-        </Form.Group> */}
+        onChange={handleInpuntChange}
+        value={formValues.hexColor}
+        />
+        </Form.Group>
 
         <Form.Group className="mb-3 col-12 col-md-6">
         <Form.Label>Color</Form.Label>
@@ -154,7 +157,7 @@ export const FormProduct = ({products,setProducts,formValues,setFormValues}) => 
 
 
 FormProduct.propTypes = {
-  products: PropTypes.array,
+  products : PropTypes.array,
   setProducts : PropTypes.func,
   formValues : PropTypes.object,
   setFormValues :  PropTypes.func,
