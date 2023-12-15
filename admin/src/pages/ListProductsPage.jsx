@@ -18,14 +18,15 @@ export const ListProductsPage = () => {
     price : "",
     discount : "",
     description :"",
-    categoryId :""
+    categoryId :"",
+    hexColor : ""
   });
 
   const [itemsPerPage, setItemsPerPage] = useState(4);
 
   const handleEditForm = (idProduct) => {
 
-    const {id, name, price, discount, categoryId, color, description} = products.find(product => product.id === idProduct)
+    const {id, name, price, discount, categoryId, color, description,hexColor} = products.find(product => product.id === idProduct)
 
     setFormValues({
       id,
@@ -35,6 +36,7 @@ export const ListProductsPage = () => {
       color,
       categoryId,
       description,
+      hexColor
     })
   }
 
